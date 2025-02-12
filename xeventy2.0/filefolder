@@ -1,0 +1,25 @@
+xeventy2.0/
+├── README.md
+├── public
+│   ├── images
+│   └── fonts
+├── src/
+│   ├── app
+│   │   ├── images
+│   │   ├── images
+│   │   ├── images
+│   ├── admin.py
+│   ├── apps.py           # AppConfig for the giveaid app
+│   ├── models.py         # Models for the giveaid app
+│   ├── tests.py          # Tests for the giveaid app
+│   ├── views.py          # Non-API views (optional)
+│   ├── urls.py           # Non-API URL configuration (optional)
+│
+├── api/
+│   ├── __init__.py
+│   ├── serializers.py    # Serializers for API endpoints
+│   ├── views.py          # API views
+│   ├── urls.py           # API URL configuration
+│   ├── tests.py          # Tests for API endpoints
+│
+└── manage.py              # Django management script
