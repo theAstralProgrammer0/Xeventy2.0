@@ -1,0 +1,111 @@
+" .vimrc
+" ============================================================================
+" Vim-plug initialization - KEEP THIS AT THE TOP
+" Avoid modifying this section, unless you are very sure of what you are doing
+
+let vim_plug_just_installed = 0
+let vim_plug_path = expand('~/.vim/autoload/plug.vim')
+if !filereadable(vim_plug_path)
+    echo "Installing Vim-plug..."
+    echo ""
+    silent !mkdir -p ~/.vim/autoload
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let vim_plug_just_installed = 1
+endif
+
+" manually load vim-plug the first time
+if vim_plug_just_installed
+    :execute 'source '.fnameescape(vim_plug_path)
+endif
+
+" ============================================================================
+
+" ---- PLUGINS - KEEP PLUGIN DECLARATIONS WITHIN plug#begin() and plug#end() ----
+" https://github.com/junegunn/vim-plug
+" install plugins with :PlugInstall
+" clean unused plugins :PlugClean
+"
+call plug#begin('~/.vim/plugged')
+
+" Code Formatting and Auto-formatting Plugin - ALE (Asynchronous Lint Engine)
+Plug 'dense-analysis/ale'
+
+call plug#end()
+" -----------------------------------------------------------------------------
+
+" ============================================================================
+" Install plugins the first time vim runs
+if vim_plug_just_installed
+    echo "Installing Bundles, please ignore key map error messages"
+    :PlugInstall
+endif
+" ============================================================================
+
+" ============================================================================
+" Basic Settings - These enhance core Vim functionality
+" ============================================================================
+
+syntax on                   " Enable syntax highlighting for better code readability
+set encoding=utf-8         " Set encoding to UTF-8 for broad character support
+
+set visualbell             " Use visual bell instead of audible bell
+set noerrorbells           " Disable error sounds
+
+" Indentation Settings - For smart and consistent code formatting
+set tabstop=2             " Number of spaces a tab counts for
+set shiftwidth=2          " Number of spaces for autoindent/indent
+set softtabstop=2         " Number of spaces for a tab when editing
+set expandtab             " Use spaces instead of tabs for better consistency
+set autoindent            " Keep indentation of the previous line when starting a new line
+set smartindent           " Enable smart indentation for code
+set cindent               " Enable C-style indentation, good for many languages
+
+" Line Numbering - Helps in navigating code and error messages
+set number                 " Show line numbers on the left side
+set relativenumber        " Show relative line numbers to the cursor line
+
+" Visual Mode Highlighting -  Essential for visual selection and operations
+highlight link multiple_cursors_visual Visual " Ensure visual mode highlighting is active
+
+
+" ============================================================================
+" Formatting and Auto-formatting Configurations - Using ALE Plugin
+" ============================================================================
+
+" Re-indent the current line appropriately. Useful after code changes that mess up indentation.
+nnoremap <leader>ii ==
+
+" Re-indent the entire file.  Use this for auto-formatting the whole document.
+nnoremap <leader>if :gg=G<CR>
+
+" Auto-formatting using ALE (Asynchronous Lint Engine)
+" Configure ALE fixers to use formatters for different file types
+" Make sure you have the formatters (prettier, black, clang-format, etc.) installed in your system.
+let g:ale_fixers = {
+    '*': ['trim_whitespace'], " Default fixer: remove trailing whitespace in all file types
+    'javascript': ['prettier'],
+    'typescript': ['prettier'],
+    'json': ['prettier'],
+    'css': ['prettier'],
+    'scss': ['prettier'],
+    'less': ['prettier'],
+    'html': ['prettier'],
+    'vue': ['prettier'],
+    'python': ['black', 'isort'],  " 'isort' for imports, 'black' for code formatting
+    'go': ['gofmt', 'goimports'],
+    'rust': ['rustfmt'],
+    'c': ['clang-format'],
+    'cpp': ['clang-format'],
+    'sh': ['shfmt'],
+    'bash': ['shfmt'],
+    'lua': ['stylua'],
+  }
+
+" Enable format on save. Set to 0 to disable format-on-save and format manually.
+let g:ale_fix_on_save = 1
+
+" Key mapping to manually trigger formatting using ALE (if fix_on_save is disabled or for on-demand formatting)
+nnoremap <leader>af :ALEFix<CR>
+
+" ============================================================================
+" }}} End of combined and formatted .vimrc
