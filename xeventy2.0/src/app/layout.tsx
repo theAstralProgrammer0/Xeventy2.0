@@ -1,12 +1,9 @@
+import React, { ReactNode } from "react";
 import "@/styles/tailwind.css";
-import type { Metadata } from "next";
+import "../styles/index.css";
+import "../styles/font.css";
 
-export const metadata: Metadata = {
-  title: "Xeventy2.0 Health Limited",
-  description: "Xeventy2.0 Health is a web app designed for heallth, telehealt, EMR, electronic health records",
-};
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -20,3 +17,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+export default RootLayout;
