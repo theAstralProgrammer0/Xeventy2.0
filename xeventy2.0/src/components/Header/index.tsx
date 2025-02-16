@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const Header = ({ ...props }: Props) {
+export default function Header({ ...props }: Props) {
   return (
     <header
       {...props}
@@ -25,5 +25,46 @@ const Header = ({ ...props }: Props) {
             <Link href="#">
               <Text size="text3xl" as="p" className="text-[17.23px] font-normal !text-gray-900">
                 Services
-
-
+              </Text>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <Text size="text3xl" as="p" className="text-[17.23px] font-normal !text-gray-900">
+                About Us
+              </Text>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <Text size="text3xl" as="p" className="text-[17.23px] font-normal !text-gray-900">
+                Blog
+              </Text>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <Text size="text3xl" as="p" className="text-[17.23px] font-normal !text-gray-900">
+                Training & Conference
+              </Text>
+            </Link>
+          </li>
+          <li>
+            <Link href="#">
+              <Text size="text3xl" as="p" className="text-[17.23px] font-normal !text-gray-900">
+                Products
+              </Text>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <Button
+        size="sm"
+        shape="round"
+        className="min-w-[198px] rounded-[10px] border-[1.13px] border-solid border-green-a700 px-[32.87px] sm:px-5"
+      >
+        Get in touch
+      </Button>
+    </header>
+  );
+}
