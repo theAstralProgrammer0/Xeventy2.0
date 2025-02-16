@@ -7,8 +7,8 @@ const shapes = {
 const variants = {
   fill: {
     blue_A700_5b: "bg-blue-a700_5b shadow-xs text-black-900_01",
-    black_900_01: "bg-black-900_01 text-white-a700",
     blue_A700_e5: "bg-blue-a700_e5 shadow-xs text-black-900_01",
+    black_900_01: "bg-black-900_01 text-white-a700",
   },
 } as const;
 
