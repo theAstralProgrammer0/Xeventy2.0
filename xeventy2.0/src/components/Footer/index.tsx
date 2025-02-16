@@ -8,7 +8,7 @@ interface Props {
   className?: string;
 }
 
-const Footer = ({ ...props }: Props) => {
+ export default function Footer({ ...props }: Props) {
   return (
     <footer {...props} className={`${props.className} flex flex-col mt-1`}>
       <div className="relative z-[3] flex items-start gap-[30px] self-stretch bg-black-900_01 px-[18px] py-[54px] md:flex-col md:py-5">
@@ -229,5 +229,3 @@ const Footer = ({ ...props }: Props) => {
       </footer>
     );
 }
-
-export default Footer;
