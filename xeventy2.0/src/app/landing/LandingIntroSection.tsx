@@ -38,4 +38,45 @@ export default function LandingIntroSection() {
               shape="round"
               rightIcon={
                 <Img
-            
+                  src="img_link_icon.png"
+                  width={28}
+                  height={28}
+                  alt="Link Icon"
+                  className="h-[28px] w-[28px] object-contain"
+                />
+              }
+              className="min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5"
+            >
+              Learn more
+            </Button>
+            <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
+              <Text
+                as="p"
+                className="text-[18.15px] font-normal !text-gray-700 underline"
+              >
+                Hiring consultants?
+              </Text>
+            </Link>
+          </div>
+          <div className="mt-[38px] flex items-center gap-6 sm:flex-col">
+            <Text
+              size="textxl"
+              as="p"
+              className="mb-1.5 self-end text-[14.32px] font-normal !text-gray-700 sm:mb-0"
+            >
+              Powered by the Xeventy2.0 health team
+            </Text>
+            <Img
+              src="img_mini_avatars.png"
+              width={138}
+              height={38}
+              alt="Miniavatars"
+              className="h-[38px] w-[10%] object-contain sm:w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
