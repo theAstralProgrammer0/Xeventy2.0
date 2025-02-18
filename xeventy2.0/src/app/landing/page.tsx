@@ -1,5 +1,6 @@
-import React, { Metadata } from "react";
+import React from "react";
 import Page from ".";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Xeventy2.0 Health Ltd - Empowering Providers Globally",
