@@ -18,10 +18,10 @@ export default function HealthCareRecordComponent({
     <div {...props} className={`${props.classname} h-[480px] w-[24%] md:w-full relative`}>
       <div className="absolute bottom-[0.35px] left-0 right-0 mx-auto flex-1 rounded-md bg-black-900_0a px-3.5 py-[22px] sm:py-5">
         <div className="mt-[242px] flex flex-col items-center gap-3">
-          <Text size="text2xl" as="p" classname="!font-merriweather text-[16.94px] font-normal !text-blue-700">
+          <Text size="text2xl" classname="!font-merriweather text-[16.94px] font-normal !text-blue-700">
             {headerText}
           </Text>
-          <Text size="texts" as="p" className="w-full text-[11.86px] font-normal leading-[23px] !text-black-900_01">
+          <Text size="texts" className="w-full text-[11.86px] font-normal leading-[23px] !text-black-900_01">
             {descriptionText}
           </Text>
         </div>

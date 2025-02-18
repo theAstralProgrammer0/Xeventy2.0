@@ -36,14 +36,14 @@ export default function ServicesOverviewSection() {
             <Button
               color="black_900_01"
               size="xs"
-              shape="round"
+              
               className="min-w-[108px] rounded-[10px] px-1.5 font-merriweather tracking-[1.09px]"
             >
               Our Services
             </Button>
             <Text
               size="text13xl"
-              as="p"
+              
               className="!font-merriweather text-[56.47px] font-normal !text-black-900_01 md:text-[48px] sm:text-[42px]"
             >
               Bridging technology and patient care
@@ -59,7 +59,7 @@ export default function ServicesOverviewSection() {
             </Suspense>
           </div>
           <Button
-            shape="round"
+            
             rightIcon={
               <Img
                 src="img_link_icon.png"

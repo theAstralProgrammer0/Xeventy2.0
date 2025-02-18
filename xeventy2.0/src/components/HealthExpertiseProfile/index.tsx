@@ -24,14 +24,12 @@ export default function HealthExpertiseProfile({
         className="text-[48.79px] font-semibold !text-white-a700"
       />
       <Heading
-        as="h1"
         className="text-[48.79px] font-semibold !text-white-a700"
       >
         {experienceNumber}
       </Heading>
       <Text
         size="text2xl"
-        as="p"
         className="text-[16.26px] font-normal"
       >
         {experienceDescription}

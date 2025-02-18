@@ -64,7 +64,7 @@ export default function VideoNewsSection() {
             <div className="flex flex-col items-start gap-2.5">
               <Text
                 size="text6xl"
-                as="p"
+                
                 className="flex items-center justify-center rounded bg-black-900_01 px-1 text-[25px] font-normal tracking-[2.75px] md:text-[23px] sm:text-[21px]"
               >
                 news
@@ -77,7 +77,7 @@ export default function VideoNewsSection() {
               >
                 <Text
                   size="text9xl"
-                  as="p"
+                  
                   className="!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 underline"
                 >
                   VR Training for telehealth healthcare delivery service in
@@ -86,7 +86,7 @@ export default function VideoNewsSection() {
               </Link>
               <Text
                 size="textlg"
-                as="p"
+                
                 className="text-[13.55px] font-normal !text-black-900_01">
                 By Raphael Akangbe, PhD
               </Text>
@@ -96,7 +96,7 @@ export default function VideoNewsSection() {
             <div className="flex flex-col items-center self-stretch">
               <Text
                 size="textlg"
-                as="p"
+                
                 className="relative z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[13.55px] font-normal !text-black-900_01"
               >
                 LATEST NEWS
@@ -114,7 +114,7 @@ export default function VideoNewsSection() {
             <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
               <Text
                 size="textlg"
-                as="p"
+                
                 className="text-[13.55px] font-normal !text-black-900_01 underline"
               >
                 Get More News

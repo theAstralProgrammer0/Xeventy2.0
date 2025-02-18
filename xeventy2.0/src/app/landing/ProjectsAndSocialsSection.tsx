@@ -53,7 +53,6 @@ export default function ProjectsAndSocialsSection() {
               <div className="flex flex-col items-center justify-center gap-4 px-4 py-6 sm:py-5">
                 <Text
                   size="text8xl"
-                  p"
                   className="text-[30.49px] font-normal !text-black-900_01 md:text-[28px] sm:text-[26px]"
                 >
                   Join our millions of followers

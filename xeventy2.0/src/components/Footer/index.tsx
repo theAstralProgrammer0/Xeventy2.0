@@ -17,7 +17,7 @@ export default function Footer({ ...props }: Props) {
           <div className="flex w-[30%] flex-col items-start gap-2 md:w-full">
             <Text
               size="text7xl"
-              as="p"
+              
               className="text-[27.11px] font-normal !text-green-a700_01 md:text-[25px] sm:text-[23px]"
             >
               Services
@@ -25,28 +25,28 @@ export default function Footer({ ...props }: Props) {
             <ul className="flex flex-col items-start gap-6">
               <li>
                 <Link href="#" target="_blank" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     EMR & EHR
                   </Text>
                 </Link>
               </li>
               <li>
                 <Link href="#" target="_blank" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     Telemedicine
                   </Text>
                 </Link>
               </li>
               <li>
                 <Link href="#" target="_blank" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     Telehealth
                   </Text>
                 </Link>
               </li>
               <li>
                 <Link href="#" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     VR & AR Training
                   </Text>
                 </Link>
@@ -56,7 +56,7 @@ export default function Footer({ ...props }: Props) {
           <div className="flex w-[30%] flex-col items-start gap-2 md:w-full">
             <Text
               size="text7xl"
-              as="p"
+              
               className="text-[27.11px] font-normal !text-green-a700_01 md:text-[25px] sm:text-[23px]"
             >
               Projects
@@ -64,7 +64,7 @@ export default function Footer({ ...props }: Props) {
             <ul className="flex flex-col items-start gap-6">
               <li>
                 <Link href="#" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     Tech Conference
                   </Text>
                 </Link>
@@ -75,7 +75,7 @@ export default function Footer({ ...props }: Props) {
           <div className="flex w-[30%] flex-col items-start gap-2 md:w-full">
             <Text
               size="text7xl"
-              as="p"
+              
               className="text-[27.11px] font-normal !text-green-a700_01 md:text-[25px] sm:text-[23px]"
             >
               Socials
@@ -83,7 +83,7 @@ export default function Footer({ ...props }: Props) {
             <ul className="flex flex-col items-start gap-6">
               <li>
                 <Link href="#" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     Facebook
                   </Text>
                 </Link>
@@ -94,7 +94,7 @@ export default function Footer({ ...props }: Props) {
           <div className="flex flex-col items-start gap-2">
             <Text
               size="text7xl"
-              as="p"
+              
               className="text-[27.11px] font-normal !text-green-a700_01 md:text-[25px] sm:text-[23px]"
             >
               Products
@@ -102,7 +102,7 @@ export default function Footer({ ...props }: Props) {
             <ul className="flex flex-col items-start gap-6">
               <li>
                 <Link href="#" rel="noreferrer">
-                  <Text as="p" className="text-[18.07px] font-normal">
+                  <Text  className="text-[18.07px] font-normal">
                     Data Protection Tool
                   </Text>
                 </Link>
@@ -115,7 +115,7 @@ export default function Footer({ ...props }: Props) {
           {/* ... (Newsletter signup section - same as before) */}
           <Text
             size="text10xl"
-            as="p"
+            
             className="text-[34.64px] font-normal tracking-[-1.73px] !text-green-a700_01 md:text-[32px] sm:text-[30px]"
           >
             Sign up to our newsletter and stay up to date
@@ -133,38 +133,38 @@ export default function Footer({ ...props }: Props) {
         </div>
       </div>
       <div className="flex items-center justify-between gap-5 self-stretch bg-black-900_01 px-6 py-8 md:flex-col sm:p-5">
-        <Text as="p" className="self-end text-[18.97px] font-normal tracking-[-0.76px] !text-green-a700_01">
+        <Text  className="self-end text-[18.97px] font-normal tracking-[-0.76px] !text-green-a700_01">
           © Xeventy2.0 Health 2025
         </Text>
         <div className="flex w-[62%] items-center justify-between gap-5 md:w-full md:flex-col">
           <div className="flex w-[60%] flex-wrap justify-between gap-5 md:w-full">
             <Link href="#" rel="noreferrer">
-              <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+              <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
                 Privacy Policy
               </Text>
             </Link>
             <Link href="#" rel="noreferrer">
-              <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+              <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
                 Support
               </Text>
             </Link>
             <Link href="#" rel="noreferrer">
-              <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+              <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
                 Blog
               </Text>
             </Link>
             <Link href="#" rel="noreferrer">
-              <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+              <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
                 API
               </Text>
             </Link>
             <Link href="#" rel="noreferrer">
-              <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+              <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
                 Training
               </Text>
             </Link>
           </div>
-          <Text as="p" className="text-[18.97px] font-normal tracking-[-0.76px]">
+          <Text  className="text-[18.97px] font-normal tracking-[-0.76px]">
             v3.0.1
           </Text>
         </div>

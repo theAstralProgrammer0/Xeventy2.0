@@ -43,7 +43,7 @@ export default function Header({ className }: Props) {
             <Link href="#">
               <Text
                 size="text3xl"
-                as="p"
+                
                 className="text-[17.23px] font-normal !text-gray-900"
               >
                 Services
@@ -54,7 +54,7 @@ export default function Header({ className }: Props) {
             <Link href="#">
               <Text
                 size="text3xl"
-                as="p"
+                
                 className="text-[17.23px] font-normal !text-gray-900"
               >
                 About Us
@@ -65,7 +65,7 @@ export default function Header({ className }: Props) {
             <Link href="#">
               <Text
                 size="text3xl"
-                as="p"
+                
                 className="text-[17.23px] font-normal !text-gray-900"
               >
                 Blog
@@ -76,7 +76,7 @@ export default function Header({ className }: Props) {
             <Link href="#">
               <Text
                 size="text3xl"
-                as="p"
+                
                 className="text-[17.23px] font-normal !text-gray-900"
               >
                 Training & Conference
@@ -87,7 +87,7 @@ export default function Header({ className }: Props) {
             <Link href="#">
               <Text
                 size="text3xl"
-                as="p"
+                
                 className="text-[17.23px] font-normal !text-gray-900"
               >
                 Products
