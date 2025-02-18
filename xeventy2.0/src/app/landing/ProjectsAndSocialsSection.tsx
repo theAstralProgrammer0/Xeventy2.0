@@ -36,7 +36,6 @@ export default function ProjectsAndSocialsSection() {
               <Button
                 color="black_900_01"
                 size="xs"
-                shape="round"
                 className="min-w-[108px] rounded-[10px] px-1.5 font-merriweather tracking-[1.09px]"
               >
                 Our Projects
@@ -44,7 +43,6 @@ export default function ProjectsAndSocialsSection() {
             </div>
             <Text
               size="text13xl"
-              as="p"
               className="!font-merriweather text-[56.47px] font-normal !text-black-900_01 md:text-[48px] sm:text-[42px]"
             >
               Discover our most impactful projects
@@ -55,7 +53,7 @@ export default function ProjectsAndSocialsSection() {
               <div className="flex flex-col items-center justify-center gap-4 px-4 py-6 sm:py-5">
                 <Text
                   size="text8xl"
-                  as="p"
+                  p"
                   className="text-[30.49px] font-normal !text-black-900_01 md:text-[28px] sm:text-[26px]"
                 >
                   Join our millions of followers
@@ -101,7 +99,6 @@ export default function ProjectsAndSocialsSection() {
               <div className="flex flex-col gap-[30px] py-2.5">
                 <Text
                   size="text8xl"
-                  as="p"
                   className="text-center text-[30.49px] font-normal leading-9 !text-black-900_01 md:text-[28px] sm:text-[26px]"
                 >
                   Follow us for more daily health and wellness tips
