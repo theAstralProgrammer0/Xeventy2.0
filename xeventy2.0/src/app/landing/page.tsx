@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Metadata } from "react";
 import Page from ".";
 
 export const metadata: Metadata = {
