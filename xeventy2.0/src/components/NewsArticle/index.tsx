@@ -4,7 +4,7 @@ import React from "react";
 
 interface Props {
   className?: string;
-  articleTitle?: ReactReactReactNode;
+  articleTitle?: React.ReactNode;
   articleTimeline?: React.ReactNode;
   articleAuthor?: React.ReactNode;
 }
