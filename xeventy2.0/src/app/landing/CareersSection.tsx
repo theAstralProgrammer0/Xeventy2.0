@@ -24,7 +24,6 @@ export default function CareersSection() {
             </Text>
             <Text
               size="text2xl"
-              as="p"
               className="self-stretch text-center text-[16.54px] font-normal leading-8 !text-black-900_01"
             >
               At Xeventy2.0 Health Limited, we nurture talent and foster
