@@ -1,36 +1,49 @@
-import { Img } from "../../components";
-import React, { Suspense } from "react";
+"use client";
 
-const logoList = [{ logo: "img_logo_2.png" }, { logo: "img_logo_3.png" }, { logo: "img_logo_4.png" }];
+import { Img } from "../../components";
+import React from "react";
+
+const logos = [
+  "img_logo_1.png",
+  "img_logo_2.png",
+  "img_logo_3.png",
+  "img_logo_4.png",
+];
 
 export default function LogoRowSection() {
   return (
-    <>
-      {/* logo row section */}
-      <div className="mb-4 flex justify-between gap-5 md:flex-col">
-        <Img
-          src="img_logo_1.png"
-          width={136}
-          height={136}
-          alt="Logoone"
-          className="h-[136px] w-[12%] object-contain md:w-full"
-        />
-        <div className="ml-[296px] flex w-[88%] gap-[296px] md:ml-0 md:w-full md:flex-col md:px-5">
-          <Suspense fallback={<div>Loading feed...</div>}>
-            {logoList.map((d, index) => (
-              <Img
-                key={"listlogo" + index}
-                src={d.logo}
-                width={136}
-                height={136}
-                alt="Logo"
-                className="h-[136px] w-[32%] object-contain md:w-full"
-              />
-            ))}
-          </Suspense>
-        </div>
+    <div className="relative overflow-hidden bg-black-900_07 py-6 shadow-md">
+      {/* The marquee container; duplicate the logos for a seamless scroll */}
+      <div className="flex animate-marquee">
+        {logos.concat(logos).map((logo, index) => (
+          <div key={index} className="flex-shrink-0 mx-8">
+            <Img
+              src={logo}
+              width={136}
+              height={136}
+              alt={`Logo ${index + 1}`}
+              className="h-[136px] w-[136px] object-contain"
+            />
+          </div>
+        ))}
       </div>
-    </>
+      {/* Custom keyframes for marquee animation */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            /* Adjust this value to exactly match half of the total width
+               of the scrolling content for a seamless loop. */
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
+    </div>
   );
 }
 
