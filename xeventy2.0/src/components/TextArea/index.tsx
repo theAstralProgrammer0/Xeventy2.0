@@ -16,14 +16,15 @@ const sizes = {
 type TextAreaProps = Omit<
   React.DetailedHTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>,
   "size" | "prefix" | "type" | "onChange"
-> & 
+> &
   Partial<{
     className: string;
     name: string;
     placeholder: string;
-    onChange: Function;
+    onChange?: (value: string) => void;
     shape: keyof typeof variants | null;
     size: keyof typeof sizes;
+    variant: keyof typeof variants;
   }>;
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
@@ -41,7 +42,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     ref,
   ) => {
     const handleChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
-      if (onChange) onChange(e?.target?.value);
+      if (onChange) onChange(e.target.value);
     };
 
     return (
@@ -56,6 +57,8 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     );
   },
 );
+
+TextArea.displayName = "TextArea";
 
 export { TextArea };
 
