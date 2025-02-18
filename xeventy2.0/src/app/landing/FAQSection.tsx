@@ -24,7 +24,7 @@ export default function FAQSection() {
       {/* f a q section */}
       <div className="relative z-[2] flex flex-col items-center bg-white-a700 py-[34px] sm:py-5">
         <div className="container-xs flex flex-col items-start gap-14 pl-[380px] pr-14 md:px-5 sm:gap-7">
-          <Heading size="headings" as="h2" className="text-[27.11px] font-semibold md:text-[25px] sm:text-[23px]">
+          <Heading size="headings" className="text-[27.11px] font-semibold md:text-[25px] sm:text-[23px]">
             Frequently Asked Questions
           </Heading>
           <Accordion preExpanded={[0]} className="flex w-[64%] flex-col gap-14">
@@ -37,7 +37,7 @@ export default function FAQSection() {
                         {(props) => (
                           <>
                             <div className="flex w-[94%] flex-wrap items-start justify-between gap-5 md:w-full">
-                              <Heading size="headingxs" as="h3" className="self-center text-[15.81px] font-semibold">
+                              <Heading size="headingxs" className="self-center text-[15.81px] font-semibold">
                                 {d.que}
                               </Heading>
                               {props?.expanded ? (
@@ -67,7 +67,6 @@ export default function FAQSection() {
                     <div className="flex w-[94%] justify-center md:w-full">
                       <Text
                         size="textlg"
-                        as="p"
                         className="w-[90%] text-[13.18px] font-normal leading-[15px] !text-black-900_01"
                       >
                         Our return policy allows you to return items within 30
