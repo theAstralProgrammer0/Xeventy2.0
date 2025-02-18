@@ -10,7 +10,6 @@ export default function IntroductionSection() {
           <div className="flex self-end rounded-tl-lg rounded-tr-[12px] bg-green-a700_a5 p-3.5 shadow-lg">
             <Text
               size="text7xl"
-              as="p"
               className="text-[27.11px] font-normal tracking-[-1.08px] !text-gray-900 md:text-[25px] sm:text-[23px]"
             >
               What is Xeventy2.0 all about?
@@ -19,7 +18,6 @@ export default function IntroductionSection() {
           <div className="flex w-[72%] justify-center rounded-tl-lg rounded-tr-[12px] bg-blue_gray-100 p-3.5 shadow-lg md:w-full">
             <Text
               size="text7xl"
-              as="p"
               className="w-[90%] text-[27.11px] font-normal leading-[47px] tracking-[-1.08px] !text-gray-900 md:text-[25px] sm:text-[23px]"
             >
               <span className="text-gray-900">At&nbsp;</span>
