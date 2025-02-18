@@ -87,8 +87,7 @@ export default function VideoNewsSection() {
               <Text
                 size="textlg"
                 as="p"
-                className="text-[13.55px] font-normal !text-black-900_01"
-              >
+                className="text-[13.55px] font-normal !text-black-900_01">
                 By Raphael Akangbe, PhD
               </Text>
             </div>

@@ -99,8 +99,7 @@ export default function ContactUsSection() {
                     <Text
                       size="textmd"
                       as="p"
-                      className="ml-2 text-[12.71px] font-normal !text-gray-700"
-                    >
+                      className="ml-2 text-[12.71px] font-normal !text-gray-700">
                       You agree to our friendly
                     </Text>
                     <Link href="https://give-aid.vercel.app/" target="_blank" rel="noreferrer" className="ml-2">
