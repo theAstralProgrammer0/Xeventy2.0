@@ -18,7 +18,6 @@ export default function CareersSection() {
             </Button>
             <Text
               size="text12xl"
-              as="p"
               className="self-stretch text-center text-[49.62px] font-normal leading-[60px] !text-black-900_01 md:text-[45px] sm:text-[39px]"
             >
               Join us in creating a tech engaged healthcare system in Africa
