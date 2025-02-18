@@ -12,10 +12,10 @@ export type HeadingProps = Partial<{
   as: any;
   size: keyof typeof sizes;
 }> &
-  React.DetailedHTMLProps<React.HTMLAttributes<HT<LSpanElement>, HTMLSpanElement>;
+  React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
 const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
-  children.
+  children,
   className = "",
   size = "headinglg",
   as,

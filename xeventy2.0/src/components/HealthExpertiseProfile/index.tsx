@@ -22,7 +22,7 @@ export default function HealthExpertiseProfile({
         height={54}
         alt="ribbonIconImage"
         className="text-[48.79px] font-semibold !text-white-a700"
-      >
+      />
       <Heading
         as="h1"
         className="text-[48.79px] font-semibold !text-white-a700"

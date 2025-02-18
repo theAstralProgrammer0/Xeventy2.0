@@ -2,7 +2,7 @@
 
 import { Button, Img, Text, TextArea, Input, Heading } from "../../components";
 import Link from "next/link";
-improt React from "react";
+import React from "react";
 
 export default function ContactUsSection() {
   return (
@@ -41,6 +41,16 @@ export default function ContactUsSection() {
                         className="w-[84%] rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
                       />
                     </div>
+                    <div className="flex w-[46%] flex-col items-start gap-2.5 md:w-full">
+                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                        Last name
+                      </Text>
+                      <Input
+                        shape="round"
+                        name="lastName"
+                        className="self-stretch rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
+                      />
+                    </div>
                   </div>
                   <div className="flex flex-col items-start gap-3">
                     <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
@@ -57,70 +67,71 @@ export default function ContactUsSection() {
                       <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
                         Team size
                       </Text>
-                    <Input
-                      shape="round"
-                      name="teamsizeinput"
-                      className="w-[84%] rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
-                    />
+                      <Input
+                        shape="round"
+                        name="teamsizeinput"
+                        className="w-[84%] rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
+                      />
+                    </div>
+                    <div className="flex w-[46%] flex-col items-start gap-3 md:w-full">
+                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                        Location
+                      </Text>
+                      <Input
+                        shape="round"
+                        name="location"
+                        className="self-stretch rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
+                      />
+                    </div>
                   </div>
-                  <div className="flex w-[46%] flex-col items-start gap-3 md:w-full">
+                  <div className="flex flex-col items-start justify-center gap-2.5">
                     <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
-                      Location
+                      Message
                     </Text>
-                    <Input
+                    <TextArea
                       shape="round"
-                      name="location"
-                      className="self-stretch rounded-[10px] border-[0.85px] border-solid border-black-900_3f px-3"
+                      name="messageinput"
+                      className="self-stretch rounded-[10px] !border-[0.85px] !border-solid border-black-900_3f px-3"
                     />
                   </div>
-                </div>
-                <div className="flex flex-col items-start justify-center gap-2.5">
-                  <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
-                    Message
-                  </Text>
-                  <TextArea
-                    shape="round"
-                    name="messageinput"
-                    className="self-stretch rounded-[10px] !border-[0.85px] !border-solid border-black-900_3f px-3"
-                  />
-                </div>
-                <div className="flex">
-                  <div className="h-[18px] w-[18px] rounded-[3px] bg-blue_gray-100" />
-                  <Text
-                    size="textmd"
-                    as="p"
-                    className="ml-2 text-[12.71px] font-normal !text-gray-700">
-                  >
-                    You agree to our friendly
-                  </Text>
-                  <Link href="https://give-aid.vercel.app/" target="_blank" rel="noreferrer" className="ml-2">
-                    <Text size="textmd" as="p" className="text-[12.71px] font-normal !text-gray-700 underline">
-                      privacy policy
+                  <div className="flex">
+                    <div className="h-[18px] w-[18px] rounded-[3px] bg-blue_gray-100" />
+                    <Text
+                      size="textmd"
+                      as="p"
+                      className="ml-2 text-[12.71px] font-normal !text-gray-700">
+                    >
+                      You agree to our friendly
                     </Text>
-                  </Link>
+                    <Link href="https://give-aid.vercel.app/" target="_blank" rel="noreferrer" className="ml-2">
+                      <Text size="textmd" as="p" className="text-[12.71px] font-normal !text-gray-700 underline">
+                        privacy policy
+                      </Text>
+                    </Link>
+                  </div>
+                  <Button
+                    size="lg"
+                    shape="round"
+                    rightIcon={
+                      <Img
+                        src="img_send_airplance_icon.svg"
+                        width={30}
+                        height={30}
+                        alt="Send Airplane Icon"
+                        className="h-[30px] w-[30px] object-contain"
+                      />
+                    }
+                    className="gap-1 self-stretch rounded-[12px] px-[34px] sm:px-5"
+                  >
+                    Send message
+                  </Button>
                 </div>
-                <Button
-                  size="lg"
-                  shape="round"
-                  rightIcon={
-                    <Img
-                      src="img_send_airplance_icon.svg"
-                      width={30}
-                      height={30}
-                      alt="Send Airplane Icon"
-                      className="h-[30px] w-[30px] object-contain"
-                    />
-                  }
-                  className="gap-1 self-stretch rounded-[12px] px-[34px] sm:px-5"
-                >
-                  Send message
-                </Button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </>
-;
+    </>
+  );
+}
 

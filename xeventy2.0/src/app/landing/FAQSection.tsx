@@ -37,7 +37,7 @@ export default function FAQSection() {
                         {(props) => (
                           <>
                             <div className="flex w-[94%] flex-wrap items-start justify-between gap-5 md:w-full">
-                              <Heading size="headingxs" as="h3" classname="self-center text-[15.81px] font-semibold">
+                              <Heading size="headingxs" as="h3" className="self-center text-[15.81px] font-semibold">
                                 {d.que}
                               </Heading>
                               {props?.expanded ? (
@@ -68,7 +68,7 @@ export default function FAQSection() {
                       <Text
                         size="textlg"
                         as="p"
-                        classname="w-[90%] text-[13.18px] font-normal leading-[15px] !text-black-900_01"
+                        className="w-[90%] text-[13.18px] font-normal leading-[15px] !text-black-900_01"
                       >
                         Our return policy allows you to return items within 30
                         days of purchase for a full refund. Itemns must be in
@@ -78,7 +78,7 @@ export default function FAQSection() {
                     </div>
                   </AccordionItemPanel>
                 </div>
-              </AccordionItems>
+              </AccordionItem>
             ))}
           </Accordion>
         </div>

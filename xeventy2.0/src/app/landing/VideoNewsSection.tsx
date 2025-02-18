@@ -80,7 +80,8 @@ export default function VideoNewsSection() {
                   as="p"
                   className="!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 underline"
                 >
-                  VR Training for telehealth healthcare delivery service in Lagos, Nigeria
+                  VR Training for telehealth healthcare delivery service in
+                  Lagos, Nigeria
                 </Text>
               </Link>
               <Text
@@ -102,7 +103,7 @@ export default function VideoNewsSection() {
                 LATEST NEWS
               </Text>
               <div className="relative mt-[-14px] self-stretch rounded-md border-[0.94px] border-solid border-black-900_3f p-10 shadow-xl sm:p-5">
-                <dic className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8">
                   <Suspense fallback={<div>Loading feed...</div>}>
                     {newsList.map((d, index) => (
                       <NewsArticle {...d} key={"listprice" + index} />

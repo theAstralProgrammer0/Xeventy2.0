@@ -20,7 +20,7 @@ export default function ProjectTile({
         src={projectImage}
         width={370}
         height={342}
-        alt=`${projectTitle} Image`
+        alt="Image"
         className="h-[342px] w-full rounded-lg object-cover"
       />
       <Text

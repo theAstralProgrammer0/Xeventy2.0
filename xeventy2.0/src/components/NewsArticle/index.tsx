@@ -16,7 +16,7 @@ export default function NewsArticle({
   ...props
 }: Props) {
   return (
-    <div {..props} className={`${props.className} flex flex-col self-stretch gap-2 flex-1`}>
+    <div {...props} className={`${props.className} flex flex-col self-stretch gap-2 flex-1`}>
       <Link href="https://dribbble.com/" target="_blank" rel="noreferrer" className="w-full leading-[19px]">
         <Text
           size="text2xl"
