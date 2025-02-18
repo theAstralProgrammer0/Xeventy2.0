@@ -30,7 +30,7 @@ export default function ContactUsSection() {
                 <div className="flex flex-col gap-[34px]">
                   <div className="flex md:flex-col">
                     <div className="flex flex-1 flex-col items-start gap-3 md:self-stretch">
-                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                      <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                         First name
                       </Text>
                       <Input
@@ -40,7 +40,7 @@ export default function ContactUsSection() {
                       />
                     </div>
                     <div className="flex w-[46%] flex-col items-start gap-2.5 md:w-full">
-                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                      <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                         Last name
                       </Text>
                       <Input
@@ -51,7 +51,7 @@ export default function ContactUsSection() {
                     </div>
                   </div>
                   <div className="flex flex-col items-start gap-3">
-                    <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                    <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                       Email
                     </Text>
                     <Input
@@ -62,7 +62,7 @@ export default function ContactUsSection() {
                   </div>
                   <div className="flex md:flex-col">
                     <div className="flex flex-1 flex-col items-start gap-3 md:self-stretch">
-                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                      <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                         Team size
                       </Text>
                       <Input
@@ -72,7 +72,7 @@ export default function ContactUsSection() {
                       />
                     </div>
                     <div className="flex w-[46%] flex-col items-start gap-3 md:w-full">
-                      <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                      <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                         Location
                       </Text>
                       <Input
@@ -83,7 +83,7 @@ export default function ContactUsSection() {
                     </div>
                   </div>
                   <div className="flex flex-col items-start justify-center gap-2.5">
-                    <Text size="textlg" as="p" className="text-[13.55px] font-normal !text-black-900_01">
+                    <Text size="textlg"  className="text-[13.55px] font-normal !text-black-900_01">
                       Message
                     </Text>
                     <TextArea
@@ -96,12 +96,12 @@ export default function ContactUsSection() {
                     <div className="h-[18px] w-[18px] rounded-[3px] bg-blue_gray-100" />
                     <Text
                       size="textmd"
-                      as="p"
+                      
                       className="ml-2 text-[12.71px] font-normal !text-gray-700">
                       You agree to our friendly
                     </Text>
                     <Link href="https://give-aid.vercel.app/" target="_blank" rel="noreferrer" className="ml-2">
-                      <Text size="textmd" as="p" className="text-[12.71px] font-normal !text-gray-700 underline">
+                      <Text size="textmd"  className="text-[12.71px] font-normal !text-gray-700 underline">
                         privacy policy
                       </Text>
                     </Link>
