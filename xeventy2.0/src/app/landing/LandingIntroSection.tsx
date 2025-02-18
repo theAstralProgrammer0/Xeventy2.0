@@ -7,10 +7,9 @@ export default function LandingIntroSection() {
     <>
       {/* landing intro section */}
       <div className="mb-[350px] flex flex-col items-center">
-        <div classname="container-xs flex flex-col md:px-5">
+        <div className="container-xs flex flex-col md:px-5">
           <Text
             size="text11xl"
-            as="p"
             className="w-[46%] !font-merriweather text-[47.59px] font-normal leading-[59px] tracking-[1.43px] !text-black-900 md:w-full md:text-[43px] sm:text-[37px]"
           >
             <p className="text-black-900">Redefining&nbsp;
@@ -25,7 +24,6 @@ export default function LandingIntroSection() {
           <div className="mt-4 flex py-3.5">
             <Text
               size="text5xl"
-              as="p"
               className="w-[42%] text-[19.73px] font-normal leading-[27px] !text-black-900_93"
             >
               We integrate cutting-edge technology, data-driven insights, and
@@ -35,7 +33,6 @@ export default function LandingIntroSection() {
           </div>
           <div className="mt-7 flex items-center gap-[38px]">
             <Button
-              shape="round"
               rightIcon={
                 <Img
                   src="img_link_icon.png"
@@ -51,7 +48,6 @@ export default function LandingIntroSection() {
             </Button>
             <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
               <Text
-                as="p"
                 className="text-[18.15px] font-normal !text-gray-700 hover:underline"
               >
                 Hiring consultants?
@@ -61,7 +57,6 @@ export default function LandingIntroSection() {
           <div className="mt-[38px] flex items-center gap-6 sm:flex-col">
             <Text
               size="textxl"
-              as="p"
               className="mb-1.5 self-end text-[14.32px] font-normal !text-gray-700 sm:mb-0"
             >
               Powered by the Xeventy2.0 health team
