@@ -22,5 +22,5 @@ const CloseSVG: React.FC<CloseSVGProps> = ({ fillColor = "#000000", className = 
   );
 };
 
-export ( CloseSVG };
+export { CloseSVG };
 

@@ -18,14 +18,14 @@ export default function ContactUsSection() {
                   as="h1"
                   className="text-[40.66px] font-semibold md:text-[38px] sm:text-[36px]"
                 >
-                  We'd love to help
+                  We&apos;d love to help
                 </Heading>
                 <Text
                   size="text7xl"
                   as="p"
                   className="text-[27.11px] font-normal !text-black-900_01 md:text-[25px] sm:text-[23px]"
                 >
-                  Reach out and we'll get in touch within 24 hours.
+                  Reach out and we&apos;ll get in touch within 24 hours.
                 </Text>
               </div>
               <div>
