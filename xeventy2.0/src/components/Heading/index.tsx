@@ -9,7 +9,6 @@ const sizes = {
 
 export type HeadingProps = Partial<{
   className: string;
-  as: any;
   size: keyof typeof sizes;
 }> &
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;

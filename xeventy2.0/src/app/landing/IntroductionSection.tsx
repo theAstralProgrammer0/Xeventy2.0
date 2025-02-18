@@ -29,7 +29,7 @@ export default function IntroductionSection() {
               <span className="text-gray-900">
                 , we empower you to advance healthcare.  Whether you need
                 robust data protection, cutting-edge analytics, or expert
-                training, we're here to partner with you.&nbsp;
+                training, we&apos;re here to partner with you.&nbsp;
               </span>
               <a href="#" className="inline text-blue-700 underline">
                 Discover

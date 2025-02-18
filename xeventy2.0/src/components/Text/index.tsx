@@ -22,7 +22,6 @@ const sizes = {
 
 export type TextProps = Partial<{
   className: string,
-  as: any;
   size: keyof typeof sizes;
 }> & 
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;

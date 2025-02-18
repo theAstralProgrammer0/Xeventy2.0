@@ -27,7 +27,7 @@ type InputProps = Omit<React.ComponentPropsWithoutRef<"input">, "prefix" | "size
     color: string;
   }>;
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>( // Corrected typo here: InpurtProps to InputProps
+const Input = React.forwardRef<HTMLInputElement, InputProps>( 
   (
     {
       className = "",
@@ -50,9 +50,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>( // Corrected typo 
       <label
         className={`${className} flex items-center justify-center cursor-text bg-white-a700 ${shape && shapes[shape]} ${variant && (variants[variant]?.[color as keyof (typeof variants)[typeof variant]] || variants[variant])} ${size && sizes[size]}`}
       >
-        {label && <span>{label}</span>} {/* Added a span for better label handling */}
+        {label && <span>{label}</span>}
         {prefix && prefix}
-        <input ref={ref} type={type} name={name} placeholder={placeholder} onChange={onChange} {...restProps} /> {/* Spread props correctly: ...restProps */}
+        <input ref={ref} type={type} name={name} placeholder={placeholder} onChange={onChange} {...restProps} /> 
         {suffix && suffix}
       </label>
     );
