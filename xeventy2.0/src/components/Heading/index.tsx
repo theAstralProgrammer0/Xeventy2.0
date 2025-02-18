@@ -19,7 +19,7 @@ const Heading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
   size = "headinglg",
   ...restProps
 }) => {
-  const Component = "h6";
+  const Component = as || "h6";
 
   return (
     <Component
