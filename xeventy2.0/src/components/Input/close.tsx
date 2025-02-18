@@ -10,7 +10,7 @@ const CloseSVG: React.FC<CloseSVGProps> = ({ fillColor = "#000000", className = 
   return (
     <svg
       fill={fillColor}
-      xmins="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...props}
       height={props?.width || 20}
