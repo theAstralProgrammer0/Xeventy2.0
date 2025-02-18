@@ -38,7 +38,7 @@ const Img: React.FC<React.PropsWithChildren<ImgProps>> = ({
       height={height}
       {...restProps}
       onError={() => {
-        setImgSrc(isStatic ? `${BASE_URL}defaultNoData.png` : "defaultNoData.png");
+        setImgSrc(isStatic ? `${BASE_URL}defaultNoData.png` : "defaultNoData.png);
       }}
     />
   );

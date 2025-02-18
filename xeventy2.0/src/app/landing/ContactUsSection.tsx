@@ -114,7 +114,7 @@ export default function ContactUsSection() {
                     shape="round"
                     rightIcon={
                       <Img
-                        src="img_send_airplance_icon.svg"
+                        src="img_send_airplane_icon.svg"
                         width={30}
                         height={30}
                         alt="Send Airplane Icon"

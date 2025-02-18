@@ -27,7 +27,7 @@ export default function HealthExpertiseProfile({
         as="h1"
         className="text-[48.79px] font-semibold !text-white-a700"
       >
-        {experienceNmber}
+        {experienceNumber}
       </Heading>
       <Text
         size="text2xl"

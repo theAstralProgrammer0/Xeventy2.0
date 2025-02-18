@@ -62,7 +62,7 @@ export default function ProjectsAndSocialsSection() {
                 </Text>
                 <div className="mx-4 flex justify-between gap-5 self-stretch md:mx-0">
                   <Img
-                    src="img_facebook_app_sysmbol.png"
+                    src="img_facebook_app_symbol.png"
                     width={36}
                     height={36}
                     alt="Facebookapp"

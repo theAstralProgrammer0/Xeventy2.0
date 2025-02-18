@@ -1,4 +1,4 @@
-import { AvatarStack, Img, Text, Button } from "../../components";
+import { Img, Text, Button } from "../../components";
 import Link from "next/link";
 import React from "react";
 
@@ -66,7 +66,13 @@ export default function LandingIntroSection() {
             >
               Powered by the Xeventy2.0 health team
             </Text>
-            <AvatarStack />
+            <Img
+              src="img_mini_avatars.png"
+              width={138}
+              height={38}
+              alt="Miniavatars"
+              className="h-[38px] w-[10%] object-contain sm:w-full"
+            />
           </div>
         </div>
       </div>
