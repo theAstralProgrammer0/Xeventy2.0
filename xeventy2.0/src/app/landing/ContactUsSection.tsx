@@ -87,7 +87,6 @@ export default function ContactUsSection() {
                       Message
                     </Text>
                     <TextArea
-                      shape="round"
                       name="messageinput"
                       className="self-stretch rounded-[10px] !border-[0.85px] !border-solid border-black-900_3f px-3"
                     />
