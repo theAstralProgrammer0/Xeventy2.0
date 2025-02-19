@@ -556,6 +556,10 @@ select {
   width: 100%;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .absolute {
   position: absolute;
 }
@@ -774,6 +778,14 @@ select {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-\[1082px\] {
   height: 1082px;
 }
@@ -864,6 +876,34 @@ select {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[16px\] {
+  height: 16px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[10\%\] {
+  height: 10%;
+}
+
+.h-\[12\%\] {
+  height: 12%;
+}
+
+.h-\[6\%\] {
+  height: 6%;
+}
+
+.h-\[3\%\] {
+  height: 3%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-\[136px\] {
@@ -1238,10 +1278,6 @@ select {
   border-width: .94px;
 }
 
-.border-\[1\.13px\] {
-  border-width: 1.13px;
-}
-
 .\!border-solid {
   border-style: solid !important;
 }
@@ -1256,10 +1292,6 @@ select {
 
 .border-black-900_3f {
   border-color: var(--black_900_3f);
-}
-
-.border-green-a700 {
-  border-color: var(--green_a700);
 }
 
 .border-green-a700_a5 {
@@ -1322,6 +1354,10 @@ select {
   --tw-bg-opacity: .8;
 }
 
+.bg-opacity-90 {
+  --tw-bg-opacity: .9;
+}
+
 .bg-gradient-to-l {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
 }
@@ -1344,12 +1380,20 @@ select {
   padding: 2.5rem;
 }
 
+.p-2 {
+  padding: .5rem;
+}
+
 .p-3 {
   padding: .75rem;
 }
 
 .p-3\.5 {
   padding: .875rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-\[18px\] {
@@ -1399,11 +1443,6 @@ select {
 .px-\[18px\] {
   padding-left: 18px;
   padding-right: 18px;
-}
-
-.px-\[32\.87px\] {
-  padding-left: 32.87px;
-  padding-right: 32.87px;
 }
 
 .px-\[33\.06px\] {
@@ -1474,6 +1513,41 @@ select {
 .py-\[54px\] {
   padding-top: 54px;
   padding-bottom: 54px;
+}
+
+.py-2 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-\[16px\] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .pl-\[380px\] {
@@ -1919,6 +1993,11 @@ select {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid #0000;
+  outline-offset: 2px;
 }
 
 @media (width <= 1050px) {
