@@ -22,7 +22,7 @@ type TextAreaProps = Omit<
     name: string;
     placeholder: string;
     onChange?: (value: string) => void;
-    shape: keyof typeof variants | null;
+    shape: keyof typeof shapes | null;
     size: keyof typeof sizes;
     variant: keyof typeof variants;
   }>;
