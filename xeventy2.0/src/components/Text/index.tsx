@@ -21,6 +21,7 @@ const sizes = {
 };
 
 export type TextProps = Partial<{
+  as?: React.ElementType;
   className: string,
   size: keyof typeof sizes;
 }> & 
