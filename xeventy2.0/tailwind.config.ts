@@ -42,7 +42,7 @@ module.exports = {
         "sm": "3.76px 3.76px 3px 0 #0000003f",
         "md": "0 3.76px 3px 0 #0000003f",
         "lg": "1.88px 1.88px 1px 0 #0000003f",
-        "sm": "1.88px 3.76px 3px 0 #0000003f"
+        "xl": "1.88px 3.76px 3px 0 #0000003f"
       },
       fontFamily: {
         "inter": "Inter",
