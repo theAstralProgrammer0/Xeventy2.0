@@ -15,10 +15,10 @@ import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <div className="w-full bg-white-a700">
+    <div className="w-full bg-white-a700 relative">
       <Header />
       
-      <div className="relative h-[1082px] flex flex-col gap-[74px] px-3 py-3 md:h-auto md:gap-[55px] sm:gap-[37px]">
+      <div className="relative desktop:h-[70vh] md:h-[60vh] sm:h-[50vh] flex flex-col gap-[74px] px-3 py-3 md:h-auto md:gap-[55px] sm:gap-[37px]">
         <Image
           src="/images/img_header_hero.png" 
           alt="Background"

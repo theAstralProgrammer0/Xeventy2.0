@@ -556,6 +556,30 @@ select {
   width: 100%;
 }
 
+@media (width >= 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media (width >= 393px) {
+  .container {
+    max-width: 393px;
+  }
+}
+
+@media (width >= 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (width >= 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
 @media (width >= 1300px) {
   .container {
     max-width: 1300px;
@@ -784,14 +808,6 @@ select {
 
 .mt-\[86px\] {
   margin-top: 86px;
-}
-
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {

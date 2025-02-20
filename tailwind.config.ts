@@ -8,6 +8,10 @@ module.exports = {
       sm: { max: "550px" },
       laptop: "1300px",
       desktop: "1920px",
+      tablet: "768px",
+      mobile: "375px",
+      iPhone14Pro: "393px",
+      iPadPro: "1024px",
     },
     extend: {
       colors: {
