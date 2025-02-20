@@ -1,5 +1,5 @@
 import React from "react";
-import { Img } from "./";
+import { Img } from "../";
 
 interface AvatarStackProps {
   avatars?: string[];
