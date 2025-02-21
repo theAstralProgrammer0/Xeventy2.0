@@ -54,7 +54,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$index$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Img$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/Img/index.tsx [app-ssr] (ecmascript)");
 ;
 ;
-const AvatarStack = ({ avatars, size = 40, overlap = -8 })=>{
+const AvatarStack = ({ avatars, size = 48, overlap = -8 })=>{
     const defaultAvatars = [
         "img_dr_raphael.jpg",
         "img_temitayo.jpg",
@@ -937,7 +937,7 @@ function Header({ className }) {
         className: `
         ${className || ""}
         w-full sticky top-0 z-50 transition-all duration-500 ease-in-out
-        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md py-1" : "bg-transparent py-4"}
+        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md" : "bg-transparent py-4"}
       `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {

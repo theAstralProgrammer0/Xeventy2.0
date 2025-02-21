@@ -18,15 +18,15 @@ export default function LandingPage() {
     <div className="w-full bg-white-a700 relative">
       <Header />
       
-      <div className="relative desktop:h-[70vh] md:h-[60vh] sm:h-[50vh] flex flex-col gap-[74px] px-3 py-3 md:h-auto md:gap-[55px] sm:gap-[37px]">
+      <div className="relative md:h-[75vh] sm:h-[70vh] flex flex-col gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]">
         <Image
           src="/images/img_header_hero.png" 
           alt="Background"
-          className="absolute inset-y-0 right-0 w-auto h-full object-cover z-0 bg-gradient-to-l from-transparent to-black/50"
+          className="absolute inset-y-0 right-0 w-auto h-full object-cover z-0 iPadPro:opacity-30"
           width={1920} 
           height={1080}
         />
-        <div className="relative z-10 flex flex-col gap-[74px]">
+        <div className="relative z-10 flex flex-col gap-[74px] px-4">
           <LandingIntroSection />
         </div>
       </div>

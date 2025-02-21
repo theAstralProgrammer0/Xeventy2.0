@@ -5,13 +5,14 @@ module.exports = {
   theme: {
     screens: { 
       md: { max: "1050px" },
-      sm: { max: "550px" },
+      sm: { max: "650px" },
+      xs: { max: "550px" },
       laptop: "1300px",
       desktop: "1920px",
-      tablet: "768px",
+      tablet: { max: "768px" },
       mobile: "375px",
       iPhone14Pro: "393px",
-      iPadPro: "1024px",
+      iPadPro: { max: "1100px" },
     },
     extend: {
       colors: {

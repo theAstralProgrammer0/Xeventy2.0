@@ -6,11 +6,11 @@ export default function LandingIntroSection() {
   return (
     <>
       {/* landing intro section */}
-      <div className="mb-[350px] flex flex-col items-center">
-        <div className="container-xs flex flex-col md:px-5">
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="container-xs flex flex-col md:px-3">
           <Text
             size="text11xl"
-            className="w-[46%] !font-merriweather text-[47.59px] font-normal leading-[59px] tracking-[1.43px] !text-black-900 md:w-full md:text-[43px] sm:text-[37px]"
+            className="max-w-3xl !font-merriweather text-[47.59px] font-normal leading-tight tracking-wide !text-black-900 md:text-[38px] xs:text-[30px]"
           >
             <p className="text-black-900">Redefining&nbsp;
               <span className="text-green-a700">healthcare</span>
@@ -24,7 +24,7 @@ export default function LandingIntroSection() {
           <div className="mt-4 flex py-3.5">
             <Text
               size="text5xl"
-              className="w-[42%] text-[19.73px] font-normal leading-[27px] !text-black-900_93"
+              className="w-[50%] md:w-full text-[19.73px] sm:text-[15px] font-normal leading-relaxed !text-black-900_93"
             >
               We integrate cutting-edge technology, data-driven insights, and
               agile healthcare delivery to revolutionize patient care and
@@ -39,25 +39,25 @@ export default function LandingIntroSection() {
                   width={28}
                   height={28}
                   alt="Link Icon"
-                  className="h-[28px] w-[28px] object-contain"
+                  className="h-[28px] w-[28px] sm:h-[20px] sm:w-[20px] object-contain"
                 />
               }
-              className="min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5"
+              className="sm:text-[15px] min-w-[234px] sm:min-w-[128px] sm:h-[48px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5"
             >
               Learn more
             </Button>
             <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
               <Text
-                className="text-[18.15px] font-normal !text-gray-700 hover:underline"
+                className=" w-contain text-[18.15px] whitespace-nowrap sm:text-[15px] font-normal !text-gray-700 hover:underline"
               >
                 Hiring consultants?
               </Text>
             </Link>
           </div>
-          <div className="mt-[38px] flex items-center gap-6 sm:flex-col">
+          <div className="mt-[38px] flex items-center gap-6">
             <Text
               size="textxl"
-              className="mb-1.5 self-end text-[14.32px] font-normal !text-gray-700 sm:mb-0"
+              className="text-[15px] whitespace-nowrap font-normal !text-gray-700" 
             >
               Powered by the Xeventy2.0 health team
             </Text>

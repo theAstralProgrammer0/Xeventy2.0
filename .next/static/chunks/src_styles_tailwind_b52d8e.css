@@ -568,18 +568,6 @@ select {
   }
 }
 
-@media (width >= 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (width >= 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
 @media (width >= 1300px) {
   .container {
     max-width: 1300px;
@@ -710,16 +698,8 @@ select {
   margin-bottom: .25rem;
 }
 
-.mb-1\.5 {
-  margin-bottom: .375rem;
-}
-
 .mb-3 {
   margin-bottom: .75rem;
-}
-
-.mb-\[350px\] {
-  margin-bottom: 350px;
 }
 
 .ml-12 {
@@ -828,10 +808,6 @@ select {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-\[1082px\] {
-  height: 1082px;
 }
 
 .h-\[136px\] {
@@ -962,10 +938,6 @@ select {
   width: 36%;
 }
 
-.w-\[42\%\] {
-  width: 42%;
-}
-
 .w-\[46\%\] {
   width: 46%;
 }
@@ -976,6 +948,10 @@ select {
 
 .w-\[4px\] {
   width: 4px;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .w-\[52\%\] {
@@ -1044,6 +1020,10 @@ select {
 
 .min-w-\[72px\] {
   min-width: 72px;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-1 {
@@ -1395,16 +1375,6 @@ select {
   --tw-bg-opacity: .9;
 }
 
-.bg-gradient-to-l {
-  background-image: linear-gradient(to left, var(--tw-gradient-stops));
-}
-
-.from-transparent {
-  --tw-gradient-from: transparent var(--tw-gradient-from-position);
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .object-contain {
   object-fit: contain;
 }
@@ -1495,11 +1465,6 @@ select {
 .px-\[34px\] {
   padding-left: 34px;
   padding-right: 34px;
-}
-
-.py-1 {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
 }
 
 .py-1\.5 {
@@ -1645,10 +1610,6 @@ select {
 
 .text-\[13px\] {
   font-size: 13px;
-}
-
-.text-\[14\.32px\] {
-  font-size: 14.32px;
 }
 
 .text-\[14\.68px\] {
@@ -1843,10 +1804,6 @@ select {
   line-height: 23px;
 }
 
-.leading-\[27px\] {
-  line-height: 27px;
-}
-
 .leading-\[45px\] {
   line-height: 45px;
 }
@@ -1855,12 +1812,16 @@ select {
   line-height: 47px;
 }
 
-.leading-\[59px\] {
-  line-height: 59px;
-}
-
 .leading-\[60px\] {
   line-height: 60px;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .tracking-\[-0\.76px\] {
@@ -1887,12 +1848,12 @@ select {
   letter-spacing: 1.09px;
 }
 
-.tracking-\[1\.43px\] {
-  letter-spacing: 1.43px;
-}
-
 .tracking-\[2\.75px\] {
   letter-spacing: 2.75px;
+}
+
+.tracking-wide {
+  letter-spacing: .025em;
 }
 
 .\!text-black-900 {
@@ -2063,8 +2024,8 @@ select {
     margin-right: 0;
   }
 
-  .md\:h-auto {
-    height: auto;
+  .md\:h-\[75vh\] {
+    height: 75vh;
   }
 
   .md\:w-full {
@@ -2089,6 +2050,11 @@ select {
 
   .md\:self-stretch {
     align-self: stretch;
+  }
+
+  .md\:px-3 {
+    padding-left: .75rem;
+    padding-right: .75rem;
   }
 
   .md\:px-5 {
@@ -2147,13 +2113,25 @@ select {
   }
 }
 
-@media (width <= 550px) {
-  .sm\:mb-0 {
-    margin-bottom: 0;
+@media (width <= 650px) {
+  .sm\:h-\[20px\] {
+    height: 20px;
   }
 
-  .sm\:flex-col {
-    flex-direction: column;
+  .sm\:h-\[48px\] {
+    height: 48px;
+  }
+
+  .sm\:h-\[70vh\] {
+    height: 70vh;
+  }
+
+  .sm\:w-\[20px\] {
+    width: 20px;
+  }
+
+  .sm\:min-w-\[128px\] {
+    min-width: 128px;
   }
 
   .sm\:gap-7 {
@@ -2193,6 +2171,10 @@ select {
   .sm\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .sm\:text-\[15px\] {
+    font-size: 15px;
   }
 
   .sm\:text-\[21px\] {
@@ -2236,6 +2218,12 @@ select {
   }
 }
 
+@media (width <= 550px) {
+  .xs\:text-\[30px\] {
+    font-size: 30px;
+  }
+}
+
 @media (width >= 1300px) {
   .laptop\:block {
     display: block;
@@ -2247,6 +2235,12 @@ select {
 
   .laptop\:hidden {
     display: none;
+  }
+}
+
+@media (width <= 1100px) {
+  .iPadPro\:opacity-30 {
+    opacity: .3;
   }
 }
 

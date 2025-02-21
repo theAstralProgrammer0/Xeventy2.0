@@ -9,7 +9,7 @@ interface AvatarStackProps {
 
 const AvatarStack: React.FC<AvatarStackProps> = ({
   avatars,
-  size = 40, 
+  size = 48, 
   overlap = -8, 
 }) => {
   const defaultAvatars = [

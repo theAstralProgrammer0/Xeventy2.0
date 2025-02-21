@@ -12,7 +12,7 @@ export default function QuickInfoSection() {
     <>
       {/* quick info section */}
       <div className="mt-4 flex justify-center bg-black-900_01 py-[38px] shadow-sm sm:py-5">
-        <div className="container-xs flex justify-center px-14 md:px-5">
+        <div className="flex justify-center px-14 md:px-5">
           <div className="flex w-full gap-[72px] md:flex-col">
             <Suspense fallback={<div>Loading feed...</div>}>
               {healthExpertiseList.map((d, index) => (
