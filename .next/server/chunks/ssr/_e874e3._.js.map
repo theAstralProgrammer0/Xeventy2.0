@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/ty/Xeventy2.0/src/app/layout.tsx"],"sourcesContent":["import React, { ReactNode } from \"react\";\nimport \"@/styles/tailwind.css\";\nimport \"../styles/index.css\";\nimport \"../styles/font.css\";\n\nfunction RootLayout({ children }: { children: ReactNode }) {\n  return (\n    <html lang=\"en\">\n      <head>\n        <meta charSet=\"utf-8\" />\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n        <meta name=\"theme-color\" content=\"#000000\" />\n        <link rel=\"manifest\" href=\"/manifest.json\" />\n        <link rel=\"icon\" href=\"/favicon.ico\" />\n      </head>\n      <body>{children}</body>\n    </html>\n  );\n}\nexport default RootLayout;\n"],"names":[],"mappings":";;;;;;;;AAKA,SAAS,WAAW,EAAE,QAAQ,EAA2B;IACvD,qBACE,8OAAC;QAAK,MAAK;;0BACT,8OAAC;;kCACC,8OAAC;wBAAK,SAAQ;;;;;;kCACd,8OAAC;wBAAK,MAAK;wBAAW,SAAQ;;;;;;kCAC9B,8OAAC;wBAAK,MAAK;wBAAc,SAAQ;;;;;;kCACjC,8OAAC;wBAAK,KAAI;wBAAW,MAAK;;;;;;kCAC1B,8OAAC;wBAAK,KAAI;wBAAO,MAAK;;;;;;;;;;;;0BAExB,8OAAC;0BAAM;;;;;;;;;;;;AAGb;uCACe"}},
-    {"offset": {"line": 81, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 92, "column": 0}, "map": {"version":3,"sources":["file:///home/ty/Xeventy2.0/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
-    {"offset": {"line": 94, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

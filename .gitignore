@@ -7,7 +7,7 @@ backup
 *.bak
 filefolder
 
-.next/*
+.next
 out/
 
 build
