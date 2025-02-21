@@ -7,42 +7,42 @@ const newsList = [
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },  
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
   {
     articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
     articleTimeline: "Just In",
-    articleAuthor: "By Raphael Akangbe, PhD",
+    articleAuthor: "Raphael Akangbe, PhD",
   },
 ]
 
@@ -78,7 +78,7 @@ export default function VideoNewsSection() {
                 <Text
                   size="text9xl"
                   
-                  className="!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 underline"
+                  className="!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 hover:underline"
                 >
                   VR Training for telehealth healthcare delivery service in
                   Lagos, Nigeria
@@ -88,7 +88,7 @@ export default function VideoNewsSection() {
                 size="textlg"
                 
                 className="text-[13.55px] font-normal !text-black-900_01">
-                By Raphael Akangbe, PhD
+                By <span id="author">Raphael Akangbe, PhD</span>
               </Text>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function VideoNewsSection() {
               <Text
                 size="textlg"
                 
-                className="relative z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[13.55px] font-normal !text-black-900_01"
+                className="relative w-[90%] py-1 z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[16px] font-bold !text-black-900_01"
               >
                 LATEST NEWS
               </Text>
@@ -105,7 +105,7 @@ export default function VideoNewsSection() {
                 <div className="flex flex-col gap-8">
                   <Suspense fallback={<div>Loading feed...</div>}>
                     {newsList.map((d, index) => (
-                      <NewsArticle {...d} key={"listprice" + index} />
+                      <NewsArticle className="pb-1 border-b border-black" {...d} key={"listprice" + index} />
                     ))}
                   </Suspense>
                 </div>
@@ -115,7 +115,7 @@ export default function VideoNewsSection() {
               <Text
                 size="textlg"
                 
-                className="text-[13.55px] font-normal !text-black-900_01 underline"
+                className="text-[13.55px] font-normal !text-black-900_01 hover:underline"
               >
                 Get More News
               </Text>

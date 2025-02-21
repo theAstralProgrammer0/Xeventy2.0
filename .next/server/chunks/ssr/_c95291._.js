@@ -1718,42 +1718,42 @@ const newsList = [
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     },
     {
         articleTitle: "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work?",
         articleTimeline: "Just In",
-        articleAuthor: "By Raphael Akangbe, PhD"
+        articleAuthor: "Raphael Akangbe, PhD"
     }
 ];
 function VideoNewsSection() {
@@ -1796,7 +1796,7 @@ function VideoNewsSection() {
                                         className: "w-full leading-[45px] md:text-[31px] sm:text-[29px]",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                                             size: "text9xl",
-                                            className: "!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 underline",
+                                            className: "!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 hover:underline",
                                             children: "VR Training for telehealth healthcare delivery service in Lagos, Nigeria"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/landing/VideoNewsSection.tsx",
@@ -1811,8 +1811,18 @@ function VideoNewsSection() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                                         size: "textlg",
                                         className: "text-[13.55px] font-normal !text-black-900_01",
-                                        children: "By Raphael Akangbe, PhD"
-                                    }, void 0, false, {
+                                        children: [
+                                            "By ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                id: "author",
+                                                children: "Raphael Akangbe, PhD"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/landing/VideoNewsSection.tsx",
+                                                lineNumber: 91,
+                                                columnNumber: 20
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/src/app/landing/VideoNewsSection.tsx",
                                         lineNumber: 87,
                                         columnNumber: 15
@@ -1837,7 +1847,7 @@ function VideoNewsSection() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                                         size: "textlg",
-                                        className: "relative z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[13.55px] font-normal !text-black-900_01",
+                                        className: "relative w-[90%] py-1 z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[16px] font-bold !text-black-900_01",
                                         children: "LATEST NEWS"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/landing/VideoNewsSection.tsx",
@@ -1857,6 +1867,7 @@ function VideoNewsSection() {
                                                     columnNumber: 39
                                                 }, void 0),
                                                 children: newsList.map((d, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createElement"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NewsArticle$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                                        className: "pb-1 border-b border-black",
                                                         ...d,
                                                         key: "listprice" + index,
                                                         __source: {
@@ -1893,7 +1904,7 @@ function VideoNewsSection() {
                                 rel: "noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                                     size: "textlg",
-                                    className: "text-[13.55px] font-normal !text-black-900_01 underline",
+                                    className: "text-[13.55px] font-normal !text-black-900_01 hover:underline",
                                     children: "Get More News"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/landing/VideoNewsSection.tsx",
