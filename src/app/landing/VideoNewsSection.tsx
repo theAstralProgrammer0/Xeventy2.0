@@ -97,12 +97,12 @@ export default function VideoNewsSection() {
               <Text
                 size="textlg"
                 
-                className="relative w-[90%] py-1 z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[16px] font-bold !text-black-900_01"
+                className="relative w-[90%] py-1 z-[1] flex items-center justify-center rounded-tl-md rounded-tr-md bg-green-a700 text-[16px] font-extrabold !text-black-900_01"
               >
                 LATEST NEWS
               </Text>
               <div className="relative mt-[-14px] self-stretch rounded-md border-[0.94px] border-solid border-black-900_3f p-10 shadow-xl sm:p-5">
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-6">
                   <Suspense fallback={<div>Loading feed...</div>}>
                     {newsList.map((d, index) => (
                       <NewsArticle className="pb-1 border-b border-black" {...d} key={"listprice" + index} />
