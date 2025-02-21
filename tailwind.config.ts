@@ -10,7 +10,7 @@ module.exports = {
       laptop: "1300px",
       desktop: "1920px",
       tablet: { max: "768px" },
-      mobile: "375px",
+      mobile: { max: "430px" },
       iPhone14Pro: "393px",
       iPadPro: { max: "1100px" },
     },

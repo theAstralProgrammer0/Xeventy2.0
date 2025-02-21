@@ -556,12 +556,6 @@ select {
   width: 100%;
 }
 
-@media (width >= 375px) {
-  .container {
-    max-width: 375px;
-  }
-}
-
 @media (width >= 393px) {
   .container {
     max-width: 393px;
@@ -2134,8 +2128,16 @@ select {
     min-width: 128px;
   }
 
+  .sm\:gap-2 {
+    gap: .5rem;
+  }
+
   .sm\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .sm\:gap-\[28px\] {
+    gap: 28px;
   }
 
   .sm\:gap-\[29px\] {
@@ -2171,6 +2173,10 @@ select {
   .sm\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .sm\:text-\[12px\] {
+    font-size: 12px;
   }
 
   .sm\:text-\[15px\] {
@@ -2219,6 +2225,26 @@ select {
 }
 
 @media (width <= 550px) {
+  .xs\:h-\[12px\] {
+    height: 12px;
+  }
+
+  .xs\:h-\[38px\] {
+    height: 38px;
+  }
+
+  .xs\:w-\[12px\] {
+    width: 12px;
+  }
+
+  .xs\:min-w-\[100px\] {
+    min-width: 100px;
+  }
+
+  .xs\:text-\[12px\] {
+    font-size: 12px;
+  }
+
   .xs\:text-\[30px\] {
     font-size: 30px;
   }
@@ -2235,6 +2261,20 @@ select {
 
   .laptop\:hidden {
     display: none;
+  }
+}
+
+@media (width <= 430px) {
+  .mobile\:text-\[10px\] {
+    font-size: 10px;
+  }
+
+  .mobile\:text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .mobile\:text-\[20px\] {
+    font-size: 20px;
   }
 }
 

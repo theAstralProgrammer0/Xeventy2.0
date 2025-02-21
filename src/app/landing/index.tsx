@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <div className="w-full bg-white-a700 relative">
+    <div className="container-xs w-full bg-white-a700 relative">
       <Header />
       
       <div className="relative md:h-[75vh] sm:h-[70vh] flex flex-col gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]">

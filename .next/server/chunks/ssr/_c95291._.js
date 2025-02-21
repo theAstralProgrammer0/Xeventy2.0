@@ -731,7 +731,7 @@ function LandingIntroSection() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                         size: "text11xl",
-                        className: "max-w-3xl !font-merriweather text-[47.59px] font-normal leading-tight tracking-wide !text-black-900 md:text-[38px] xs:text-[30px]",
+                        className: "max-w-3xl !font-merriweather text-[47.59px] font-normal leading-tight tracking-wide !text-black-900 md:text-[38px] xs:text-[30px] mobile:text-[20px]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-black-900",
@@ -795,7 +795,7 @@ function LandingIntroSection() {
                         className: "mt-4 flex py-3.5",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                             size: "text5xl",
-                            className: "w-[50%] md:w-full text-[19.73px] sm:text-[15px] font-normal leading-relaxed !text-black-900_93",
+                            className: "w-[50%] md:w-full text-[19.73px] sm:text-[15px] mobile:text-[12px] font-normal leading-relaxed !text-black-900_93",
                             children: "We integrate cutting-edge technology, data-driven insights, and agile healthcare delivery to revolutionize patient care and empower providers globally."
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/LandingIntroSection.tsx",
@@ -808,7 +808,7 @@ function LandingIntroSection() {
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-7 flex items-center gap-[38px]",
+                        className: "mt-7 flex items-center gap-[38px] sm:gap-[28px]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
                                 rightIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Img$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Img"], {
@@ -816,13 +816,13 @@ function LandingIntroSection() {
                                     width: 28,
                                     height: 28,
                                     alt: "Link Icon",
-                                    className: "h-[28px] w-[28px] sm:h-[20px] sm:w-[20px] object-contain"
+                                    className: "h-[28px] w-[28px] sm:h-[20px] sm:w-[20px] xs:h-[12px] xs:w-[12px] object-contain"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/landing/LandingIntroSection.tsx",
                                     lineNumber: 37,
                                     columnNumber: 17
                                 }, void 0),
-                                className: "sm:text-[15px] min-w-[234px] sm:min-w-[128px] sm:h-[48px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5",
+                                className: "sm:text-[15px] xs:text-[12px] min-w-[234px] sm:min-w-[128px] xs:min-w-[100px] sm:h-[48px] xs:h-[38px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5",
                                 children: "Learn more"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/LandingIntroSection.tsx",
@@ -834,7 +834,7 @@ function LandingIntroSection() {
                                 target: "_blank",
                                 rel: "noreferrer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
-                                    className: " w-contain text-[18.15px] whitespace-nowrap sm:text-[15px] font-normal !text-gray-700 hover:underline",
+                                    className: " w-contain text-[18.15px] whitespace-nowrap sm:text-[15px] sm:text-[12px] font-normal !text-gray-700 hover:underline",
                                     children: "Hiring consultants?"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/landing/LandingIntroSection.tsx",
@@ -853,11 +853,11 @@ function LandingIntroSection() {
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-[38px] flex items-center gap-6",
+                        className: "mt-[38px] flex items-center gap-6 sm:gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                                 size: "textxl",
-                                className: "text-[15px] whitespace-nowrap font-normal !text-gray-700",
+                                className: "text-[15px] xs:text-[12px] mobile:text-[10px] whitespace-nowrap font-normal !text-gray-700",
                                 children: "Powered by the Xeventy2.0 health team"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/LandingIntroSection.tsx",
@@ -1959,7 +1959,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 function LandingPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full bg-white-a700 relative",
+        className: "container-xs w-full bg-white-a700 relative",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/landing/index.tsx",
