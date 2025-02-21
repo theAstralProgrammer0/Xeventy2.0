@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     screens: { 
       md: { max: "1050px" },
-      sm: { max: "650px" },
+      sm: { max: "850px" },
       xs: { max: "550px" },
-      laptop: "1300px",
-      desktop: "1920px",
-      tablet: { max: "768px" },
+      laptop: { min: "1300px" },
+      desktop: { min: "1920px" },
+      tablet: { min: "551px", max: "849px" },
       mobile: { max: "430px" },
       iPhone14Pro: "393px",
       iPadPro: { max: "1100px" },

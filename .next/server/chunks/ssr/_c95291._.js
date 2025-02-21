@@ -1267,34 +1267,37 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f
 function HealthExpertiseProfile({ ribbonIconImage = "img_ribbion_icon.svg", experienceNumber = "32+", experienceDescription = "Years Health Expertise", ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ...props,
-        className: `${props.className} flex items-center md:w-full gap-1.5`,
+        className: `${props.className} flex items-center gap-1.5`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Img$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Img"], {
                 src: ribbonIconImage,
                 width: 54,
                 height: 54,
                 alt: "ribbonIconImage",
-                className: "text-[48.79px] font-semibold !text-white-a700"
+                // Set responsive width/height: 54px by default, 40px on medium screens, 32px on extra-small screens.
+                className: "w-[44px] h-[44px] md:w-[30px] md:h-[30px] sm:w-[25px] sm:h-[25px] xs:w-[20px] xs:h-[20px] mobile:w-[20px] mobile-h-[20px] object-contain"
             }, void 0, false, {
                 fileName: "[project]/src/components/HealthExpertiseProfile/index.tsx",
-                lineNumber: 19,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Heading$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Heading"], {
-                className: "text-[48.79px] font-semibold !text-white-a700",
+                // Responsive font sizes: 48.79px default, 36px on md screens, 28px on xs screens.
+                className: "laptop:text-[28px] tablet:text-[22px] md:text-[20px] xs:text-[11px] font-semibold !text-white-a700",
                 children: experienceNumber
             }, void 0, false, {
                 fileName: "[project]/src/components/HealthExpertiseProfile/index.tsx",
-                lineNumber: 26,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Text$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Text"], {
                 size: "text2xl",
-                className: "text-[16.26px] font-normal",
+                // Responsive text sizes: 16.26px default, 14px on md, 12px on xs; ensuring readability on smaller devices.
+                className: "laptop:text-[12px] md:text-[9px] xs:text-[6px] font-normal leading-tight !text-white-a700",
                 children: experienceDescription
             }, void 0, false, {
                 fileName: "[project]/src/components/HealthExpertiseProfile/index.tsx",
-                lineNumber: 31,
+                lineNumber: 36,
                 columnNumber: 7
             }, this)
         ]
@@ -1340,48 +1343,49 @@ const healthExpertiseList = [
 function QuickInfoSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mt-4 flex justify-center bg-black-900_01 py-[38px] shadow-sm sm:py-5",
+            className: " w-fill mt-4  flex justify-center  bg-black-900_01  py-[38px] sm:py-[28px] xs:py-[20px]   /* Reduced vertical padding on smaller screens */ shadow-sm ",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center px-14 md:px-5",
+                className: "flex justify-center px-14 sm:px-5",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex w-full gap-[72px] md:flex-col",
+                    className: "flex w-full gap-[72px] sm:gap-8",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Suspense"], {
                         fallback: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: "Loading feed..."
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-                            lineNumber: 17,
+                            lineNumber: 39,
                             columnNumber: 33
                         }, void 0),
-                        children: healthExpertiseList.map((d, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createElement"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$HealthExpertiseProfile$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                        children: healthExpertiseList.map((d, index)=>// You may also add responsive classes inside HealthExpertiseProfile to adjust icon and text sizes
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createElement"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$HealthExpertiseProfile$2f$index$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 ...d,
                                 key: "listnumber" + index,
                                 className: "w-[32%]",
                                 __source: {
                                     fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-                                    lineNumber: 19,
+                                    lineNumber: 42,
                                     columnNumber: 17
                                 },
                                 __self: this
                             }))
                     }, void 0, false, {
                         fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-                        lineNumber: 17,
+                        lineNumber: 39,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-                    lineNumber: 16,
+                    lineNumber: 37,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-                lineNumber: 15,
+                lineNumber: 36,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/landing/QuickInfoSection.tsx",
-            lineNumber: 14,
+            lineNumber: 26,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -1967,7 +1971,7 @@ function LandingPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative md:h-[75vh] sm:h-[70vh] flex flex-col gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]",
+                className: "relative tablet:h-[75vh] md:h-[75vh] sm:h-[70vh] flex flex-col gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         src: "/images/img_header_hero.png",

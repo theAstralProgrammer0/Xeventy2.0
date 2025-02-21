@@ -15,25 +15,32 @@ export default function HealthExpertiseProfile({
   ...props
 }: Props) {
   return (
-    <div {...props} className={`${props.className} flex items-center md:w-full gap-1.5`}>
+    <div
+      {...props}
+      className={`${props.className} flex items-center gap-1.5`} // Removed md:w-full to keep layout consistent
+    >
       <Img
         src={ribbonIconImage}
         width={54}
         height={54}
         alt="ribbonIconImage"
-        className="text-[48.79px] font-semibold !text-white-a700"
+        // Set responsive width/height: 54px by default, 40px on medium screens, 32px on extra-small screens.
+        className="w-[44px] h-[44px] md:w-[30px] md:h-[30px] sm:w-[25px] sm:h-[25px] xs:w-[20px] xs:h-[20px] mobile:w-[20px] mobile-h-[20px] object-contain"
       />
       <Heading
-        className="text-[48.79px] font-semibold !text-white-a700"
+        // Responsive font sizes: 48.79px default, 36px on md screens, 28px on xs screens.
+        className="laptop:text-[28px] tablet:text-[22px] md:text-[20px] xs:text-[11px] font-semibold !text-white-a700"
       >
         {experienceNumber}
       </Heading>
       <Text
         size="text2xl"
-        className="text-[16.26px] font-normal"
+        // Responsive text sizes: 16.26px default, 14px on md, 12px on xs; ensuring readability on smaller devices.
+        className="laptop:text-[12px] md:text-[9px] xs:text-[6px] font-normal leading-tight !text-white-a700"
       >
         {experienceDescription}
       </Text>
     </div>
   );
 }
+
