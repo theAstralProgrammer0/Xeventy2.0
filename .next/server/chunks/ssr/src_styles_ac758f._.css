@@ -804,6 +804,10 @@ select {
   height: 1.5rem;
 }
 
+.h-\[10vh\] {
+  height: 10vh;
+}
+
 .h-\[136px\] {
   height: 136px;
 }
@@ -2018,6 +2022,10 @@ select {
     margin-right: 0;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:h-\[75vh\] {
     height: 75vh;
   }
@@ -2032,6 +2040,10 @@ select {
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:gap-\[52px\] {
@@ -2261,6 +2273,18 @@ select {
 
   .laptop\:hidden {
     display: none;
+  }
+
+  .laptop\:h-\[10vh\] {
+    height: 10vh;
+  }
+
+  .laptop\:w-full {
+    width: 100%;
+  }
+
+  .laptop\:items-center {
+    align-items: center;
   }
 }
 

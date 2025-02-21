@@ -63,11 +63,11 @@ export default function Header({ className }: Props) {
     <header
       className={`
         ${className || ""}
-        w-full sticky top-0 z-50 transition-all duration-500 ease-in-out
-        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md" : "bg-transparent py-4"}
+        w-full laptop:flex laptop:items-center sticky top-0 z-50 transition-all duration-500 ease-in-out
+        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md laptop:h-[10vh]" : "bg-transparent py-4"}
       `}
     >
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center 
+      <div className="laptop:w-full mx-auto flex justify-between items-center 
                       px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <Img
           src="img_x2h_logo_new_removebg_preview.png"

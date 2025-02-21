@@ -935,14 +935,13 @@ function Header({ className }) {
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: `
-        container-xs
         ${className || ""}
-        w-full sticky top-0 z-50 transition-all duration-500 ease-in-out
-        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md" : "bg-transparent py-4"}
+        w-full laptop:flex laptop:items-center sticky top-0 z-50 transition-all duration-500 ease-in-out
+        ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md laptop:h-[10vh]" : "bg-transparent py-4"}
       `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-screen-xl mx-auto flex justify-between items-center  px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16",
+                className: "laptop:w-full mx-auto flex justify-between items-center  px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Img$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Img"], {
                         src: "img_x2h_logo_new_removebg_preview.png",
@@ -952,7 +951,7 @@ function Header({ className }) {
                         className: "object-contain transition-all duration-500 ease-in-out"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/index.tsx",
-                        lineNumber: 73,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -966,22 +965,22 @@ function Header({ className }) {
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/index.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/index.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 84,
                                     columnNumber: 15
                                 }, this)
                             }, link.href, false, {
                                 fileName: "[project]/src/components/Header/index.tsx",
-                                lineNumber: 84,
+                                lineNumber: 83,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/index.tsx",
-                        lineNumber: 82,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1003,12 +1002,12 @@ function Header({ className }) {
                                     d: "M6 18L18 6M6 6l12 12"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/index.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 111,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/index.tsx",
-                                lineNumber: 104,
+                                lineNumber: 103,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                 className: "w-6 h-6 transition-all duration-300 ease-in-out",
@@ -1023,22 +1022,22 @@ function Header({ className }) {
                                     d: "M4 6h16M4 12h16M4 18h16"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/index.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 127,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/index.tsx",
-                                lineNumber: 120,
+                                lineNumber: 119,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/index.tsx",
-                            lineNumber: 99,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/index.tsx",
-                        lineNumber: 98,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1050,18 +1049,18 @@ function Header({ className }) {
                             children: "Get in touch"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/index.tsx",
-                            lineNumber: 141,
+                            lineNumber: 140,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/Header/index.tsx",
-                        lineNumber: 140,
+                        lineNumber: 139,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Header/index.tsx",
-                lineNumber: 71,
+                lineNumber: 70,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1079,17 +1078,17 @@ function Header({ className }) {
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/index.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 163,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header/index.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this)
                             }, link.href, false, {
                                 fileName: "[project]/src/components/Header/index.tsx",
-                                lineNumber: 162,
+                                lineNumber: 161,
                                 columnNumber: 13
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1100,23 +1099,23 @@ function Header({ className }) {
                                 children: "Get in touch"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/index.tsx",
-                                lineNumber: 174,
+                                lineNumber: 173,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/index.tsx",
-                            lineNumber: 173,
+                            lineNumber: 172,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Header/index.tsx",
-                    lineNumber: 160,
+                    lineNumber: 159,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Header/index.tsx",
-                lineNumber: 152,
+                lineNumber: 151,
                 columnNumber: 7
             }, this)
         ]
