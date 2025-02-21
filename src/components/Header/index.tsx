@@ -62,7 +62,6 @@ export default function Header({ className }: Props) {
   return (
     <header
       className={`
-        container-xs
         ${className || ""}
         w-full sticky top-0 z-50 transition-all duration-500 ease-in-out
         ${scrolled ? "bg-green-100 bg-opacity-80 shadow-md" : "bg-transparent py-4"}
