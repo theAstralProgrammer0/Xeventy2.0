@@ -1,4 +1,3 @@
-import LandingPage from "../../../pages/landing";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import CareersSection from "./CareersSection";
