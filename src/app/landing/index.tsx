@@ -1,3 +1,4 @@
+import LandingPage from "../../../pages/landing";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import CareersSection from "./CareersSection";
@@ -13,7 +14,7 @@ import VideoNewsSection from "./VideoNewsSection";
 import React from "react";
 import Image from "next/image";
 
-export default function LandingPage() {
+export default function LandingPage({initialNewsArticles, initialVideoNews}: {initialNewsArticles: any[], initialVideoNews: any}) {
   return (
     <div className="w-full bg-white-a700 relative">
       <Header />
@@ -32,7 +33,7 @@ export default function LandingPage() {
       </div>
 
       <QuickInfoSection />
-      <VideoNewsSection />
+      <VideoNewsSection initialNewsArticles={initialNewsArticles} initialVideoNews={initialVideoNews} />
       <IntroductionSection />
       <ServicesOverviewSection />
       <ProjectsAndSocialsSection />
