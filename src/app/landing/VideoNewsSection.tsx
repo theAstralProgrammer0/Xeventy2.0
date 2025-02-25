@@ -1,4 +1,3 @@
-@typescript-eslint/no-explicit-any
 "use client";
 
 import { Text } from "../../components";
