@@ -1,6 +1,7 @@
+@typescript-eslint/no-explicit-any
 "use client";
 
-import { Text, Img } from "../../components";
+import { Text } from "../../components";
 import NewsArticle from "../../components/NewsArticle";
 import Link from "next/link";
 import React, { Suspense } from "react";
@@ -10,18 +11,33 @@ import axios from "axios";
 // Define a fetcher function using axios that returns the promise result.
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
-// Type definitions for props passed to the VideoNewsSection component.
-interface VideoNewsSectionProps {
-  initialNewsArticles: any[];
-  initialVideoNews: any;
-}
-
 // Function to extract the YouTube video ID from a given URL.
-const extractYouTubeID = (youtube_url: string): string => {
+const extractYouTubeID = (url: string): string => {
   const regExp = /(?:youtube\.com\/.*(?:\?|&)v=|youtu\.be\/)([^&]+)/;
-  const match = youtube_url.match(regExp); // Use the correct variable name.
+  const match = url.match(regExp); // Use the correct variable name.
   return match ? match[1] : "";
 }; // Added missing closing curly brace.
+
+// Type definitions for props passed to the VideoNewsSection component.
+interface NewsArticleType {
+  id: number;
+  title: string;
+  author: string;
+  timeline: string;
+  article_url: string;
+}
+
+interface VideoNewsType {
+  id: number;
+  title: string;
+  content_provider: string;
+  youtube_url: string;
+}
+
+interface VideoNewsSectionProps {
+  initialNewsArticle: NewsArticleType[];
+  initialVideoNews: VideoNewsType;
+}
 
 // The VideoNewsSection component: It uses useSWR to fetch data client-side,
 // using the SSR data passed via props as fallback data.
@@ -67,7 +83,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
                 news
               </Text>
               <Link
-                href="https://laspema.vercel.app"
+                href={videoData.youtube_url}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full leading-[45px] md:text-[31px] sm:text-[29px]"
@@ -105,6 +121,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
                         articleTitle={article.title}
                         articleTimeline={article.timeline}
                         articleAuthor={article.author}
+                        articleUrl={article.article_url}
                         className="pb-1 border-b border-black"
                       />
                     ))}

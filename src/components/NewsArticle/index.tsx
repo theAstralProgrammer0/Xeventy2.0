@@ -3,21 +3,23 @@ import Link from "next/link";
 import React from "react";
 
 interface Props {
-  className?: string;
-  articleTitle?: React.ReactNode;
-  articleTimeline?: React.ReactNode;
-  articleAuthor?: React.ReactNode;
+  className: string;
+  articleTitle: React.ReactNode;
+  articleTimeline: React.ReactNode;
+  articleAuthor: React.ReactNode;
+  articleUrl: string;
 }
 
 export default function NewsArticle({
   articleTitle = "NAD Supplements Are the Latest Thing in Anti-Aging—Do They Work? ",
   articleTimeline = "Just In",
   articleAuthor = "By Raphael Akangbe, PhD",
+  articleUrl = "https://researchgate.net",
   ...props
 }: Props) {
   return (
     <div {...props} className={`${props.className} flex flex-col self-stretch gap-2 flex-1`}>
-      <Link href="https://dribbble.com/" target="_blank" rel="noreferrer" className="w-full leading-[19px]">
+      <Link href={articleUrl} target="_blank" rel="noreferrer" className="w-full leading-[19px]">
         <Text
           size="text2xl"
           className="text-[16.38px] font-medium tracking-[0.49px] !text-black-900_01 hover:underline"
