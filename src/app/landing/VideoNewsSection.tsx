@@ -114,7 +114,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
               <div className="relative mt-[-14px] self-stretch rounded-md border-[0.94px] border-solid border-black-900_3f p-10 shadow-xl sm:p-5">
                 <div className="flex flex-col gap-6">
                   <Suspense fallback={<div>Loading feed...</div>}>
-                    {articlesData.map((article: any, index: number) => (
+                    {articlesData.map((article: NewsArticleType, index: number) => (
                       <NewsArticle
                         key={"article" + index}
                         articleTitle={article.title}

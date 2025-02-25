@@ -14,7 +14,27 @@ import React from "react";
 import Image from "next/image";
 
 
-export default function LandingPage({ initialNewsArticles, initialVideoNews }: { initialNewsArticles: any[], initialVideoNews: any }) {
+interface NewsArticleType {
+  id: number;
+  title: string;
+  author: string;
+  timeline: string;
+  article_url: string;
+}
+
+interface VideoNewsType {
+  id: number;
+  title: string;
+  content_provider: string;
+  youtube_url: string;
+}
+
+interface VideoNewsSectionProps {
+  initialNewsArticle: NewsArticleType[];
+  initialVideoNews: VideoNewsType;
+}
+
+export default function LandingPage({ initialNewsArticles, initialVideoNews }: VideoNewsSectionProps) {
   return (
     <div className="w-full bg-white-a700 relative">
       <Header />
