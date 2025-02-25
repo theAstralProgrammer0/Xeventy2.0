@@ -40,7 +40,7 @@ interface VideoNewsSectionProps {
 
 // The VideoNewsSection component: It uses useSWR to fetch data client-side,
 // using the SSR data passed via props as fallback data.
-const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSectionProps) => {
+const VideoNewsSection = ({ initialNewsArticle, initialVideoNews }: VideoNewsSectionProps) => {
   const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   // Fetch the latest news articles and video news using SWR for client-side caching.
