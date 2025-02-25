@@ -30,7 +30,7 @@ interface VideoNewsType {
 }
 
 interface VideoNewsSectionProps {
-  initialNewsArticle: NewsArticleType[];
+  initialNewsArticles: NewsArticleType[];
   initialVideoNews: VideoNewsType;
 }
 
