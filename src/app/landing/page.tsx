@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 {/* This page component is async so you can fetch data on the server (SSR) */}
 export default async function LandingPageWrapper() {
   {/* Read the backend API URL from env vars */}
+  console.log(process.env.NEXT_PUBLIC_API_BASE_URL)
   const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL;
   
   {/* Fetch data from Django API endpoints concurrently */}
