@@ -54,7 +54,7 @@ export default function LandingIntroSection() {
               </Text>
             </Link>
           </div>
-          <div className="mt-[38px] flex items-center gap-6 sm:gap-2">
+          {/*<div className="mt-[38px] flex items-center gap-6 sm:gap-2">
             <Text
               size="textxl"
               className="text-[15px] xs:text-[12px] mobile:text-[10px] whitespace-nowrap font-normal !text-gray-700" 
@@ -62,7 +62,7 @@ export default function LandingIntroSection() {
               Powered by the Xeventy2.0 health team
             </Text>
             <AvatarStack />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
