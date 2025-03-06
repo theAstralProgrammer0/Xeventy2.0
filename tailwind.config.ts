@@ -7,12 +7,14 @@ module.exports = {
       md: { max: "1050px" },
       sm: { max: "850px" },
       xs: { max: "550px" },
+      cs2: { min: "550px", max: "679px" },
       laptop: { min: "1300px" },
       desktop: { min: "1920px" },
       tablet: { min: "551px", max: "849px" },
       mobile: { max: "430px" },
       iPhone14Pro: "393px",
       iPadPro: { max: "1100px" },
+      cs1: { min: "1054px", max: "1380px" },
     },
     extend: {
       colors: {

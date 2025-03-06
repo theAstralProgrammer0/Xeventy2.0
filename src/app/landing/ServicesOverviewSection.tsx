@@ -50,8 +50,8 @@ export default function ServicesOverviewSection() {
             </Text>
           </div>
         </div>
-        <div className="container-xs flex flex-col items-center gap-14 md:px-5 sm:gap-7">
-          <div className="mr-3 flex gap-[22px] self-stretch md:mr-0 md:flex-col">
+        <div className="container-xs flex flex-col items-center gap-14 px-5 sm:gap-7">
+          <div className="grid cs2:grid-cols-1 xs:grid-cols-1 cs1:grid-cols-2 md:grid-cols-2 grid-cols-4 gap-5 w-full">
             <Suspense fallback={<div>Loading feed...</div>}>
               {serviceList.map((d, index) => (
                 <HealthcareRecordComponent {...d} key={"listcomp1Header" + index} />
@@ -69,7 +69,7 @@ export default function ServicesOverviewSection() {
                 className="h-[28px] w-[28px] object-contain"
               />
             }
-            className="min-w-[234px] gap-2.5 rounded-[[10px] px--4 font-memrriweathersans"
+            className="min-w-[234px] gap-2.5 rounded-[10px] px-4 font-sans"
           >
             View more services
           </Button>

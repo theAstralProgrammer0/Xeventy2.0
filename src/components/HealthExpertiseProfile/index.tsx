@@ -29,7 +29,7 @@ export default function HealthExpertiseProfile({
       />
       <Heading
         // Responsive font sizes: 48.79px default, 36px on md screens, 28px on xs screens.
-        className="laptop:text-[28px] tablet:text-[22px] md:text-[20px] xs:text-[11px] font-semibold !text-white-a700"
+        className="laptop:text-[38px] tablet:text-[30px] md:text-[28px] xs:text-[18px] font-semibold !text-white-a700 font-sans"
       >
         {experienceNumber}
       </Heading>

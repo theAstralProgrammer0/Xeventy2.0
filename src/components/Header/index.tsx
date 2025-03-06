@@ -140,7 +140,7 @@ export default function Header({ className }: Props) {
           <Button
             size="sm"
             shape="round"
-            className="min-w-[198px] rounded-[10px] border border-green-a700 px-8"
+            className="min-w-[198px] rounded-[10px] border border-green-a700 px-8 font-sans"
           >
             Get in touch
           </Button>
