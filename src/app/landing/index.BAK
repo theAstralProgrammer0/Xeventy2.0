@@ -39,11 +39,11 @@ export default function LandingPage({ initialNewsArticles, initialVideoNews }: V
     <div className="w-full bg-white-a700 relative">
       <Header />
       
-      <div className="relative tablet:h-[60vh] md:h-[60vh] sm:h-[60vh] xs:h-[60vh] flex flex-col justify-center gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]">
+      <div className="relative tablet:h-[75vh] md:h-[75vh] sm:h-[70vh] flex flex-col gap-[74px] px-3 py-3 md:gap-[55px] sm:gap-[37px]">
         <Image
           src="/images/img_header_hero.png" 
           alt="Background"
-          className="absolute inset-y-0 right-0 w-auto h-full object-cover z-0 iPadPro:opacity-30"
+          className="absolute inset-y-5 right-0 w-auto h-full object-cover z-0 iPadPro:opacity-30"
           width={1920} 
           height={1080}
         />

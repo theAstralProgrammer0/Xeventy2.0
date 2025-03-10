@@ -77,7 +77,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
             <div className="flex flex-col items-start gap-2.5">
               <Text
                 size="text6xl"
-                className="flex items-center justify-center rounded bg-black-900_01 px-1 text-[25px] font-normal tracking-[2.75px] md:text-[23px] sm:text-[21px]"
+                className="flex items-center justify-center rounded bg-black-900_01 px-1 text-[25px] font-normal tracking-[2.75px] md:text-[23px] sm:text-[18px] xs:text-[12px] mobile:text-[12px]"
               >
                 news
               </Text>
@@ -85,18 +85,18 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
                 href={videoData.youtube_url}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full leading-[45px] md:text-[31px] sm:text-[29px]"
+                className="w-full leading-[45px]"
               >
                 <Text
                   size="text9xl"
-                  className="!font-merriweather text-[33.88px] font-normal tracking-[1.02px] !text-gray-900 hover:underline"
+                  className="!font-merriweather text-[33.88px] md:text-[28px] sm:text-[22px] font-normal tracking-[1.02px] !text-gray-900 hover:underline"
                 >
                   {videoData.title}
                 </Text>
               </Link>
               <Text
                 size="textlg"
-                className="text-[13.55px] font-normal !text-black-900_01"
+                className="text-[13.55px] md:text-[12px] sm:text-[11px] xs:text-[10px] font-normal !text-black-900_01"
               >
                 By {videoData.content_provider}
               </Text>
@@ -111,7 +111,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
               >
                 LATEST NEWS
               </Text>
-              <div className="relative mt-[-14px] self-stretch rounded-md border-[0.94px] border-solid border-black-900_3f p-10 shadow-xl sm:p-5">
+              <div className="relative mt-[-14px] self-stretch rounded-md border-[0.94px] border-solid border-black-900_3f p-5 shadow-xl">
                 <div className="flex flex-col gap-6">
                   <Suspense fallback={<div>Loading feed...</div>}>
                     {articlesData.map((article: NewsArticleType, index: number) => (

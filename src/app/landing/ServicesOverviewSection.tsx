@@ -50,7 +50,7 @@ export default function ServicesOverviewSection() {
             </Text>
           </div>
         </div>
-        <div className="container-xs flex flex-col items-center gap-14 px-5 sm:gap-7">
+        <div className="container-xs flex flex-col items-center gap-5 px-5 sm:gap-7">
           <div className="grid cs2:grid-cols-1 xs:grid-cols-1 cs1:grid-cols-2 md:grid-cols-2 grid-cols-4 gap-5 w-full">
             <Suspense fallback={<div>Loading feed...</div>}>
               {serviceList.map((d, index) => (
@@ -63,10 +63,10 @@ export default function ServicesOverviewSection() {
             rightIcon={
               <Img
                 src="img_link_icon.png"
-                width={28}
-                height={28}
+                width={20}
+                height={20}
                 alt="Link Icon"
-                className="h-[28px] w-[28px] object-contain"
+                className="h-[20px] w-[20px] object-contain"
               />
             }
             className="min-w-[234px] gap-2.5 rounded-[10px] px-4 font-sans"
