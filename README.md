@@ -22,8 +22,4 @@ Would you like to customize the import alias (`@/*` by default)? No / Yes // No
 What import alias would you like configured? @/*
 ```
 
-
-
-
-
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
