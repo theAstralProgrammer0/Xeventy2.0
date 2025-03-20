@@ -1,4 +1,3 @@
-These are the steps I took to create this project
 
 ## Step 1
 
