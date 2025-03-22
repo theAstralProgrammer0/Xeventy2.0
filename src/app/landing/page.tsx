@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const metadata: Metadata = {
   title: "Xeventy2.0 Health Limited - Empowering Providers Globally",
-  description: "Discover Xeventy2.0\\'s transformative healthcare solutions integrating technology and data-driven insights for revolutionary patient care. Explore our services, training, and expert insights.",
+  description: "Discover Xeventy2.0's transformative healthcare solutions integrating technology and data-driven insights for revolutionary patient care. Explore our services, training, and expert insights.",
 };
 
 {/* This page component is async so you can fetch data on the server (SSR) */}
