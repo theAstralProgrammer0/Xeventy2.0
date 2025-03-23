@@ -58,13 +58,6 @@ export default function LandingPage({ initialNewsArticles, initialVideoNews }: V
       <ServicesOverviewSection />
       <ProjectsAndSocialsSection />
       <CareersSection />
-      <ContactUsSection />
-      <div>
-        <FAQSection />
-        <div className="relative mt-[-4px] bg-black-900_07 py-[30px] shadow-md sm:py-5">
-          <LogoRowSection />
-        </div>
-      </div>
       <Footer />
     </div>
   );

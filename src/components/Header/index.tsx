@@ -47,7 +47,6 @@ export default function Header({ className }: Props) {
     { label: "About Us", href: "/about" },
     { label: "Blog", href: "/blog" },
     { label: "Training", href: "/training" },
-    { label: "Products", href: "/products" },
   ];
 
   // Mobile version: using "Training & Conference" for display but same route.
@@ -55,8 +54,7 @@ export default function Header({ className }: Props) {
     { label: "Services", href: "/services" },
     { label: "About Us", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Training & Conference", href: "/training" },
-    { label: "Products", href: "/products" },
+    { label: "Training", href: "/training" },
   ];
 
   return (

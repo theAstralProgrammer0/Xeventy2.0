@@ -12,25 +12,25 @@ interface Project {
 
 const emrSystemGrid: Project[] = [
   {
-    projectImage: "img_tile_1_image.png",
+    projectImage: "img_proj_1.jpg",
     projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
     projectDescription:
       "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
   },
   {
-    projectImage: "img_tile_2_image.png",
+    projectImage: "img_pic2.png",
     projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
     projectDescription:
       "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
   },
   {
-    projectImage: "img_tile_2_image.png",
+    projectImage: "img_proj_2.jpg",
     projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
     projectDescription:
       "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
   },
   {
-    projectImage: "img_tile_1_image.png",
+    projectImage: "img_pic3.png",
     projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
     projectDescription:
       "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
@@ -181,11 +181,11 @@ export default function ProjectsAndSocialsSection() {
             </div>
           </div>
           <div className="flex gap-4 mt-4">
-            <button onClick={prevSlide} className="p-2 bg-gray-300 rounded">
-              Prev
+            <button onClick={prevSlide} className="p-2 bg-gray-300 rounded-2xl">
+              &lt;&lt;
             </button>
-            <button onClick={nextSlide} className="p-2 bg-gray-300 rounded">
-              Next
+            <button onClick={nextSlide} className="p-2 bg-gray-300 rounded-2xl">
+              &gt;&gt;
             </button>
           </div>
         </div>

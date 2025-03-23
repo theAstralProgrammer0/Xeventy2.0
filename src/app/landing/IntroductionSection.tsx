@@ -10,15 +10,15 @@ export default function IntroductionSection() {
           <div className="flex self-end rounded-bl-lg rounded-br-lg rounded-tl-lg bg-green-a700_a5 p-3.5 shadow-lg">
             <Text
               size="text7xl"
-              className="text-[19px] font-normal tracking-[1.08px] !text-gray-600 md:text-[18px] sm:text-[12px] xs:text-[12px]"
+              className="text-[19px] px-5 font-normal tracking-[-1.08px] !text-gray-900 md:text-[18px] sm:text-[12px] xs:text-[12px]"
             >
               What is Xeventy2.0 all about?
             </Text>
           </div>
-          <div className="flex w-[72%] justify-center rounded-bl-lg rounded-br-lg rounded-tr-lg bg-blue_gray-100 p-3.5 shadow-lg">
+          <div className="flex w-[72%] justify-center rounded-bl-lg rounded-br-lg rounded-tr-lg bg-blue_gray-100 p-3.5 shadow-xl">
             <Text
               size="text7xl"
-              className="text-[19px] font-normal leading-[32px] tracking-[1.08px] !text-gray-600 md:text-[18px] sm:text-[12px] xs:text-[12px]"
+              className="text-[19px] px-5 font-normal leading-[32px] tracking-[-1.08px] !text-gray-900 md:text-[18px] sm:text-[12px] xs:text-[12px]"
             >
               At&nbsp;
               <a href="#" className="inline text-blue-700 hover:underline">
@@ -26,7 +26,7 @@ export default function IntroductionSection() {
               </a>
               , we empower you to advance healthcare. Whether you need
                 robust data protection, cutting-edge analytics, or expert
-                training, we are here to partner with you.&nbsp;
+                training, we are here to partner with you.
             </Text>
           </div>
         </div>

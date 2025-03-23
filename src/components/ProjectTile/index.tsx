@@ -29,7 +29,7 @@ export default function ProjectTile({
       >
         {projectTitle}
       </Text>
-      <Text size="texts" className="mt-2.5 w-[78%] text-[11.75px] font-normal leading-[22px] !text-black-900_01">
+      <Text size="texts" className="mt-2.5 w-[80%] sm:w-full text-[11.75px] font-normal leading-[22px] !text-black-900_01">
         {projectDescription}
       </Text>
     </div>
