@@ -1,5 +1,6 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import NewsletterSubscription from "../../components/NewsletterSubscription";
 import CareersSection from "./CareersSection";
 import ContactUsSection from "./ContactUsSection";
 import FAQSection from "./FAQSection";
@@ -57,7 +58,9 @@ export default function LandingPage({ initialNewsArticles, initialVideoNews }: V
       <IntroductionSection />
       <ServicesOverviewSection />
       <ProjectsAndSocialsSection />
+      <LogoRowSection />
       <CareersSection />
+      <NewsletterSubscription />
       <Footer />
     </div>
   );

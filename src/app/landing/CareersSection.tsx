@@ -60,21 +60,6 @@ export default function CareersSection() {
               className="absolute left-0 top-0 m-auto h-[652px] w-[36%] rounded-[12px] object-contain"
             />
           </div>
-          <Button
-            size="xl"
-            rightIcon={
-              <Img
-                src="img_link_icon.png"
-                width={28}
-                height={28}
-                alt="Link icon"
-                className="mb-1 h-[28px] w-[28px] object-contain"
-              />
-            }
-            className="ml-[172px] mr-[174px] gap-1.5 self-stretch rounded-[14px] px-[34px] md:mx-0 sm:px-5"
-          >
-            Explore careers
-          </Button>
         </div>
       </div>
     </>

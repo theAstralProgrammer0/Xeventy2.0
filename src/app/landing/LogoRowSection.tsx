@@ -63,7 +63,7 @@ export default function LogoRowSection() {
 
   return (
     <div
-      className="relative overflow-hidden bg-black-900_07 py-6 shadow-md"
+      className="mt-[8em] relative overflow-hidden bg-black-900_07 py-6 shadow-md"
       ref={containerRef}
     >
       <div

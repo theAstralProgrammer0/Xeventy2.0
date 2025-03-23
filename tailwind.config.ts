@@ -23,13 +23,15 @@ module.exports = {
           "900_01": "var(--black_900_01)",
           "900_07": "var(--black_900_07)",
           "900_0a": "var(--black_900_0a)",
+          "900_33": "var(--black_900_33)",
           "900_3f": "var(--black_900_3f)",
           "900_93": "var(--black_900_93)",
         },
         blue: { 
           "700": "var(--blue_700)",
           "a700_5b": "var(--blue_a700_5b)",
-          "a700_e5": "var(--blue_a700_e5)" 
+          "a700_8e": "var(--blue_a700_8e)",
+          "a700_e5": "var(--blue_a700_e5)"
         },
         blue_gray: {
           "100": "var(--blue_gray_100)"
