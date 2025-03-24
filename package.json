@@ -16,6 +16,7 @@
     "react-dom": "^18",
     "react-slick": "^0.30.3",
     "react-swipeable": "^7.0.2",
+    "react-tabs": "^6.1.0",
     "slick-carousel": "^1.8.1"
   },
   "browserslist": {

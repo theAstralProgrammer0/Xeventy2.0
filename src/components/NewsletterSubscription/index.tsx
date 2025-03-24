@@ -4,9 +4,9 @@ import { Img, Button, Input, Text, Heading } from "./..";
 import React from "react";
 
 interface Props {
-  className?: string;
-  headingText?: React.ReactNode;
-  descriptionText?: React.ReactNode;
+  className: string;
+  headingText: React.ReactNode;
+  descriptionText: React.ReactNode;
 }
 
 export default function NewsletterSubscription({
@@ -15,12 +15,12 @@ export default function NewsletterSubscription({
   descriptionText = "Ask about Xeventy2.0 Health services, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help",
 }: Props) {
   return (
-    <div className={`${className || ""} mt-[6em] flex justify-center items-center bg-black-900_33 py-[70px] md:py-5`}>
-      <div className="container-xs flex items-center justify-center md:flex-col md:px-5">
-        <div className="flex flex-1 flex-col gap-[34px] md:self-stretch">
+    <div className={`${className || ""} flex justify-center items-center bg-black-900_33 py-[70px] md:py-5`}>
+      <div className="container-xs flex items-center justify-center gap-5 px-5">
+        <div className="flex flex-1 flex-col gap-2">
           <div className="flex">
             <Text
-              className="w-[76%] self-stretch text-[49.62px] font-bold leading-[60px] !text-black-900_01 md:text-[45px] sm:text-[39px]"
+              className="w-[76%] md:w-full sm:w-full xs:w-full self-stretch text-[49.62px] sm:text-[32px] font-bold leading-[60px] !text-black-900_01 md:text-[45px] sm:text-[39px]"
             >
               {headingText}
             </Text>
@@ -28,19 +28,19 @@ export default function NewsletterSubscription({
           <div className="flex flex-col items-start gap-9">
             <Text
               size="text2xl"
-              className="w-[76%] self-stretch text-[16.54px] font-normal leading-8 !text-black-900_01 md:w-full"
+              className="w-[76%] self-stretch text-[16.54px] md:text-[14px] font-normal leading-8 !text-black-900_01 md:w-full"
             >
               {descriptionText}
             </Text>
-            <div className="flex w-[86%] items-end justify-center gap-3 md:w-full sm:flex-col">
+            <div className="flex w-[86%] sm:w-full xs:w-full items-end justify-center gap-3 md:w-full">
               <Input
                 size="sm"
                 name="emailinput_one"
                 placeholder="Enter your email"
-                className="flex-grow rounded-md px-3"
+                className="h-[3rem] flex-grow rounded-md px-3"
               />
               <Button
-                className="w-[23%] rounded-lg px-2"
+                className="w-[23%] h-[3rem] rounded-lg px-2"
               >
                 <Img
                   src="img_send_airplane_icon.svg"
@@ -57,7 +57,7 @@ export default function NewsletterSubscription({
           width={650}
           height={498}
           alt="image"
-          className="h-full w-[50%] object-contain md:w-full rounded-lg"
+          className="h-auto w-[40%] object-contain sm:hidden rounded-lg"
         />
       </div>
     </div>
