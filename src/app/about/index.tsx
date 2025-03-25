@@ -9,10 +9,10 @@ import ContactUsSection from "./ContactUsSection";
 import React, { Suspense } from "react";
 
 const teamMembersGrid = [
-  { userImage: "drRaphael.png"; userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
-  { userImage: "drRaphael.png"; userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
-  { userImage: "drRaphael.png"; userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
-  { userImage: "drRaphael.png"; userName: "Raphael Akangbe", userTitle: "Founder & CEO" }
+  { userImage: "drRaphael.png", userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
+  { userImage: "drRaphael.png", userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
+  { userImage: "drRaphael.png", userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
+  { userImage: "drRaphael.png", userName: "Raphael Akangbe", userTitle: "Founder & CEO" }
 ];
 
 export default function AboutPage() {
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="mx-[52px] grid h-[506px] grid-cols-2 justify-center gap-[90px] md:mx-0 md:grid-cols-1">
             <Suspense fallback={<div>Loading feed...</div>}>
               {teamMembersGrid.map((d, index) => (
-                <UserProfile {..d} key={"about" + index} />
+                <UserProfile {...d} key={"about" + index} />
               ))}
             </Suspense>
           </div>
