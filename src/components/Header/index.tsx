@@ -3,6 +3,7 @@
 import { Button, Text, Img } from "./..";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 interface Props {
   className?: string;
@@ -13,6 +14,7 @@ export default function Header({ className }: Props) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   // Update header state on scroll.
   useEffect(() => {
@@ -49,13 +51,17 @@ export default function Header({ className }: Props) {
     { label: "Training", href: "/training" },
   ];
 
-  // Mobile version: using "Training & Conference" for display but same route.
+  // Mobile version (same as desktop in this example).
   const navLinksMobile = [
     { label: "Services", href: "/services" },
     { label: "About Us", href: "/about" },
     { label: "Blog", href: "/blog" },
     { label: "Training", href: "/training" },
   ];
+
+  // Helper function to conditionally add active styling.
+  const activeClass = (href: string) =>
+    pathname === href ? "border-b-2 border-green-a700 text-green-a700" : "";
 
   return (
     <header
@@ -82,7 +88,7 @@ export default function Header({ className }: Props) {
               <Link href={link.href}>
                 <Text
                   size="text3xl"
-                  className="text-[17px] font-normal !text-gray-900 hover:!text-green-a700"
+                  className={`text-[17px] p-3 font-normal !text-gray-900 transition-all duration-300 hover:bg-blue-50 hover:text-blue-500 rounded ${activeClass(link.href)}`}
                 >
                   {link.label}
                 </Text>
@@ -160,7 +166,7 @@ export default function Header({ className }: Props) {
               <Link href={link.href}>
                 <Text
                   size="text3xl"
-                  className="text-[17px] font-normal !text-gray-900 hover:!text-green-a700"
+                  className={`text-[17px] font-normal !text-gray-900 transition-all duration-300 hover:bg-blue-50 hover:text-blue-500 rounded ${activeClass(link.href)}`}
                 >
                   {link.label}
                 </Text>
