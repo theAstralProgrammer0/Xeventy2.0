@@ -1,7 +1,7 @@
-import { Text Heading } from "../../components";
+import { Text, Heading } from "../../components";
 import React from "react";
 
-export default functionAboutHeroSection1() {
+export default function AboutHeroSection1() {
   return (
     <>
       {/* about hero section */}

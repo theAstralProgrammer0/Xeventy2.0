@@ -17,10 +17,10 @@ const teamMembersGrid = [
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col md:h-auto">
+    <div className="flex w-full flex-col bg-white-a700">
       <Header />
-      <div className="mt-6 flex flex-col items-center gap-[102px] md:h-auto md:gap-[76px] sm:gap-[51px]">
-        <div className="flex flex-col gap-3.5 md:h-auto">
+      <div className="mt-6 flex flex-col items-center md:h-auto md:gap-[76px] sm:gap-[51px]">
+        <div className="container-xs flex flex-col gap-3.5 md:h-auto">
           <AboutHeroSection />
           <AboutTabSection />
         </div>
