@@ -50,6 +50,15 @@ module.exports = {
         white: {
           "a700": "var(--white_a700)"
         },
+        colors: "black_900_93",
+        colors1: "white_A700",
+        colors2: "black_900",
+        colors3: "gray_900",
+        colors4: "green_A700",
+        colors5: "gray_700",
+        colors6: "blue_gray_100",
+        colors7: "blue_700",
+        colors8: "green_A700_01",
       },
       boxShadow: {
         "xs": "0 2.26px 2px 0 #0000003f",
@@ -68,3 +77,4 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/forms")],
 };
+
