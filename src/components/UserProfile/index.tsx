@@ -21,19 +21,19 @@ export default function UserProfile({
         width={202}
         height={202}
         alt="Raphael Akangbe"
-        className="h-[202px] rounded-[100px] object-cover"
+        className="h-[202] rounded-full object-cover"
       />
-      <div className="h-[70px]">
-        <div className="flex h-[70px] flex-col items-start">
+      <div className="">
+        <div className="flex flex-col items-start">
           <Heading
             size="text3xl"
-            className="h-[48px] text-[32px] font-medium !text-colors2">
+            className="text-[32px] font-medium !text-black-900"
           >
-            {userName}
+          {userName}
           </Heading>
           <Text
             size="textxl"
-            className="mt-[-6px] h-[30px] text-[24px] font-light !text-colors2"
+            className="mt-[6px] text-[24px] font-light !text-gray-700"
           >
             {userTitle}
           </Text>
