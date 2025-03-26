@@ -13,10 +13,10 @@ const AvatarStack: React.FC<AvatarStackProps> = ({
   overlap = -8, 
 }) => {
   const defaultAvatars = [
-    "img_dr_raphael.jpg",
-    "img_temitayo.jpg",
-    "img_sanwo_olu.jpeg",
-    "img_essien.jpg",
+    "dr_raphael_pfp.jpg",
+    "ty_pfp.jpg",
+    "dam_pfp.jpg",
+    "anonym_pfp.png",
   ];
 
   const avatarImages = avatars && avatars.length === 4 ? avatars : defaultAvatars;
@@ -34,7 +34,7 @@ const AvatarStack: React.FC<AvatarStackProps> = ({
             alt={`Avatar ${index + 1}`}
             width={size}
             height={size}
-            className="rounded-full object-cover border-2 border-transparent"
+            className="h-[48px] rounded-full object-cover border-2 border-transparent"
           />
         </div>
       ))}

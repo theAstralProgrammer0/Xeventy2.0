@@ -5,13 +5,13 @@ export default function AboutTabSection() {
   return (
     <>
       {/* about tab section */}
-      <div className="h-[564px] md:h-auto">
+      <div className="mb-[3rem] md:h-auto">
         <Img
-          src="img_tab.png"
-          width={1440}
+          src="x2h_about1.png"
+          width={1540}
           height={564}
           alt="Tab"
-          className="h-[564px] w-full object-cover md:h-auto"
+          className="object-cover md:h-auto"
         />
       </div>
     </>

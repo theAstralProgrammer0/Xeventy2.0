@@ -43,7 +43,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -95,7 +95,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -147,7 +147,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -199,7 +199,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -251,7 +251,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -303,7 +303,7 @@ const tabData = [
             <Button
               rightIcon={
                 <Img
-                  src="img_icon.svg"
+                  src="hire_icon.svg"
                   width={24}
                   height={24}
                   alt="hire me icon"
@@ -373,7 +373,9 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-        <NewsletterSubscription />
+        <div className="mt-[3rem]">
+          <NewsletterSubscription />
+        </div>
         <Footer />
       </div>
     </div>

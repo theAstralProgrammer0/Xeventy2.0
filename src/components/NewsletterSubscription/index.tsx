@@ -37,10 +37,10 @@ export default function NewsletterSubscription({
                 size="sm"
                 name="emailinput_one"
                 placeholder="Enter your email"
-                className="h-[3rem] flex-grow rounded-md px-3"
+                className="h-[3rem] md:h-[2rem] flex-grow rounded-md px-3"
               />
               <Button
-                className="w-[23%] h-[3rem] rounded-lg px-2"
+                className="w-[23%] h-[3rem] md:h-[2rem] rounded-lg px-2"
               >
                 <Img
                   src="img_send_airplane_icon.svg"
