@@ -1,4 +1,3 @@
-
 ## Step 1
 
 I started by creating a Next.js app using ```create-next-app```:
