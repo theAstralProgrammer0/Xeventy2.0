@@ -358,7 +358,7 @@ export default function ServicesPage() {
                     {tabData.map((tab, index) => (
                       <Tab
                         key={`tab-${index}`}
-                        className="p-2 text-[21px] md:text-[16px] sm:text-[12px] font-light text-black-900_01 transition-all duration-300 hover:bg-blue-50 hover:text-blue-500 rounded"
+                        className="cursor-pointer p-2 text-[21px] md:text-[16px] sm:text-[12px] font-light text-black-900_01 transition-all duration-300 hover:bg-blue-50 hover:text-blue-500 rounded"
                       >
                         {tab.label}
                       </Tab>
