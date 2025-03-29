@@ -10,8 +10,8 @@ import React, { Suspense } from "react";
 
 const teamMembersGrid = [
   { userImage: "dr_raphael_pfp.jpg", userName: "Raphael Akangbe", userTitle: "Founder & CEO" },
-  { userImage: "ty_pfp.jpg", userName: "Temitayo Daisi-Oso", userTitle: "Chief Technology Officer" },
   { userImage: "dam_pfp.jpg", userName: "Adeoye Damilare", userTitle: "Director, Legal Unit" },
+  { userImage: "ty_pfp.jpg", userName: "Temitayo Daisi-Oso", userTitle: "Chief Technology Officer" },
   { userImage: "anonym_pfp.png", userName: "Raphael Akangbe", userTitle: "Founder & CEO" }
 ];
 
