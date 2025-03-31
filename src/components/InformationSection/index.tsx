@@ -1,37 +1,37 @@
 import { Img, Button, Text } from "./..";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
   className: string;
   titleText: React.ReactNode;
   descriptionText: React.ReactNode;
-  buttonText: string;
   imageSrc: string;
+  article_url: string;
 }
 
 export default function InformationSection({
   titleText = "Understanding the EU Deforestation Regulation (EUDR)",
   descriptionText = "Dive into the key aspects of EUDR and discover how business can comply with this groundbreaking regulation to entire sustainable supply chains...",
-  buttonText = "Read article",
   imageSrc = "img_frame_21.png",
+  article_url = "https://google.com",
   ...props
 }: Props) {
   return (
     <div
       {...props}
-      className={`${props.className} flex justify-center items-center self-stretch p-12 md:p-5 border-black-900_01 border-tborder-solid flex-1 cursor-pointer container-xs hover:border-green-a700_a5 hover:border-[0.5px] hover:border-solid hover:shadow-xs`}
+      className={`${props.className} p-3 flex justify-center items-center self-stretch flex-1 container-xs`}
     >
-      <div className="flex w-[88%] items-center justify-center md:w-full md:flex-col">
-        <div className="flex w-[60%] flex-col items-start gap-[46px] md:w-full">
-          <div className="flex flex-col items-start gap-7 self-stretch">
+      <Link href={article_url} className="flex p-5 w-[90%] items-center justify-evenly md:w-full md:flex-col hover:border-green-a700_a5 hover:border-[0.5px] hover:border-solid hover:shadow-xs">
+        <div className="flex w-[60%] flex-col items-start gap-[2rem] md:w-full">
+          <div className="flex flex-col items-start gap-[2rem] self-stretch">
             <Text
-              size="text12xl"
-              className="w-[88%] text-[34px] font-normal leading-[41px] !text-black-900_01 md:w-full md:text-[32px] sm:text-[30px]"
+              className="text-[34px] font-normal !text-black-900_01 md:w-full md:text-[20px] sm:text-[18px]"
             >
               {titleText}
             </Text>
             <Text
-              className="w-[88%] text-[18px] font-normal leading-[21px] !text-black-900_01 md:w-full">
+              className="text-[18px] font-normal !text-black-900_01 md:w-full"
             >
               {descriptionText}
             </Text>
@@ -43,12 +43,12 @@ export default function InformationSection({
                 width={24}
                 height={24}
                 alt="article icon"
-                className="h-[24px] w-[24px] object-contain"
+                className="h-[24px] w-[24px] object-cover"
               />
             }
-            className="min-w-[276px] gap-2.5 rounded-[10px] border-[0.5px] border-solid border-green-a700_a5 px-[33px] font-merriweathersans sm:px-5"
+            className="mt-[1rem] min-w-[276px] gap-2.5 rounded-[10px] border-[0.5px] border-solid border-green-a700_a5 px-[33px] font-merriweathersans sm:px-5"
           >
-            {buttonText}
+            Read article 
           </Button>
         </div>
         <Img
@@ -56,9 +56,9 @@ export default function InformationSection({
           width={380}
           height={380}
           alt="blog image"
-          className="h-[380px] w-[34%] rounded-[16px] object-contain md:w-full"
+          className="h-[300px] w-[300px] rounded-[16px] object-cover md:w-full"
         />
-      </div>
+      </Link>
     </div>
   );
 }
