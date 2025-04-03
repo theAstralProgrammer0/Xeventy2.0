@@ -22,3 +22,5 @@ What import alias would you like configured? @/*
 
 I realized Next.js caches on the front-end automatically and does not require
 manual caching.
+
+Working on integrating geodata
