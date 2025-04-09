@@ -16,8 +16,8 @@ export default async function LandingPageWrapper() {
   
   {/* Fetch data from Django API endpoints concurrently */}
   const [newsResponse, videoResponse] = await Promise.all([
-    axios.get(`${API_BASE}/news-articles/`),
-    axios.get(`${API_BASE}/video-news/`)
+    axios.get(`${API_BASE}/news/news-articles/`),
+    axios.get(`${API_BASE}/news/video-news/`)
   ]);
 
   {/* Extract data from responses */}

@@ -45,10 +45,10 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
 
   // Fetch the latest news articles and video news using SWR for client-side caching.
   // We assign the result to articlesData and videoData, respectively.
-  const { data: articlesData } = useSWR(`${API_BASE}/news-articles/`, fetcher, {
+  const { data: articlesData } = useSWR(`${API_BASE}/news/news-articles/`, fetcher, {
     fallbackData: initialNewsArticles,
   });
-  const { data: videoData } = useSWR(`${API_BASE}/video-news/`, fetcher, {
+  const { data: videoData } = useSWR(`${API_BASE}/news/video-news/`, fetcher, {
     fallbackData: initialVideoNews,
   });
 
