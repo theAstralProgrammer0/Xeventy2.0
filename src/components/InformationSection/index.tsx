@@ -41,7 +41,7 @@ export default function InformationSection({
             </Text>
           </div>
           {/* Flex container for the two buttons */}
-          <div className="mt-4 flex gap-12">
+          <div className="mt-4 flex md:flex-wrap gap-12 md:gap-6">
             <Button
               rightIcon={
                 <Img
@@ -52,7 +52,7 @@ export default function InformationSection({
                   className="h-6 w-6 object-cover"
                 />
               }
-              className="min-w-[140px] gap-2 rounded-lg border border-green-500 px-8 py-2 font-medium transition-colors hover:bg-green-500 !hover:text-white md:px-4 md:py-2"
+              className="min-w-[140px] sm:w-full text-[0.8rem] flex gap-2 rounded-lg border border-green-500 px-8 py-2 font-medium transition-colors hover:bg-green-500 !hover:text-white md:px-4 md:py-2"
             >
               Read article
             </Button>
@@ -67,7 +67,7 @@ export default function InformationSection({
                   className="h-6 w-6 object-cover"
                 />
               }
-              className="min-w-[140px] gap-2 rounded-lg border bg-yellow-500 px-8 py-2 font-medium transition-colors hover:bg-yellow-500 hover:text-white md:px-4 md:py-2"
+              className="min-w-[140px] sm:w-full text-[0.8rem] flex gap-2 rounded-lg border bg-yellow-500 px-8 py-2 font-medium transition-colors hover:bg-yellow-500 hover:text-white md:px-4 md:py-2"
             >
               Buy on Amazon
             </Button>
@@ -78,7 +78,7 @@ export default function InformationSection({
           width={380}
           height={380}
           alt="blog image"
-          className="h-72 w-72 rounded-lg object-fit md:mt-4 md:w-full md:h-auto"
+          className="h-72 w-72 md:order-first rounded-lg object-fit m-4 md:w-full md:h-auto"
         />
       </Link>
     </div>

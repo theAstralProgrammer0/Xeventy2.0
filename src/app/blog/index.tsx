@@ -99,7 +99,7 @@ export default function BlogPage() {
               color="white_a700"
               onClick={() => fetchArticles(nextLink)}
               disabled={isLoading}
-              className="w-[13rem] mt-4 rounded-md border border-green-500 px-6 py-2 text-lg shadow-md transition-all duration-150 hover:bg-green-50"
+              className="w-[13rem] ml-4 rounded-md border border-green-500 px-6 py-2 text-lg shadow-md transition-all duration-150 hover:bg-green-50"
             >
               {isLoading ? "Loading..." : "Load more articles"}
             </Button>
