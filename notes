@@ -1,0 +1,3 @@
+# Notes while building
+
+- Never use an <a> tag within a <Link> Wrapper
