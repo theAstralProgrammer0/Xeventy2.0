@@ -51,8 +51,11 @@ export default function BlogPage() {
       setNextLink(data.links.next);
       console.log("Articles fetched:", data.results);
     } catch (error: unknown) {
-      console.error("There was an error fetching articles!", error);
-      console.error("Error details:", error.message, error.response);
+      if (error instanceof Error) {
+        console.error("Error message:", error.message);
+      } else {
+        console.error("The caught value was not a standard Error object.");
+      }
     } finally {
       setIsLoading(false);
     }
