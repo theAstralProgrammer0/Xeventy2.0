@@ -1,7 +1,7 @@
 import { AvatarStack } from "./AvatarStack";
 import { Button } from "./Button";
 import { CheckBox } from "./CheckBox";
-import { Footer } from "./Footer";
+import Footer from "./Footer";
 import { Header } from "./Header";
 import { Heading } from "./Heading";
 import { HealthExpertiseProfile } from "./HealthExpertiseProfile";
