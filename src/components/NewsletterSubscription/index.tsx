@@ -1,6 +1,6 @@
 "use client";
 
-import { Img, Button, Input, Text, Heading } from "./..";
+import { Img, Button, Input, Text } from "./..";
 import React from "react";
 
 interface Props {
