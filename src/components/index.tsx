@@ -1,9 +1,9 @@
 import { AvatarStack } from "./AvatarStack";
 import { Button } from "./Button";
-import CheckBox from "./CheckBox";
+import { CheckBox } from "./CheckBox";
 import Footer from "./Footer";
 import Header from "./Header";
-import Heading from "./Heading";
+import { Heading } from "./Heading";
 import HealthExpertiseProfile from "./HealthExpertiseProfile";
 import HealthcareRecordComponent from "./HealthcareRecordComponent";
 import { Img } from "./Img";
