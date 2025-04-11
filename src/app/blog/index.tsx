@@ -50,7 +50,7 @@ export default function BlogPage() {
       setArticles((prevArticles) => [...prevArticles, ...data.results]);
       setNextLink(data.links.next);
       console.log("Articles fetched:", data.results);
-    } catch (error: string) {
+    } catch (error: unknown) {
       console.error("There was an error fetching articles!", error);
       console.error("Error details:", error.message, error.response);
     } finally {
