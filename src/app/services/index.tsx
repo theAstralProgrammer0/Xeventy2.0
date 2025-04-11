@@ -72,7 +72,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               Data Protection
@@ -124,7 +123,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               Telehealth
@@ -176,7 +174,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               Advanced Training
@@ -228,7 +225,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               Web3
@@ -280,7 +276,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               AI
@@ -332,7 +327,6 @@ export default function ServicesPage() {
             <div>
               <div className="flex px-2">
                 <Heading
-                  size="text21xl"
                   className="text-[77px] md:text-[67px] sm:text-[57px] xs:text-[47px] font-medium"
                 >
                   We strive to
