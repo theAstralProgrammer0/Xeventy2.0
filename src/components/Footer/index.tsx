@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col">
       <div className="flex justify-center bg-black-900_01 px-[18px] py-[3rem] md:py-5">
-        <div className="container-xs flex justify-between gap-5 px-2.5 md:flex-col md:px-5">
+        <div className="container-xs flex justify-between gap-5 px-14 md:flex-col md:px-5">
           <div className="flex w-[38%] flex-col gap-1 self-center md:w-full">
             <Link href="/landing">
               <Text

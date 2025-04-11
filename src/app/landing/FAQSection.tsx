@@ -11,11 +11,18 @@ import {
   AccordionItem,
 } from "react-accessible-accordion";
 
-const accordionData = [
+const accordionQues = [
   { que: "How to reset my password?" },
   { que: "Do you offer international training?" },
   { que: "What is your return policy?" },
   { que: "How can I contact customer support?" },
+];
+
+const accordionAns = [
+  { ans: "Our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
+  { ans: "Know that our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
+  { ans: "What are you saying our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
+  { ans: "Bruh not the same our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
 ];
 
 export default function FAQSection() {
@@ -28,7 +35,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </Heading>
           <Accordion preExpanded={[0]} className="flex w-[64%] flex-col gap-14">
-            {accordionData.map((d, i) => (
+            {accordionQues.map((d, i) => (
               <AccordionItem uuid={i} key={`expandablelisth${i}`}>
                 <div className="flex flex-1 flex-col items-center gap-3 rounded-md border-[0.56px] border-solid border-black-900_3f bg-white-a700 p-[18px]">
                   <AccordionItemHeading className="w-full">
@@ -67,12 +74,9 @@ export default function FAQSection() {
                     <div className="flex w-[94%] justify-center md:w-full">
                       <Text
                         size="textlg"
-                        className="w-[90%] text-[13.18px] font-normal leading-[15px] !text-black-900_01"
+                        className="w-[90%] text-[13.18px] font-normal !text-black-900_01"
                       >
-                        Our return policy allows you to return items within 30
-                        days of purchase for a full refund. Itemns must be in
-                        their original condition and oackaging. Still need help?
-                        Contact us
+                        {accordionAns[i]?.ans}
                       </Text>
                     </div>
                   </AccordionItemPanel>

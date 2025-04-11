@@ -16,7 +16,7 @@ export default function NewsletterSubscription({
 }: Props) {
   return (
     <div className={`${className || ""} flex justify-center items-center bg-black-900_33 py-[70px] md:py-5`}>
-      <div className="container-xs flex items-center justify-center gap-5 px-5">
+      <div className="container-xs flex items-center justify-center gap-5 px-14">
         <div className="flex flex-1 flex-col gap-2">
           <div className="flex">
             <Text
@@ -37,10 +37,10 @@ export default function NewsletterSubscription({
                 size="sm"
                 name="emailinput_one"
                 placeholder="Enter your email"
-                className="h-[3rem] md:h-[2rem] flex-grow rounded-md px-3"
+                className="h-[3em] flex-grow rounded-md px-3"
               />
               <Button
-                className="w-[23%] h-[3rem] md:h-[2rem] rounded-lg px-2"
+                className="w-[23%] h-[3em] rounded-lg px-2"
               >
                 <Img
                   src="img_send_airplane_icon.svg"

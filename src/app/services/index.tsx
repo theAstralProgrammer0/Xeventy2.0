@@ -29,7 +29,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Navigating healthcare documentation shouldn't be your biggest
               challenge. Our Electronic Medical Record (EMR) and Electronic
@@ -80,7 +80,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Protect your data with advanced security protocols and encryption
               to ensure compliance and safeguard your sensitive information.
@@ -132,7 +132,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Experience seamless virtual care with our Telehealth solutions,
               providing reliable and accessible healthcare from anywhere. Our
@@ -184,7 +184,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Upgrade your skills with our Advanced Training programs, designed
               to provide practical, hands-on learning experiences. Our
@@ -236,7 +236,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Dive into the future with our Web3 solutions, bringing
               decentralized technologies and blockchain innovations to your
@@ -288,7 +288,7 @@ const tabData = [
             </Heading>
             <Text
               size="text5xl"
-              className="w-[96%] text-[19px] font-normal leading-[33px] !text-black-900_01 md:w-full"
+              className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Leverage the power of Artificial Intelligence to streamline
               operations, enhance decision-making, and drive innovation in your

@@ -148,7 +148,9 @@ export default function Header({ className }: Props) {
             shape="round"
             className="min-w-[198px] rounded-[10px] border border-green-a700 px-8 font-sans"
           >
-            Get in touch
+            <Link href="/contact">
+              Get in touch
+            </Link>
           </Button>
         </div>
       </div>
@@ -176,13 +178,15 @@ export default function Header({ className }: Props) {
             </li>
           ))}
           <li>
-            <Button
-              size="sm"
-              shape="round"
-              className="min-w-[198px] rounded-[10px] border border-green-a700 px-8"
-            >
-              Get in touch
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="sm"
+                shape="round"
+                className="min-w-[198px] rounded-[10px] border border-green-a700 px-8"
+              >
+                Get in touch
+              </Button>
+            </Link>
           </li>
         </ul>
       </div>

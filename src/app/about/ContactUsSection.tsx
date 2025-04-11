@@ -1,4 +1,5 @@
 import { Text, Img, Button, Heading } from "../../components";
+import Link from "next/link";
 import React from "react";
 
 export default function ContactUsSection() {
@@ -36,7 +37,9 @@ export default function ContactUsSection() {
               <Button
                 className="mt-[2rem] !text-white-a700 hover:!text-black-900 min-w-[198px] rounded-[10px] px-[32px] text-colors6 sm:px-5"
               >
-                Contact Us
+                <Link href="/contact">
+                  Contact Us
+                </Link>
               </Button>
               <Text className="mb-3.5 text-[18px] font-normal">
                 Or call +234 105-9064
