@@ -3,7 +3,7 @@ import { Text } from "./..";
 import Link from "next/link";
 import React from "react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="flex flex-col">
       <div className="flex justify-center bg-black-900_01 px-[18px] py-[3rem] md:py-5">
