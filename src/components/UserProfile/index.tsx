@@ -26,7 +26,7 @@ export default function UserProfile({
       <div className="">
         <div className="flex flex-col items-start">
           <Heading
-            size="text3xl"
+            
             className="text-[32px] font-medium !text-black-900"
           >
           {userName}
