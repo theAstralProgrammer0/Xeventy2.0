@@ -1,7 +1,7 @@
 "use client";
 
 import { Img } from "../../components";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 
 const logos = [
   "img_logo_1.png",
@@ -16,49 +16,65 @@ export default function LogoRowSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function calculateDuplication() {
-      if (!containerRef.current) return;
-      const containerWidth = containerRef.current.offsetWidth;
-      
-      // Create a temporary element to measure one sequence of logos
-      const tempDiv = document.createElement("div");
-      tempDiv.style.display = "flex";
-      tempDiv.style.visibility = "hidden";
-      tempDiv.style.position = "absolute";
-      // Append each logo (simulate the same structure as in our component)
-      logos.forEach((logo) => {
-        const wrapper = document.createElement("div");
-        wrapper.style.flexShrink = "0";
-        // Tailwind's mx-8 is roughly 32px total horizontal margin
-        wrapper.style.margin = "0 32px"; 
-        const img = document.createElement("img");
-        img.src = logo;
-        img.width = 136;
-        img.height = 136;
-        wrapper.appendChild(img);
-        tempDiv.appendChild(wrapper);
-      });
-      document.body.appendChild(tempDiv);
-      const singleSequenceWidth = tempDiv.offsetWidth;
-      document.body.removeChild(tempDiv);
+  const calculateDuplication = () => {
+    if (!containerRef.current) return;
+    const containerWidth = containerRef.current.offsetWidth;
 
-      // Determine how many copies of the logo array are needed to cover the container
-      const times = Math.ceil(containerWidth / singleSequenceWidth);
-      setDupCount(times);
-      setBaseWidth(singleSequenceWidth * times);
-    }
+    const tempDiv = document.createElement("div");
+    tempDiv.style.display = "flex";
+    tempDiv.style.visibility = "hidden";
+    tempDiv.style.position = "absolute";
+    logos.forEach((logo) => {
+      const wrapper = document.createElement("div");
+      wrapper.style.flexShrink = "0";
+      wrapper.style.margin = "0 32px";
+      const img = document.createElement("img");
+      img.src = logo;
+      img.width = 136;
+      img.height = 136;
+      wrapper.appendChild(img);
+      tempDiv.appendChild(wrapper);
+    });
+    document.body.appendChild(tempDiv);
+    const singleSequenceWidth = tempDiv.offsetWidth;
+    document.body.removeChild(tempDiv);
+
+    const times = Math.ceil(containerWidth / singleSequenceWidth);
+    setDupCount(times);
+    setBaseWidth(singleSequenceWidth * times);
+  };
+
+  useLayoutEffect(() => {
     calculateDuplication();
-    window.addEventListener("resize", calculateDuplication);
-    return () => window.removeEventListener("resize", calculateDuplication);
   }, []);
 
-  // Build the base sequence by duplicating logos enough times to fill the container.
+  useEffect(() => {
+    const handleResize = () => {
+      calculateDuplication();
+    };
+
+    let resizeTimeoutId: NodeJS.Timeout | null = null;
+    const debouncedResizeHandler = () => {
+      if (resizeTimeoutId) {
+        clearTimeout(resizeTimeoutId);
+      }
+      resizeTimeoutId = setTimeout(handleResize, 200); // Debounce by 200ms
+    };
+
+    window.addEventListener("resize", debouncedResizeHandler);
+
+    return () => {
+      window.removeEventListener("resize", debouncedResizeHandler);
+      if (resizeTimeoutId) {
+        clearTimeout(resizeTimeoutId);
+      }
+    };
+  }, []);
+
   const baseSequence = [];
   for (let i = 0; i < dupCount; i++) {
     baseSequence.push(...logos);
   }
-  // Duplicate the base sequence once more for seamless looping.
   const marqueeSequence = [...baseSequence, ...baseSequence];
 
   return (
@@ -89,8 +105,6 @@ export default function LogoRowSection() {
             transform: translateX(0);
           }
           100% {
-            /* Translate by the exact width of the base sequence so that the duplicate 
-               copy immediately follows with no gap. */
             transform: translateX(calc(-1 * var(--base-width)));
           }
         }

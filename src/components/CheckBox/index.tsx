@@ -19,7 +19,7 @@ type CheckboxProps = Omit<
     name: string;
     label: string;
     id: string;
-    onChange: Function;
+    onChange: (checked: boolean) => void; // Fixed: Explicitly defined onChange type
     variant: keyof typeof variants;
     size: keyof typeof sizes;
     onClick: () => void;
@@ -47,7 +47,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       <>
         <div className={className + " flex items-center gap-[5px] cursor-pointer"}>
           <input
-            className={` ${(size && size[size]) || ""} ${(variant && variants[variant]) || ""}`}
+            className={` ${(size && sizes[size]) || ""} ${(variant && variants[variant]) || ""}`} // Fixed: Used 'sizes' instead of 'size'
             ref={ref}
             type="checkbox"
             name={name}
@@ -61,6 +61,8 @@ const CheckBox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     );
   },
 );
+
+CheckBox.displayName = "CheckBox"; // Fixed: Added display name
 
 export { CheckBox };
 
