@@ -77,7 +77,6 @@ export default function BlogPage() {
         <div className="bg-white-a700">
           <div className="flex px-4">
             <Heading
-              size="text17xl"
               className="text-4xl font-medium md:text-3xl sm:text-2xl"
             >
               Our Trending Articles
