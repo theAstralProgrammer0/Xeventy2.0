@@ -27,7 +27,7 @@ const tabData = [
               EMR & EHR
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Navigating healthcare documentation shouldn&apos;t be your biggest
@@ -77,7 +77,7 @@ const tabData = [
               Data Protection
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Protect your data with advanced security protocols and encryption
@@ -128,7 +128,7 @@ const tabData = [
               Telehealth
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Experience seamless virtual care with our Telehealth solutions,
@@ -179,7 +179,7 @@ const tabData = [
               Advanced Training
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Upgrade your skills with our Advanced Training programs, designed
@@ -230,7 +230,7 @@ const tabData = [
               Web3
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Dive into the future with our Web3 solutions, bringing
@@ -281,7 +281,7 @@ const tabData = [
               AI
             </Heading>
             <Text
-              size="text5xl"
+              
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
               Leverage the power of Artificial Intelligence to streamline
@@ -334,7 +334,7 @@ export default function ServicesPage() {
               </div>
               <div className="flex px-2">
                 <Text
-                  size="text14xl"
+                  
                   className="text-[38px] font-light !text-black-900_01 md:text-[30px] sm:text-[26px] xs:text-[20px]"
                 >
                   Discover our expertise
