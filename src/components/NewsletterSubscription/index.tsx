@@ -4,9 +4,9 @@ import { Img, Button, Input, Text } from "./..";
 import React from "react";
 
 interface Props {
-  className: string;
-  headingText: React.ReactNode;
-  descriptionText: React.ReactNode;
+  className?: string;
+  headingText?: React.ReactNode;
+  descriptionText?: React.ReactNode;
 }
 
 export default function NewsletterSubscription({
