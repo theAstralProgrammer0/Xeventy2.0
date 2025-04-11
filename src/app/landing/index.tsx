@@ -2,8 +2,6 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import NewsletterSubscription from "../../components/NewsletterSubscription";
 import CareersSection from "./CareersSection";
-import ContactUsSection from "./ContactUsSection";
-import FAQSection from "./FAQSection";
 import IntroductionSection from "./IntroductionSection";
 import LandingIntroSection from "./LandingIntroSection";
 import LogoRowSection from "./LogoRowSection";
