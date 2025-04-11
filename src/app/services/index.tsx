@@ -14,7 +14,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_emr_ehr.jpg" // Update with your actual image path
+            src="emr.jpg" // Update with your actual image path
             alt="EMR & EHR"
             width={440}
             height={410}
@@ -64,7 +64,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_data_protection.jpg" // Update with your actual image path
+            src="data.jpg" // Update with your actual image path
             alt="Data Protection"
             width={440}
             height={410}
@@ -115,7 +115,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_telehealth.jpg" // Update with your actual image path
+            src="telehealth.jpg" // Update with your actual image path
             alt="Telehealth"
             width={440}
             height={410}
@@ -166,7 +166,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_advanced_training.jpg" // Update with your actual image path
+            src="vr.jpg" // Update with your actual image path
             alt="Advanced Training"
             width={440}
             height={410}
@@ -217,7 +217,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_web3.jpg" // Update with your actual image path
+            src="web3.jpg" // Update with your actual image path
             alt="Web3"
             width={440}
             height={410}
@@ -268,7 +268,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="img_ai.jpg" // Update with your actual image path
+            src="ai.jpg" // Update with your actual image path
             alt="AI"
             width={440}
             height={410}

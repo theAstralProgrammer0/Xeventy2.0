@@ -128,7 +128,7 @@ const VideoNewsSection = ({ initialNewsArticles, initialVideoNews }: VideoNewsSe
                 </div>
               </div>
             </div>
-            <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
+            <Link href="/blog" target="_blank" rel="noreferrer">
               <Text
                 size="textlg"
                 className="text-[13.55px] font-normal !text-black-900_01 hover:underline"

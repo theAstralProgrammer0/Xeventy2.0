@@ -44,9 +44,11 @@ export default function LandingIntroSection() {
               }
               className="sm:text-[15px] xs:text-[12px] mobile:text-[11px] min-w-[234px] sm:min-w-[128px] xs:min-w-[100px] sm:h-[48px] xs:h-[35px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33.06px] font-merriweathersans sm:px-5"
             >
-              Learn more
+              <Link href="/about">
+                Learn more
+              </Link>
             </Button>
-            <Link href="https://dribbble.com" target="_blank" rel="noreferrer">
+            <Link href="https://whatsapp.com/09067096348" target="_blank" rel="noreferrer">
               <Text
                 className=" w-contain text-[18.15px] whitespace-nowrap sm:text-[15px] xs:text-[12px] font-normal !text-gray-700 hover:underline"
               >
