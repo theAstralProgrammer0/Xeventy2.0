@@ -11,10 +11,10 @@ const logos = [
 ];
 
 export default function LogoRowSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const marqueeRef = useRef<HTMLDivElement>(null);
   const [dupCount, setDupCount] = useState(1);
   const [baseWidth, setBaseWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function calculateDuplication() {
