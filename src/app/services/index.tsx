@@ -22,7 +22,6 @@ const tabData = [
           />
           <div className="flex flex-1 flex-col items-start gap-[3rem] self-stretch">
             <Heading
-              size="text11xl"
               className="text-[32px] font-medium md:text-[30px] sm:text-[28px]"
             >
               EMR & EHR
