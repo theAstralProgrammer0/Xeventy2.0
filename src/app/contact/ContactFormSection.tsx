@@ -16,13 +16,13 @@ export default function ContactFormSection() {
                 size="text13xl"
                 className="text-[2rem] font-semibold"
               >
-                We'd love to help
+                We&apos;d love to help
               </Heading>
               <Text
                 size="text9xl"
                 className="!text-black-900 text-[1em] font-normal"
               >
-                Reach out and we'll get in touch within 24 hours.
+                Reach out and we&apos;ll get in touch within 24 hours.
               </Text>
             </div>
             <div>

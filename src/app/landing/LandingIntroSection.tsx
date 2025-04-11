@@ -1,4 +1,4 @@
-import { AvatarStack, Img, Text, Button } from "../../components";
+import { Img, Text, Button } from "../../components";
 import Link from "next/link";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import { Img, Text, Heading, AvatarStack } from "../../components";
+import { Text, Heading, AvatarStack } from "../../components";
 import React from "react";
 
 export default function AboutHeroSection() {
