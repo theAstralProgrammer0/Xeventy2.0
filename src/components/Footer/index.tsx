@@ -1,5 +1,5 @@
 "use client";
-import { Text, Button, Input, Img } from "./..";
+import { Text } from "./..";
 import Link from "next/link";
 import React from "react";
 
@@ -22,7 +22,7 @@ export default function Footer() {
             >
               At Xeventy2.0 Health Limited, we empower you to advance
               healthcare.  Whether you need robust data protection,
-              cutting-edge analytics, or expert training, we're here to partner
+              cutting-edge analytics, or expert training, we&apso;re here to partner
               with you. Discover how our services, world-class conferences, and
               collaborative opportunities can help you build the future of
               healthcare. 
