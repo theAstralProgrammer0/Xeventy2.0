@@ -8,9 +8,9 @@ import HealthExpertiseProfile from "./HealthExpertiseProfile";
 import HealthcareRecordComponent from "./HealthcareRecordComponent";
 import { Img } from "./Img";
 import { Input } from "./Input";
-import { NewsArticle } from "./NewsArticle";
-import { NewsletterSubscription } from "./NewsletterSubscription";
-import { ProjectTile } from "./ProjectTile";
+import NewsArticle from "./NewsArticle";
+import NewsletterSubscription from "./NewsletterSubscription";
+import ProjectTile from "./ProjectTile";
 import { Text } from "./Text";
 import { TextArea } from "./TextArea";
 
