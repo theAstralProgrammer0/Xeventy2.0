@@ -1,7 +1,7 @@
 "use client";
 
 import { Img } from "../../components";
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect, JSX } from "react";
 
 const logos = [
   "img_logo_1.png",
@@ -10,7 +10,7 @@ const logos = [
   "img_logo_4.png",
 ];
 
-export default function LogoRowSection() {
+export default function LogoRowSection(): JSX.Element {
   const [dupCount, setDupCount] = useState(1);
   const [baseWidth, setBaseWidth] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
