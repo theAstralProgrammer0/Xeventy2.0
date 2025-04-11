@@ -2,7 +2,7 @@ import { Text, Heading, Img } from "./..";
 import React from "react";
 
 interface Props {
-  className: string;
+  className?: string;
   userImage: string;
   userName: React.ReactNode;
   userTitle: React.ReactNode;
