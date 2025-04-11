@@ -84,7 +84,7 @@ export function Footer() {
                     LinkedIn
                   </Text>
                 </Link>
-                <Link href="https://youtube.com" target="_blank" rel="noreferrer">
+                <Link href="https://www.youtube.com/" target="_blank" rel="noreferrer">
                   <Text className="!font-montserrat hover:text-green-a700_01 text-[18.07px] font-normal">
                     YouTube
                   </Text>
@@ -99,7 +99,7 @@ export function Footer() {
           <Text
             className="self-end text-[18.97px] font-normal tracking-[-0.76px] !text-green-a700_01"
           >
-            © Copyright 2025. All Rights Reserved.
+            © Copyright {new Date().getFullYear()}. All Rights Reserved.
           </Text>
           <div className="flex w-[40%] flex-wrap justify-between gap-5 md:w-full">
             <Link href="/policy" target="_blank" rel="noreferrer" className="self-end">
