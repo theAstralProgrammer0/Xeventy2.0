@@ -12,16 +12,16 @@ import {
 } from "react-accessible-accordion";
 
 const accordionQues = [
-  { que: "How to reset my password?" },
-  { que: "Do you offer international training?" },
-  { que: "What is your return policy?" },
-  { que: "How can I contact customer support?" },
+  { que: "What types of healthcare services can I access through Xeventy2.0?" },
+  { que: "How secure is my personal and health information on your platform?" },
+  { que: "How do I get started and use Xeventy2.0 services?" },
+  { que: "Who is Xeventy2.0 meant for?" },
 ];
 
 const accordionAns = [
-  { ans: "Our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
-  { ans: "Know that our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
-  { ans: "What are you saying our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
+  { ans: "Xeventy2.0 offers a range of convenient digital healthcare solutions designed to fit your lifestyle. Our core services include telehealth consultations (video or chat with licensed doctors and specialists), access to your Electronic Health Records (EHR/EMR) if managed through our system, remote patient monitoring options for chronic conditions, prescription refills (where legally permitted electronically), appointment booking for partner facilities, and access to health education resources. We aim to make managing your health simpler and more accessible." },
+  { ans: "Protecting your privacy and data security is our highest priority. We employ robust security measures, including end-to-end encryption for consultations and data transmission, secure server infrastructure, and strict access controls. Our platform is designed to comply with the Nigeria Data Protection Regulation (NDPR) and other relevant data protection standards to ensure your sensitive health information is always kept confidential and secure." },
+  { ans: "Getting started is easy! Simply download our mobile app (available on iOS and Android) or visit our website at x2h.com/landing. You'll need to create an account using your basic details. Depending on the service, you may need to complete identity verification. Once registered, you can browse available doctors or services, view your health records (if applicable), and book your first telehealth appointment or access other features right away. Our platform is designed to be user-friendly, but support is available if you need help." },
   { ans: "Bruh not the same our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original condition and packaging. Still need help? Contact us" },
 ];
 
@@ -71,7 +71,7 @@ export default function FAQSection() {
                 <div className="flex w-[94%] justify-center md:w-full">
                   <Text
                     size="textlg"
-                    className="w-[90%] text-[13.18px] font-normal !text-black-900_01"
+                    className="w-[90%] text-[1rem] leading-[3rem] font-normal !text-black-900_01"
                   >
                     {accordionAns[i]?.ans}
                   </Text>
