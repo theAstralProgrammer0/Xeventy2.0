@@ -1,5 +1,5 @@
 import { AvatarStack } from "./AvatarStack";
-import Button from "./Button";
+import { Button } from "./Button";
 import CheckBox from "./CheckBox";
 import Footer from "./Footer";
 import Header from "./Header";
