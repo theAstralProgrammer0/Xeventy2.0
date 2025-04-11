@@ -172,7 +172,7 @@ export default function ProjectsAndSocialsSection() {
                     <div key={idx} className="mx-2 flex-1">
                       <ProjectTile
                         {...project}
-                        imageClassName="aspect-square object-cover"
+                        className="aspect-square object-cover"
                       />
                     </div>
                   ))}
