@@ -13,7 +13,6 @@ export default function ContactFormSection() {
           <div className="container-xs flex flex-col gap-9">
             <div className="flex flex-col items-start gap-1.5">
               <Heading
-                size="text13xl"
                 className="text-[2rem] font-semibold"
               >
                 We&apos;d love to help
