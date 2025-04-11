@@ -31,7 +31,7 @@ const tabData = [
               size="text5xl"
               className="w-[96%] text-[19px] font-normal leading-[3rem] !text-black-900_01 md:w-full"
             >
-              Navigating healthcare documentation shouldn't be your biggest
+              Navigating healthcare documentation shouldn&apos;t be your biggest
               challenge. Our Electronic Medical Record (EMR) and Electronic
               Health Record (EHR) solutions streamline clinical workflows while
               ensuring comprehensive patient data management. Unlike clunky
