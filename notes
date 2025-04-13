@@ -1,3 +1,4 @@
 # Notes while building
 
 - Never use an <a> tag within a <Link> Wrapper
+- You can pass props of an element from one file to another
