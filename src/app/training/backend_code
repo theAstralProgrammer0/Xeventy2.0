@@ -1,0 +1,265 @@
+# Xeventy2.0 Training Page: End-to-End Implementation
+
+This document outlines the full-stack flow to implement the `/training` page in a Next.js frontend with a Django REST backend, covering:
+
+1. **Data Model & API (Django)**
+2. **Zoom & YouTube Live Integration (Backend)**
+3. **Django URL Configuration**
+4. **Frontend Pages & Components (Next.js)**
+5. **API Calls & State Management**
+6. **User Interactions & Hover Menus**
+
+---
+
+## 1. Django: Data Model & API
+
+**File:** `training/models.py`
+
+```python
+from django.db import models
+
+class Video(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    is_live = models.BooleanField(default=False)
+    category = models.CharField(
+        max_length=20,
+        choices=[('training','Live Training'), ('event','Live Event'), ('saved','Saved')]
+    )
+    youtube_url = models.URLField(blank=True, null=True)
+    zoom_meeting_id = models.CharField(max_length=100, blank=True, null=True)
+    zoom_join_url = models.URLField(blank=True, null=True)
+    scheduled_time = models.DateTimeField(blank=True, null=True)
+    # upload recorded file for saved videos
+    video_file = models.FileField(upload_to='recorded_videos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+```
+
+**File:** `training/serializers.py`
+
+```python
+from rest_framework import serializers
+from .models import Video
+
+class VideoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Video
+        fields = '__all__'
+```
+
+**File:** `training/views.py`
+
+```python
+from rest_framework import generics, filters
+from .models import Video
+from .serializers import VideoSerializer
+
+class VideoListCreateView(generics.ListCreateAPIView):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'description', 'category']
+
+class VideoRetrieveView(generics.RetrieveAPIView):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+```
+
+---
+
+## 2. Django: Zoom & YouTube Integration Endpoint
+
+**File:** `training/utils.py`
+
+```python
+import requests
+from django.conf import settings
+
+def get_zoom_join_url(meeting_id):
+    # If meetings are pre-created & stored
+    # Or call Zoom API with OAuth to generate join link
+    return f"https://zoom.us/j/{meeting_id}"
+```
+
+Optionally, you can build an endpoint to dynamically create Zoom meetings:
+
+**File:** `training/views.py` (append)
+
+```python
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .utils import get_zoom_join_url
+
+@api_view(['GET'])
+def zoom_join(request, pk):
+    video = Video.objects.get(pk=pk)
+    url = get_zoom_join_url(video.zoom_meeting_id)
+    return Response({'join_url': url})
+```
+
+---
+
+## 3. Django: URL Configuration
+
+**File:** `training/urls.py`
+
+```python
+from django.urls import path
+from .views import VideoListCreateView, VideoRetrieveView, zoom_join
+
+urlpatterns = [
+    path('videos/', VideoListCreateView.as_view(), name='video-list'),
+    path('videos/<int:pk>/', VideoRetrieveView.as_view(), name='video-detail'),
+    path('videos/<int:pk>/zoom/', zoom_join, name='video-zoom-join'),
+]
+```
+
+In your project `urls.py`, include:
+
+```python
+path('api/training/', include('training.urls'))
+```
+
+---
+
+## 4. Next.js: Pages & Components
+
+**Folder Structure**
+
+```
+/pages
+  /training
+    index.tsx          # Training landing & search
+    listings.tsx       # Full listings with sections
+/components
+  SearchBar.tsx
+  VideoCard.tsx
+  VideoSections.tsx
+  HoverMenu.tsx
+```
+
+### 4.1 `pages/training/index.tsx`
+
+```tsx
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import SearchBar from '@/components/SearchBar';
+
+export default function TrainingHome() {
+  const router = useRouter();
+
+  const onSearch = (q: string) => {
+    router.push(`/training/listings?search=${encodeURIComponent(q)}`);
+  };
+
+  return (
+    <div className="p-8">
+      <h1 className="text-xl font-bold">Training & Events</h1>
+      <SearchBar onSearch={onSearch} placeholder="Search videos or live events..." />
+      <button onClick={() => router.push('/training/listings')} className="mt-4 btn">
+        View Listings
+      </button>
+    </div>
+  );
+}
+```
+
+### 4.2 `pages/training/listings.tsx`
+
+```tsx
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import SearchBar from '@/components/SearchBar';
+import VideoSections from '@/components/VideoSections';
+
+export default function Listings() {
+  const router = useRouter();
+  const { search = '' } = router.query;
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    async function fetchVideos() {
+      const res = await fetch(`/api/training/videos/?search=${search}`);
+      const data = await res.json();
+      setVideos(data);
+    }
+    fetchVideos();
+  }, [search]);
+
+  return (
+    <div className="p-8">
+      <SearchBar onSearch={(q) => router.push(`/training/listings?search=${q}`)} placeholder="Search…" />
+      <VideoSections videos={videos} />
+    </div>
+  );
+}
+```
+
+### 4.3 `components/VideoSections.tsx`
+
+```tsx
+import VideoCard from './VideoCard';
+
+export default function VideoSections({ videos }) {
+  const liveTraining = videos.filter(v => v.category === 'training');
+  const events = videos.filter(v => v.category === 'event');
+  const saved = videos.filter(v => v.category === 'saved');
+
+  return (
+    <div className="space-y-8 mt-6">
+      <div><h2>Live Trainings</h2>{liveTraining.map(v => <VideoCard key={v.id} video={v} />)}</div>
+      <div><h2>Live Events/Webinars</h2>{events.map(v => <VideoCard key={v.id} video={v} />)}</div>
+      <div><h2>Saved Videos</h2>{saved.map(v => <VideoCard key={v.id} video={v} />)}</div>
+    </div>
+  );
+}
+```
+
+### 4.4 `components/VideoCard.tsx`
+
+```tsx
+import { useState } from 'react';
+import HoverMenu from './HoverMenu';
+
+export default function VideoCard({ video }) {
+  const [hover, setHover] = useState(false);
+
+  const onSelect = (mode: 'zoom' | 'youtube' | 'inline') => {
+    if (mode === 'zoom') window.open(`/api/training/videos/${video.id}/zoom/`, '_blank');
+    else if (mode === 'youtube') window.location.href = video.youtube_url;
+    else router.push(`/training/watch/${video.id}`);
+  };
+
+  return (
+    <div
+      className="relative card"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}>
+      <img src={video.thumbnail_url} alt={video.title} />
+      <h3>{video.title}</h3>
+      {hover && (
+        <HoverMenu
+          isLive={video.is_live}
+          onSelect={onSelect}
+        />
+      )}
+    </div>
+  );
+}
+```
+
+### 4.5 `components/HoverMenu.tsx`
+
+```tsx
+export default function HoverMenu({ isLive, onSelect }) {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      {isLive
+        ? <>
+            <button onClick={() => onSelect('zoom')} className="btn">Join via Zoom</button>
+            <button onClick={() => onSelect('youtube')} className="btn ml-2">Watch on YouTube</button>
+         
+
+
