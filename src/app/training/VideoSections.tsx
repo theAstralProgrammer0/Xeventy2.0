@@ -1,4 +1,4 @@
-import VideoCard from "../../components";
+import VideoCard from "../../components/VideoCard";
 
 export default function VideoSections({ videos }) {
   const liveTrainings = videos.filter(v => v.category === 'training');
