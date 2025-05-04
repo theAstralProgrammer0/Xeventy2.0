@@ -1,0 +1,50 @@
+I'm trying to implement search functionality and I'm trying to figure out how to go about it.
+This is what we're working with:
+
+```
+export const mockVideos = [
+  {
+    id: 1,
+    title: "Intro to React Hooks",
+    description: "Learn the basics of useState, useEffect, and custom hooks.",
+    is_live: false,
+    category: "saved",
+    youtube_url: "https://www.youtube.com/watch?v=dpw9EHDh2bM",
+    zoom_meeting_id: null,
+    zoom_join_url: null,
+    scheduled_time: null
+  },
+  {
+    id: 2,
+    title: "Live: Advanced Django Patterns",
+    description: "Deep dive into class‐based views, mixins, and DRF extensions.",
+    is_live: true,
+    category: "training",
+    youtube_url: "https://www.youtube.com/live/ABCDEFGHIJK",
+    zoom_meeting_id: "123-456-789",
+    zoom_join_url: "https://zoom.us/j/123456789",
+    scheduled_time: "2025-05-05T14:00:00Z"
+  },
+  {
+    id: 3,
+    title: "Webinar: Building Scalable APIs",
+    description: "Join our free webinar on API best practices and rate limiting.",
+    is_live: true,
+    category: "event",
+    youtube_url: "https://www.youtube.com/live/ZYXWVUTSRQ",
+    zoom_meeting_id: null,
+    zoom_join_url: null,
+    scheduled_time: "2025-05-10T18:30:00Z"
+  }
+];
+```
+
+So I want:
+
+- The search bar on the /training page with the "View Listing" button.
+
+- The search bar also on the page displayed when "View Listing" is clicked on.
+
+- The search bar on the /training page to show search results on the same page under the "View Listing" button, or on a separate page that shows the videos that hit the search, but more preferrably on the same page.
+
+- The search bar on the page displayed after "View Listing" button is clicked on, the same layout should be on the page, just the videos with the search hits shown.
