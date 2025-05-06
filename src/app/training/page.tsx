@@ -1,70 +1,21 @@
-"use client";
-
-import React from 'react';
-import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
-import SearchBar from '@/components/SearchBar';
-import VideoGallery from './VideoGallery';
+import type { Metadata } from 'next';
+import TrainingClientPage from './index'; 
 import { mockVideos, Video } from './utils/mockVideos';
-import Header from '@/components/Header';
 
-export default function TrainingPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
-  const [hasSearched, setHasSearched] = useState(false);
+export const metadata: Metadata = {
+  title: 'Training & Resources | Xeventy2.0',
+  description: 'Explore training videos, saved sessions, and upcoming live events. Search our extensive library.',
+};
 
-  const handleSearchChange = useCallback((newSearchTerm: string) => {
-    setSearchTerm(newSearchTerm);
-    setHasSearched(newSearchTerm.length > 0);
-  }, []);
-
-  useEffect(() => {
-    if (!searchTerm) {
-      setFilteredVideos([]);
-      return;
-    }
-
-    const lowerCaseSearch = searchTerm.toLowerCase();
-    const results = mockVideos.filter(video => 
-      video.title.toLowerCase().includes(lowerCaseSearch) ||
-      video.description.toLowerCase().includes(lowerCaseSearch)
-    );
-    setFilteredVideos(results);
-  }, [searchTerm]);
-
+export default async function TrainingPage() {
+  // In a real SSR scenario, you might fetch data here:
+  // const videos: Video[] = await fetchVideosFromServer();
+  // For this example, we use the imported mockVideos directly.
+  const videos: Video[] = mockVideos;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
-      <p className="text-center text-gray-700 mb-6">
-        Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
-      </p>
-
-      <SearchBar
-        onSearchChange={handleSearchChange}
-        placeholder="Search training content..."
-      />
-
-      <div className="text-center my-6">
-        <Link
-          href="/training/listings"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
-        >
-          View Full Listing
-        </Link>
-      </div>
-
-      {hasSearched && (
-        <div className="mt-8 border-t pt-6">
-          <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
-            <VideoGallery
-              videos={filteredVideos}
-              noResultsMessage={`No videos found matching "${searchTerm}". `}
-            />
-          </div>
-      )}
-
-      {/* Other <VideoSections /> */}
-    </div>
+    // Pass the server-loaded/imported videos to the client component
+    <TrainingClientPage initialVideos={videos} />
   );
 }
+
