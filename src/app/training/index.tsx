@@ -1,14 +1,17 @@
 "use client";
 
-import React from 'react';
-import { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import VideoGallery from './VideoGallery';
 import { mockVideos, Video } from './utils/mockVideos';
 import Header from '@/components/Header';
 
-export default function TrainingPage() {
+interface TrainingClientPageProps {
+  initialVideos: Video[];
+}
+
+export default function TrainingClientPage({ initialVideos }: TrainingClientPageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
@@ -35,6 +38,7 @@ export default function TrainingPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <Header />
       <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
       <p className="text-center text-gray-700 mb-6">
         Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
