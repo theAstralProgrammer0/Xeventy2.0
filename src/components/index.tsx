@@ -14,6 +14,7 @@ import NewsletterSubscription from "./NewsletterSubscription";
 import ProjectTile from "./ProjectTile";
 import { Text } from "./Text";
 import { TextArea } from "./TextArea";
+import VideoCard from "./VideoCard";
 
-export { AvatarStack, Button, CheckBox, Footer, Header, Heading, HealthExpertiseProfile, HealthcareRecordComponent, HoverMenu, Img, Input, NewsArticle, NewsletterSubscription, ProjectTile, Text, TextArea };
+export { AvatarStack, Button, CheckBox, Footer, Header, Heading, HealthExpertiseProfile, HealthcareRecordComponent, HoverMenu, Img, Input, NewsArticle, NewsletterSubscription, ProjectTile, Text, TextArea, VideoCard };
 

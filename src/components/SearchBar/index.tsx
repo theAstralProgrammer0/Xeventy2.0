@@ -1,21 +1,49 @@
-// components/SearchBar.tsx
-import React from 'react'
+"use client";
+
+import React, { useState, useEffect, ChangeEvent } from 'react';
+import useDebounce from '@/hooks/useDebounce';
 
 interface SearchBarProps {
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  placeholder?: string
+  initialValue?: string;
+  onSearchChange: (searchTerm: string) => void;
+  placeholder?: string;
+  debounceDelay?: number;
 }
 
-export default function SearchBar({ value, onChange, placeholder }: SearchBarProps) {
+const SearchBar: React.FC<SearchBarProps> = ({
+  initialValue = '',
+  onSearchChange,
+  placeholder = 'Search videos...',
+  debounceDelay = 300,
+}) => {
+  const [inputValue, setInputValue] = useState(initialValue);
+  const debouncedSearchTerm = useDebounce(inputValue, debounceDelay);
+
+  useEffect(() => {
+    setInputValue(initialValue);
+  }, [initialValue]);
+
+  useEffect(() => {
+    onSearchChange(debouncedSearchTerm);
+  }, [debouncedSearchTerm, onSearchChange]);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
+
   return (
-    <input
-      type="search"
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      className="w-full p-2 border rounded mb-6"
-    />
-  )
-}
+    <div className="w-full max-w-lg mx-auto my-4">
+      <input
+        type="search"
+        value={inputValue}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className="-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-150 ease-in-out"
+        aria-label="Search videos"
+      />
+    </div>
+  );
+};
+
+export default SearchBar;
 

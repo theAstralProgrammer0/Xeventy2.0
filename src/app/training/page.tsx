@@ -1,13 +1,69 @@
-import React from "react";
-import { Metadata } from "next";
-import Page from ".";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Xeventy2.0 Health Training: Get Expert Led Training From Industry Experts and Healthcare Professionals.",
-  description: "Attend our first-class events and webinars where we offer training videos on healthcare, technology and everything in-between. Upskill with Xeventy2.0 Health's expert training on healthcare and technology.",
-};
+import React from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import SearchBar from '@/components/SearchBar';
+import VideoGallery from './VideoGallery';
+import { mockVideos, Video } from './utils/mockVideos';
 
 export default function TrainingPage() {
-  return <Page />;
-}
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
 
+  const handleSearchChange = useCallback((newSearchTerm: string) => {
+    setSearchTerm(newSearchTerm);
+    setHasSearched(newSearchTerm.length > 0);
+  }, []);
+
+  useEffect(() => {
+    if (!searchTerm) {
+      setFilteredVideos([]);
+      return;
+    }
+
+    const lowerCaseSearch = searchTerm.toLowerCase();
+    const results = mockVideos.filter(video => 
+      video.title.toLowerCase().includes(lowerCaseSearch) ||
+      video.description.toLowerCase().includes(lowerCaseSearch)
+    );
+    setFilteredVideos(results);
+  }, [searchTerm]);
+
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
+      <p className="text-center text-gray-700 mb-6">
+        Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
+      </p>
+
+      <SearchBar
+        onSearchChange={handleSearchChange}
+        placeholder="Search training content..."
+      />
+
+      <div className="text-center my-6">
+        <Link
+          href="/training/listings"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+        >
+          View Full Listing
+        </Link>
+      </div>
+
+      {hasSearched && (
+        <div className="mt-8 border-t pt-6">
+          <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
+            <VideoGallery
+              videos={filteredVideos}
+              noResultsMessage={`No videos found matching "${searchTerm}". `}
+            />
+          </div>
+      )}
+
+      {/* Other <VideoSections /> */}
+    </div>
+  );
+}

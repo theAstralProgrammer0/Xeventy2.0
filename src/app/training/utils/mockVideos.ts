@@ -1,4 +1,17 @@
-export const mockVideos = [
+export interface Video {
+  id: number;
+  title: string;
+  description: string;
+  is_live: boolean;
+  category: 'saved' | 'training' | 'event';
+  youtube_url: string | null;
+  zoom_meeting_id: string | null;
+  zoom_join_url: string | null;
+  scheduled_time: string | null;
+}
+
+
+export const mockVideos: Video[] = [
   {
     id: 1,
     title: "Intro to React Hooks",
@@ -12,7 +25,7 @@ export const mockVideos = [
   },
   {
     id: 2,
-    title: "Live: Advanced Django Patterns",
+    title: "Advanced Django Patterns",
     description: "Deep dive into class‐based views, mixins, and DRF extensions.",
     is_live: true,
     category: "training",
@@ -23,7 +36,7 @@ export const mockVideos = [
   },
   {
     id: 3,
-    title: "Webinar: Building Scalable APIs",
+    title: "Building Scalable APIs",
     description: "Join our free webinar on API best practices and rate limiting.",
     is_live: true,
     category: "event",
@@ -34,7 +47,7 @@ export const mockVideos = [
   },
   {
     id: 4,
-    title: "Saved: Kubernetes Crash Course",
+    title: "Kubernetes Crash Course",
     description: "A recorded session on deploying services to a K8s cluster.",
     is_live: false,
     category: "saved",
@@ -45,7 +58,7 @@ export const mockVideos = [
   },
   {
     id: 5,
-    title: "Live Training: GraphQL with Next.js",
+    title: "GraphQL with Next.js",
     description: "Hands‐on workshop connecting Next.js frontend to a GraphQL API.",
     is_live: true,
     category: "training",
@@ -56,7 +69,7 @@ export const mockVideos = [
   },
   {
     id: 6,
-    title: "Event: Tech Community Meetup",
+    title: "Tech Community Meetup",
     description: "Monthly meetup for sharing side‐projects and networking.",
     is_live: true,
     category: "event",
@@ -67,11 +80,33 @@ export const mockVideos = [
   },
   {
     id: 7,
-    title: "Saved: CSS Grid Layout Deep Dive",
+    title: "CSS Grid Layout Deep Dive",
     description: "Recorded Q&A and demos around CSS Grid for responsive design.",
     is_live: false,
     category: "saved",
     youtube_url: "https://www.youtube.com/watch?v=EFafSYg-PkI",
+    zoom_meeting_id: null,
+    zoom_join_url: null,
+    scheduled_time: null
+  },
+  {
+    id: 8,
+    title: "Getting Started with Next.js",
+    description: "A beginner-friendly introduction to the Next.js framework for React applications.",
+    is_live: false,
+    category: "training",
+    youtube_url: "https://placehold.co/600x400/EEE/31343C?text=Next.js+Intro", // Placeholder URL
+    zoom_meeting_id: null,
+    zoom_join_url: null,
+    scheduled_time: null
+  },
+    {
+    id: 9,
+    title: "State Management in React",
+    description: "Comparing different state management solutions: Context API, Zustand, Redux.",
+    is_live: false,
+    category: "saved",
+    youtube_url: "https://placehold.co/600x400/EEE/31343C?text=React+State+Mgt", // Placeholder URL
     zoom_meeting_id: null,
     zoom_join_url: null,
     scheduled_time: null
