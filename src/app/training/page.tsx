@@ -6,6 +6,7 @@ import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import VideoGallery from './VideoGallery';
 import { mockVideos, Video } from './utils/mockVideos';
+import Header from '@/components/Header';
 
 export default function TrainingPage() {
   const [searchTerm, setSearchTerm] = useState('');

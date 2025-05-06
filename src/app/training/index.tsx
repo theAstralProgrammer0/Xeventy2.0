@@ -1,26 +1,70 @@
-// pages/training/listings/index.tsx
-import { useState } from 'react'
-import SearchBar from '@/components/SearchBar'
-import VideoGallery from '@/components/VideoGallery'
-import { mockVideos } from '@/utils/mockVideos'
+"use client";
 
-export default function Listings() {
-  const [searchTerm, setSearchTerm] = useState('')
-  const filtered = mockVideos.filter(video =>
-    video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    video.description.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+import React from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import SearchBar from '@/components/SearchBar';
+import VideoGallery from './VideoGallery';
+import { mockVideos, Video } from './utils/mockVideos';
+import Header from '@/components/Header';
+
+export default function TrainingPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  const handleSearchChange = useCallback((newSearchTerm: string) => {
+    setSearchTerm(newSearchTerm);
+    setHasSearched(newSearchTerm.length > 0);
+  }, []);
+
+  useEffect(() => {
+    if (!searchTerm) {
+      setFilteredVideos([]);
+      return;
+    }
+
+    const lowerCaseSearch = searchTerm.toLowerCase();
+    const results = mockVideos.filter(video => 
+      video.title.toLowerCase().includes(lowerCaseSearch) ||
+      video.description.toLowerCase().includes(lowerCaseSearch)
+    );
+    setFilteredVideos(results);
+  }, [searchTerm]);
+
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">All Videos</h1>
-      <SearchBar
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search all videos..."
-      />
-      <VideoGallery videos={filtered} onSelect={…} />
-    </div>
-  )
-}
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
+      <p className="text-center text-gray-700 mb-6">
+        Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
+      </p>
 
+      <SearchBar
+        onSearchChange={handleSearchChange}
+        placeholder="Search training content..."
+      />
+
+      <div className="text-center my-6">
+        <Link
+          href="/training/listings"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+        >
+          View Full Listing
+        </Link>
+      </div>
+
+      {hasSearched && (
+        <div className="mt-8 border-t pt-6">
+          <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
+            <VideoGallery
+              videos={filteredVideos}
+              noResultsMessage={`No videos found matching "${searchTerm}". `}
+            />
+          </div>
+      )}
+
+      {/* Other <VideoSections /> */}
+    </div>
+  );
+}
