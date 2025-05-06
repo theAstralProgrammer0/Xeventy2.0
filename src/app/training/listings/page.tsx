@@ -4,13 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import SearchBar from '@/components/SearchBar';
 import VideoGallery from '../VideoGallery';
-import { mockVideo, Video } from '../utils/mockVideos';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Xeventy2.0 Health Training: Get Expert Led Training From Industry Experts and Healthcare Professionals.",
-  description: "Attend our first-class events and webinars where we offer training videos on healthcare, technology and everything in-between. Upskill with Xeventy2.0 Health's expert training on healthcare and technology.",
-};
+import { mockVideos, Video } from '../utils/mockVideos';
 
 export default function TrainingListingsPage() {
   const router = useRouter();
@@ -38,7 +32,7 @@ export default function TrainingListingsPage() {
     setSearchTerm(newSearchTerm);
 
     const params = new URLSearchParams(searchParams.toString());
-    if (nenwSearchTerm) {
+    if (newSearchTerm) {
       params.set('search', newSearchTerm);
     } else {
       params.delete('search');
