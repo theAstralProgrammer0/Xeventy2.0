@@ -18,7 +18,7 @@ export const mockVideos: Video[] = [
     description: "Learn the basics of useState, useEffect, and custom hooks.",
     is_live: false,
     category: "saved",
-    youtube_url: "https://www.youtube.com/watch?v=dpw9EHDh2bM",
+    youtube_url: "https://www.youtube.com/watch?v=cF2lQ_gHAbc", 
     zoom_meeting_id: null,
     zoom_join_url: null,
     scheduled_time: null
@@ -29,7 +29,7 @@ export const mockVideos: Video[] = [
     description: "Deep dive into class‐based views, mixins, and DRF extensions.",
     is_live: true,
     category: "training",
-    youtube_url: "https://www.youtube.com/live/ABCDEFGHIJK",
+    youtube_url: "https://www.youtube.com/watch?v=Pz10xdoL9kY",
     zoom_meeting_id: "123-456-789",
     zoom_join_url: "https://zoom.us/j/123456789",
     scheduled_time: "2025-05-05T14:00:00Z"
@@ -41,8 +41,8 @@ export const mockVideos: Video[] = [
     is_live: true,
     category: "event",
     youtube_url: "https://www.youtube.com/live/ZYXWVUTSRQ",
-    zoom_meeting_id: null,
-    zoom_join_url: null,
+    zoom_meeting_id: "987-654-321",
+    zoom_join_url: "https://zoom.us/j/987654321",
     scheduled_time: "2025-05-10T18:30:00Z"
   },
   {
@@ -51,7 +51,7 @@ export const mockVideos: Video[] = [
     description: "A recorded session on deploying services to a K8s cluster.",
     is_live: false,
     category: "saved",
-    youtube_url: "https://www.youtube.com/watch?v=PH-2FfFD2PU",
+    youtube_url: "https://www.youtube.com/watch?v=1T3124xGOMw",
     zoom_meeting_id: null,
     zoom_join_url: null,
     scheduled_time: null
@@ -95,7 +95,7 @@ export const mockVideos: Video[] = [
     description: "A beginner-friendly introduction to the Next.js framework for React applications.",
     is_live: false,
     category: "training",
-    youtube_url: "https://placehold.co/600x400/EEE/31343C?text=Next.js+Intro", // Placeholder URL
+    youtube_url: "https://www.youtube.com/watch?v=1T3124xGOMw",
     zoom_meeting_id: null,
     zoom_join_url: null,
     scheduled_time: null
@@ -106,10 +106,32 @@ export const mockVideos: Video[] = [
     description: "Comparing different state management solutions: Context API, Zustand, Redux.",
     is_live: false,
     category: "saved",
-    youtube_url: "https://placehold.co/600x400/EEE/31343C?text=React+State+Mgt", // Placeholder URL
+    youtube_url: "https://www.youtube.com/watch?v=N5G36_4I53c",
     zoom_meeting_id: null,
     zoom_join_url: null,
     scheduled_time: null
-  }
+  },
+  {
+    id: 10,
+    title: "Live: Advanced Django Patterns",
+    description: "Deep dive into class‐based views, mixins, and Django REST framework extensions.",
+    is_live: true,
+    category: "training",
+    youtube_url: "https://www.youtube.com/watch?v=tA42xQSL6yA",
+    zoom_meeting_id: "123-456-789",
+    zoom_join_url: "https://zoom.us/j/123456789",
+    scheduled_time: "2025-06-15T14:00:00Z"
+  },
+  {
+    id: 11,
+    title: "Webinar: Building Scalable APIs",
+    description: "Join our free webinar on API design best practices, performance, and rate limiting.",
+    is_live: true,
+    category: "event",
+    youtube_url: "https://www.youtube.com/watch?v=Pz10xdoL9kY",
+    zoom_meeting_id: "123-456-789",
+    zoom_join_url: "https://zoom.us/j/123456789",
+    scheduled_time: "2025-06-20T18:30:00Z"
+  },
 ];
 
