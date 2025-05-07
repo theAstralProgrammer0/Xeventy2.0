@@ -32,13 +32,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto my-4">
+    <div className="w-full max-w-xl mx-auto my-4">
       <input
         type="search"
         value={inputValue}
         onChange={handleChange}
         placeholder={placeholder}
-        className="-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-150 ease-in-out"
+        className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-150 ease-in-out"
         aria-label="Search videos"
       />
     </div>
