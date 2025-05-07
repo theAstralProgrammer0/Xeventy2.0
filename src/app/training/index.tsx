@@ -40,42 +40,44 @@ export default function TrainingClientPage({ initialVideos }: TrainingClientPage
 
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
       <Header />
-      <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
-      <p className="text-center text-gray-700 mb-6">
-        Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
-      </p>
+      <div className="container mx-auto px-5 py-4">
+        <h1 className="text-3xl font-bold mb-6 text-center">Training & Resources</h1>
+        <p className="text-center text-gray-700 mb-6">
+          Find training videos, saved sessions, and upcoming live events. Use the search below or view all listings.
+        </p>
 
-      <SearchBar
-        onSearchChange={handleSearchChange}
-        placeholder="Search training content..."
-      />
+        <SearchBar
+          onSearchChange={handleSearchChange}
+          placeholder="Explore Live Trainings & Events..."
+        />
 
-      <div className="flex justify-center text-center my-6">
-        <Button
-          className="rounded-lg"
-        >
-          <Link
-            href="/training/listings"
-            className="inline-block text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+        <div className="flex justify-center text-center my-6">
+          <Button
+            className="rounded-lg"
           >
-            View Full Listing
-          </Link>
-        </Button>
+            <Link
+              href="/training/listings"
+              className="inline-block py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+            >
+              View Full Listing
+            </Link>
+          </Button>
+        </div>
+
+        {hasSearched && (
+          <div className="mt-8 border-t pt-6">
+            <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
+              <VideoGallery
+                videos={filteredVideos}
+                noResultsMessage={`No videos found matching "${searchTerm}". `}
+              />
+            </div>
+        )}
+
+        {/* Other <VideoSections /> */}
       </div>
-
-      {hasSearched && (
-        <div className="mt-8 border-t pt-6">
-          <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
-            <VideoGallery
-              videos={filteredVideos}
-              noResultsMessage={`No videos found matching "${searchTerm}". `}
-            />
-          </div>
-      )}
-
-      {/* Other <VideoSections /> */}
     </div>
   );
 }
