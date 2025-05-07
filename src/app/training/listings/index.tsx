@@ -58,17 +58,19 @@ export default function TrainingListingsClientPage({ initialVideos }: TrainingLi
 
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
       <Header />
-      <h1 className="text-3xl font-bold mb-6 text-center">All Training Videos & Events</h1>
-      <SearchBar
-        initialValues={searchTerm}
-        onSearchChange={handleSearchChange}
-        placeholder="Filter listings..."
-      />
+      <div className="container mx-auto px-5 py-4">
+        <h1 className="text-3xl font-bold mb-6 text-center">All Training Videos & Events</h1>
+        <SearchBar
+          initialValues={searchTerm}
+          onSearchChange={handleSearchChange}
+          placeholder="Filter listings..."
+        />
 
-      <div className="mt-8">
-        <VideoGallery videos={filteredVideos} />
+        <div className="mt-8">
+          <VideoGallery videos={filteredVideos} />
+        </div>
       </div>
     </div>
   );
