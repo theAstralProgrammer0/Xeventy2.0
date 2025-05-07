@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import VideoGallery from './VideoGallery';
 import { mockVideos, Video } from './utils/mockVideos';
 import Header from '@/components/Header';
+import { Button } from '@/components';
 
 interface TrainingClientPageProps {
   initialVideos: Video[];
@@ -29,8 +30,10 @@ export default function TrainingClientPage({ initialVideos }: TrainingClientPage
 
     const lowerCaseSearch = searchTerm.toLowerCase();
     const results = mockVideos.filter(video => 
+      lowerCaseSearch === 'live' ? video.is_live :  
       video.title.toLowerCase().includes(lowerCaseSearch) ||
-      video.description.toLowerCase().includes(lowerCaseSearch)
+      video.description.toLowerCase().includes(lowerCaseSearch) ||
+      video.category.toLowerCase().includes(lowerCaseSearch)
     );
     setFilteredVideos(results);
   }, [searchTerm]);
@@ -49,13 +52,17 @@ export default function TrainingClientPage({ initialVideos }: TrainingClientPage
         placeholder="Search training content..."
       />
 
-      <div className="text-center my-6">
-        <Link
-          href="/training/listings"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+      <div className="flex justify-center text-center my-6">
+        <Button
+          className="rounded-lg"
         >
-          View Full Listing
-        </Link>
+          <Link
+            href="/training/listings"
+            className="inline-block text-whitefont-semibold py-2 px-6 rounded-lg shadow transition duration-150 ease-in-out"
+          >
+            View Full Listing
+          </Link>
+        </Button>
       </div>
 
       {hasSearched && (

@@ -28,7 +28,8 @@ export default function TrainingListingsClientPage({ initialVideos }: TrainingLi
     const lowerCaseSearch = searchTerm.toLowerCase();
     return mockVideos.filter(video => 
       video.title.toLowerCase().includes(lowerCaseSearch) ||
-      video.description.toLowerCase().includes(lowerCaseSearch)
+      video.description.toLowerCase().includes(lowerCaseSearch) ||
+      video.category.toLowerCase().includes(lowerCaseSearch)
     );
   }, [searchTerm]);
 
