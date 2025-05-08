@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default async function TrainingPage() {
   // In a real SSR scenario, you might fetch data here:
-  // const videos: Video[] = await fetchVideosFromServer();
+  const videos: Video[] = await fetchVideosFromServer();
   // For this example, we use the imported mockVideos directly.
-  const videos: Video[] = mockVideos;
+  // const videos: Video[] = mockVideos;
 
   return (
     // Pass the server-loaded/imported videos to the client component
