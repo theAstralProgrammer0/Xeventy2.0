@@ -47,9 +47,16 @@ export default function BlogPage() {
       console.log("Fetching URL:", url);
       const response = await axios.get<PaginatedResponse>(url);
       const data = response.data;
-      setArticles((prevArticles) => [...prevArticles, ...data.results]);
+
+      setArticles((prevArticles) => {
+        const newArticles = data.results;
+        const existingIds = new Set(prevArticles.map(article => article.id));
+        const uniqueNewArticles = newArticles.filter(article => !existingIds.has(article.id));
+
+        return [...prevArticles, ...uniqueNewArticles];
+      });
+
       setNextLink(data.links.next);
-      console.log("Articles fetched:", data.results);
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error("Error message:", error.message);
