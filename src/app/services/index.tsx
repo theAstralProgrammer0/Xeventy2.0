@@ -3,13 +3,16 @@ import Header from "../../components/Header";
 import NewsletterSubscription from "../../components/NewsletterSubscription";
 import Footer from "../../components/Footer";
 import { Heading, Text, Button, Img } from "../../components"; 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { TabList, Tab, Tabs } from "react-tabs";
+import FAQSection from "../contact/FAQSection";
 
 // Define an array of tab data for better management and scalability
 const tabData = [
   {
     label: "EMR & EHR",
+    slug: "emr-ehr",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -60,6 +63,7 @@ const tabData = [
   },
   {
     label: "Data Protection",
+    slug: "data-protection",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -111,6 +115,7 @@ const tabData = [
   },
   {
     label: "Telehealth",
+    slug: "telehealth",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -162,6 +167,7 @@ const tabData = [
   },
   {
     label: "Advanced Training",
+    slug: "advanced-training",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -213,6 +219,7 @@ const tabData = [
   },
   {
     label: "Web3",
+    slug: "web3",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -264,6 +271,7 @@ const tabData = [
   },
   {
     label: "AI",
+    slug: "ai",
     content: (
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
@@ -316,7 +324,20 @@ const tabData = [
 ];
 
 export default function ServicesPage() {
-  const [activeTabIndex, setActiveTabIndex] = React.useState(0);
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab") ?? "";
+  const defaultIndex = tabData.findIndex((t) => t.slug === tabParam);
+  const [activeTabIndex, setActiveTabIndex] = useState(
+    defaultIndex >= 0 ? defaultIndex : 0
+  );
+  
+  useEffect(() => {
+    if (tabParam) {
+      const newIndex = tabData.findIndex((t) => t.slug === tabParam);
+      if (newIndex >= 0) setActiveTabIndex(newIndex);
+    }
+  }, [tabParam]);
+  
 
   return (
     <div className="flex w-full flex-col gap-[30px] bg-white-a700">
@@ -359,13 +380,14 @@ export default function ServicesPage() {
                   </TabList>
                 </div>
                 {/* Render only the active tab content */}
-                <div className="px-2 py-9 sm:py-5">
+                <div className="px-2 py-9 sm:py-5 border-b border-thin">
                   {tabData[activeTabIndex].content}
                 </div>
               </Tabs>
             </div>
           </div>
         </div>
+        <FAQSection />
         <div className="mt-[3rem]">
           <NewsletterSubscription />
         </div>
