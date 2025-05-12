@@ -1,0 +1,166 @@
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import { Button, Text } from "../../components";
+import ProjectTile from "../../components/ProjectTile";
+
+interface Project {
+  projectImage: string;
+  projectTitle: string;
+  projectDescription: string;
+}
+
+const emrSystemGrid: Project[] = [
+  { projectImage: "/img_proj_1.jpg", projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.", projectDescription: "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care." },
+  { projectImage: "/img_pic2.png", projectTitle: "Telemedicine Platform Integration.", projectDescription: "Integrating advanced telemedicine features into existing healthcare platforms to allow for remote consultations, diagnostics, and patient monitoring, increasing accessibility to care." },
+  { projectImage: "/img_proj_2.jpg", projectTitle: "AI-Powered Diagnostic Tool Development.", projectDescription: "Leveraging artificial intelligence and machine learning to create tools that assist medical professionals in diagnosing diseases more accurately and efficiently from medical imaging and patient data." },
+  { projectImage: "/img_pic3.png", projectTitle: "Mobile Health (mHealth) Application for Patient Engagement.", projectDescription: "Developing a comprehensive mHealth app that empowers patients to manage their health, track appointments, access records, and communicate securely with their healthcare providers." },
+  { projectImage: "/img_proj_3.jpg", projectTitle: "Healthcare Data Analytics Platform.", projectDescription: "Building a robust analytics platform to process and visualize healthcare data, providing insights for operational efficiency, treatment effectiveness, and public health trends." },
+  { projectImage: "/img_pic4.png", projectTitle: "Blockchain for Secure Medical Data Exchange.", projectDescription: "Exploring and implementing blockchain technology to enhance the security, transparency, and interoperability of medical data sharing among different healthcare entities." },
+];
+
+function groupProjects(projects: Project[], groupSize: number): Project[][] {
+  const groups: Project[][] = [];
+  for (let i = 0; i < projects.length; i += groupSize) {
+    let group = projects.slice(i, i + groupSize);
+    if (group.length < groupSize) {
+      group = group.concat(projects.slice(0, groupSize - group.length));
+    }
+    groups.push(group);
+  }
+  return groups;
+}
+
+export default function ProjectsAndSocialsSection() {
+  const [groupSize, setGroupSize] = useState(3);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      setGroupSize(w < 768 ? 1 : w < 1024 ? 2 : 3);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const groups = groupProjects(emrSystemGrid, groupSize);
+
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  // Update current index on scroll
+  const onScroll = () => {
+    if (!containerRef.current) return;
+    const idx = Math.round(
+      containerRef.current.scrollLeft / containerRef.current.clientWidth
+    );
+    setCurrentIdx(idx);
+  };
+
+  // Scroll by group on arrow click
+  const scrollToGroup = (idx: number) => {
+    if (!containerRef.current) return;
+    const width = containerRef.current.clientWidth;
+    containerRef.current.scrollTo({ left: width * idx, behavior: "smooth" });
+  };
+
+  // Handle wheel scroll to navigate carousel
+  const onWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    if (!containerRef.current) return;
+    containerRef.current.scrollBy({ left: e.deltaY, behavior: "smooth" });
+  };
+
+  return (
+    <div className="mt-[88px] flex flex-col items-center">
+      <div className="container-xs flex flex-col gap-5 md:px-5">
+        {/* Header */}
+        <div className="mx-auto flex flex-col items-center gap-6 md:mx-0">
+          <Button
+            color="black_900_01"
+            size="xs"
+            className="min-w-[108px] rounded-[10px] px-1.5 font-merriweather tracking-[1.09px]"
+          >
+            Our Projects
+          </Button>
+          <Text
+            size="text13xl"
+            className="!font-merriweather text-[56.47px] font-normal !text-black-900_01 md:text-[48px] sm:text-[42px]"
+          >
+            Discover our most impactful projects
+          </Text>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative mt-8">
+          <div
+            ref={containerRef}
+            onScroll={onScroll}
+            onWheel={onWheel}
+            className="flex overflow-x-auto scroll-hidden"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            {groups.map((group, gi) => (
+              <div key={gi} className="flex-shrink-0 w-full flex justify-around">
+                {group.map((p, i) => (
+                  <div key={i} className="mx-2 flex-1">
+                    <ProjectTile {...p} className="aspect-square object-cover" />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Prev / Next Buttons */}
+          <button
+            onClick={() =>
+              scrollToGroup(
+                currentIdx - 1 < 0 ? groups.length - 1 : currentIdx - 1
+              )
+            }
+            className="absolute left-0 top-[14rem] transform -translate-y-1/2 p-3"
+            aria-label="Previous projects"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scrollToGroup((currentIdx + 1) % groups.length)}
+            className="absolute right-0 top-[14rem] transform -translate-y-1/2 p-3"
+            aria-label="Next projects"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .scroll-hidden {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;     /* Firefox */
+        }
+        .scroll-hidden::-webkit-scrollbar {
+          display: none;             /* Chrome, Safari, Opera */
+        }
+      `}</style>
+    </div>
+  );
+}
+
