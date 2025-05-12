@@ -7,8 +7,8 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { TabList, Tab, Tabs } from "react-tabs";
 import FAQSection from "../contact/FAQSection";
+import Link from "next/link";
 
-// Define an array of tab data for better management and scalability
 const tabData = [
   {
     label: "EMR & EHR",
@@ -17,7 +17,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="emr.jpg" // Update with your actual image path
+            src="emr.jpg"
             alt="EMR & EHR"
             width={440}
             height={410}
@@ -54,7 +54,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
@@ -68,7 +70,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="data.jpg" // Update with your actual image path
+            src="data.jpg"
             alt="Data Protection"
             width={440}
             height={410}
@@ -106,7 +108,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
@@ -120,7 +124,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="telehealth.jpg" // Update with your actual image path
+            src="telehealth.jpg"
             alt="Telehealth"
             width={440}
             height={410}
@@ -158,7 +162,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
@@ -172,7 +178,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="vr.jpg" // Update with your actual image path
+            src="vr.jpg"
             alt="Advanced Training"
             width={440}
             height={410}
@@ -210,7 +216,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
@@ -224,7 +232,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="web3.jpg" // Update with your actual image path
+            src="web3.jpg"
             alt="Web3"
             width={440}
             height={410}
@@ -262,7 +270,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
@@ -276,7 +286,7 @@ const tabData = [
       <div className="w-full">
         <div className="flex items-center gap-10 md:flex-col">
           <Img
-            src="ai.jpg" // Update with your actual image path
+            src="ai.jpg"
             alt="AI"
             width={440}
             height={410}
@@ -314,7 +324,9 @@ const tabData = [
               }
               className="md:w-full min-w-[234px] gap-2.5 rounded-[10px] border-[0.94px] border-solid border-green-a700_a5 px-[33px] font-merriweather-sans sm:px-5"
             >
-              Hire us
+              <Link href="/contact">
+                Hire us
+              </Link>
             </Button>
           </div>
         </div>
