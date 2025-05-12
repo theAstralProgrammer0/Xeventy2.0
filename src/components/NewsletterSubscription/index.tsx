@@ -37,7 +37,7 @@ export default function NewsletterSubscription({
                 size="sm"
                 name="emailinput_one"
                 placeholder="Enter your email"
-                className="h-[3em] flex-grow rounded-md px-3"
+                className="h-[3em] flex-grow transition-colors hover:border-green-500 hover:bg-green-50 rounded-md px-3"
               />
               <Button
                 className="w-[23%] h-[3em] rounded-lg px-2"
