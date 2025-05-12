@@ -1,26 +1,27 @@
 import { Button, Img, Text } from "../../components";
 import HealthcareRecordComponent from "../../components/HealthcareRecordComponent";
 import React, { Suspense } from "react";
+import Link from "next/link";
 
 const serviceList = [
   {
     headerText: "EMR and EHR",
-    descriptionText: "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
+    descriptionText: "Electronic Medical/Health Records digitize patient information, enabling seamless sharing between healthcare providers, improving care coordination, enhancing clinical decision-making, and reducing medical errors through comprehensive, accessible digital documentation.",
     imageSrc: "img_comp_1_image.png",
   },
   {
     headerText: "Data Protection",
-    descriptionText: "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
+    descriptionText: "Comprehensive safeguarding of sensitive information through encryption, access controls, and compliance protocols, preventing unauthorized access while ensuring business continuity, regulatory compliance, and maintaining stakeholder trust.",
     imageSrc: "img_comp_2_image.png",
   },
   {
     headerText: "Telehealth",
-    descriptionText: "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
+    descriptionText: "Remote healthcare delivery using digital technologies to connect patients with providers, enabling virtual consultations, remote monitoring, and timely care regardless of geographic barriers or mobility limitations.",
     imageSrc: "img_comp_3_image.png",
   },
   {
     headerText: "Advanced Training",
-    descriptionText: "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
+    descriptionText: "Specialized educational programs delivering cutting-edge knowledge and skills development through expert-led instruction, hands-on practice, and personalized learning pathways to enhance professional capabilities and career advancement.",
     imageSrc: "img_comp_4_image.png",
   },
 ];
@@ -58,20 +59,21 @@ export default function ServicesOverviewSection() {
               ))}
             </Suspense>
           </div>
-          <Button
-            
+          <Button    
             rightIcon={
               <Img
                 src="img_link_icon.png"
-                width={20}
-                height={20}
+                width={100}
+                height={100}
                 alt="Link Icon"
                 className="h-[20px] w-[20px] object-contain"
               />
             }
             className="min-w-[234px] gap-2.5 rounded-[10px] px-4 font-sans"
           >
-            View more services
+            <Link href="/services">
+              View more services
+            </Link>
           </Button>
         </div>
       </div>
