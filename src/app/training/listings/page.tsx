@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from "react";
 import TrainingListingsClientPage from './index';
 // import { mockVideos, Video } from '../utils/mockVideos';
 
@@ -12,7 +13,9 @@ export default async function TrainingListingsPage() {
   // const videos: Video[] = mockVideos;
 
   return (
-    <TrainingListingsClientPage />
+    <Suspense fallback={<div className="py-10 text-center">Loading...</div>}>
+      <TrainingListingsClientPage />
+    </Suspense>
   );
 }
 
