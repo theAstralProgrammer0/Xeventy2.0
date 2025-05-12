@@ -42,7 +42,7 @@ export default function FAQSection() {
           >
             <button
               onClick={() => toggleIndex(idx)}
-              className="w-full flex justify-between items-center px-6 py-4 bg-green-50 hover:bg-blue-100 transition-colors duration-200 focus:outline-none"
+              className="w-full flex justify-between items-center px-6 py-4 hover:bg-green-50 bg-blue-100 transition-colors duration-200 focus:outline-none"
             >
               <Text className="font-semibold !text-black-900 text-left">
                 {item.question}
