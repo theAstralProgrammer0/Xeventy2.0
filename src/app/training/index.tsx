@@ -8,11 +8,8 @@ import { mockVideos, Video } from './utils/mockVideos';
 import Header from '@/components/Header';
 import { Button } from '@/components';
 
-interface TrainingClientPageProps {
-  initialVideos: Video[];
-}
 
-export default function TrainingClientPage({ initialVideos }: TrainingClientPageProps) {
+export default function TrainingClientPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
