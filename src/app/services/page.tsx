@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <Suspense faillback={<div className="py-10 text-center">Loading...</div>}>
+    <Suspense fallback={<div className="py-10 text-center">Loading...</div>}>
       <Page />
     </Suspense>
   );
