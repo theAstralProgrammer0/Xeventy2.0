@@ -80,12 +80,12 @@ export default function LogoRowSection(): JSX.Element {
     <div className="flex flex-col mt-[8em]">
       <Button
         color="black_900_01"
-        size="xs"
+        
         className="flex flex-col items-center gap-5 px-12 md:px-5"
       >
         <Text 
-          size="xs"
-          className="!font-merriweather"
+          
+          className="text-[10px] !font-merriweather"
         >
           Our Partners
         </Text>
