@@ -38,22 +38,42 @@ export default function Footer() {
               </Text>
             </div>
             <div className="flex md:flex-col items-start gap-5 md:gap-14">
-              <Link href="/services">
+              <Link 
+                href={{
+                  pathname: "/services",
+                  query: {tab: "emr-ehr"}
+                }}
+              >
                 <Text className="!font-montserrat text-[18.07px] hover:text-green-a700_01 font-normal">
                   EMR & EHR
                 </Text>
               </Link>
-              <Link href="/services">
+              <Link 
+                href={{
+                  pathname: "/services",
+                  query: {tab: "data-protection"}
+                }}
+              >
                 <Text className="!font-montserrat text-[18.07px] hover:text-green-a700_01 font-normal">
                   Data Protection
                 </Text>
               </Link>
-              <Link href="/services">
+              <Link 
+                href={{
+                  pathname: "/services",
+                  query: {tab: "telehealth"}
+                }}
+              >
                 <Text className="!font-montserrat text-[18.07px] hover:text-green-a700_01 font-normal">
                   Telehealth
                 </Text>
               </Link>
-              <Link href="/services">
+              <Link 
+                href={{
+                  pathname: "/services",
+                  query: {tab: "advanced-training"}
+                }}
+              >
                 <Text className="!font-montserrat text-[18.07px] hover:text-green-a700_01 font-normal">
                   VR Training
                 </Text>
