@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import TrainingClientPage from './index'; 
+import { Suspense } from "react";
 // import { mockVideos, Video } from './utils/mockVideos';
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ export default async function TrainingPage() {
   return (
     // Pass the server-loaded/imported videos to the client component
     // <TrainingClientPage initialVideos={videos} />
-    <TrainingClientPage />
+    <Suspense fallback={<div className="py-10 text-center">Loading...</div>}>
+      <TrainingClientPage />
+    </Suspense>
   );
 }
 
