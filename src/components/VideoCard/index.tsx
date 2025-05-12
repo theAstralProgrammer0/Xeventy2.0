@@ -63,7 +63,7 @@ export default function VideoCard({ video }: VideoCardProps) {
     if (actualThumbnailUrl) {
       return (
         <Link
-          href={video.youtube_url}
+          href={video.youtube_url || '#'}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Watch ${video.title} on YouTube`}
