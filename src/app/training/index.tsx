@@ -68,7 +68,7 @@ export default function TrainingClientPage() {
             <h2 className="text-2xl font-semibold mb-4 text-center">Search Results</h2>
               <VideoGallery
                 videos={filteredVideos}
-                noResultsMessage={`No videos found matching "${searchTerm}". `}
+                noResultMessage={`No videos found matching "${searchTerm}". `}
               />
             </div>
         )}
