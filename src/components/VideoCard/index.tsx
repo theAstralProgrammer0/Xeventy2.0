@@ -8,7 +8,7 @@ interface VideoCardProps {
 
 const getYouTubeThumbnailUrl = (youtubeUrl: string | null): string | null => {
   if (!youtubeUrl) return null;
-  let videoId = null;
+  let videoId: string | null = null;
   try {
     const url = new URL(youtubeUrl);
     if (url.hostname === 'youtu.be') {
@@ -21,10 +21,7 @@ const getYouTubeThumbnailUrl = (youtubeUrl: string | null): string | null => {
     return null;
   }
 
-  if (videoId) {
-    return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-  }
-  return null;
+  return videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : null;
 };
 
 const ZoomIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -45,7 +42,7 @@ const ZoomIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 
 
-export default function VideoCard({ video }: React.FC<VideoCardProps>) {
+export default function VideoCard({ video }: VideoCardProps) {
   const formatDateTime = (isoString: string | null) => {
     if (!isoString) return null;
     try {
