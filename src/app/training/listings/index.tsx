@@ -60,7 +60,7 @@ export default function TrainingListingsClientPage() {
       <div className="container mx-auto px-5 py-4">
         <h1 className="text-3xl font-bold mb-6 text-center">All Training Videos & Events</h1>
         <SearchBar
-          initialValues={searchTerm}
+          initialValue={searchTerm}
           onSearchChange={handleSearchChange}
           placeholder="Filter listings..."
         />
