@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Button, Img, Text } from "../../components";
-import { useSwipeable } from "react-swipeable";
-import ProjectTile from "../../components/ProjectTile";
 
 interface Project {
   projectImage: string;
@@ -11,34 +9,16 @@ interface Project {
 }
 
 const emrSystemGrid: Project[] = [
-  {
-    projectImage: "img_proj_1.jpg",
-    projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
-    projectDescription:
-      "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
-  },
-  {
-    projectImage: "img_pic2.png",
-    projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
-    projectDescription:
-      "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
-  },
-  {
-    projectImage: "img_proj_2.jpg",
-    projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
-    projectDescription:
-      "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
-  },
-  {
-    projectImage: "img_pic3.png",
-    projectTitle: "Development of an interoperable EMR system for Nigerian hospitals.",
-    projectDescription:
-      "Design and optimize Electronic Medical Records (EMRs) and Electronic Health Records (EHRs) systems, enabling healthcare facilities to digitize patient information and seamlessly exchange data for improved care.",
-  },
+  { projectImage: "img_proj_1.jpg", projectTitle: "Digital Health Mentorship Program", projectDescription: "Mentoring young professionals through the Society for Telemedicine and eHealth Nigeria in collaboration with Care One." },
+  { projectImage: "img_pic2.png", projectTitle: "Telemedicine Initiative for Portmore North, Jamaica", projectDescription: "Designing a sustainable telemedicine model to strengthen community healthcare services." },
+  { projectImage: "img_proj_2.jpg", projectTitle: "The UgaVax Project", projectDescription: "Leveraging digital technologies to enhance tracking of child immunization healthcare outcomes in Uganda, in collaboration with MedRef." },
+  { projectImage: "img_pic3.png", projectTitle: "EMR Optimization Consulting", projectDescription: "Helping healthcare facilities improve existing EMR systems for better clinical efficiency and patient care outcomes." },
+  { projectImage: "img_pic2.png", projectTitle: "Telemedicine Platform Deployment", projectDescription: "Launch of telehealth solutions to extend quality healthcare access to underserved and rural communities." },
+  { projectImage: "img_proj_1.jpg", projectTitle: "Healthcare Data Protection Programs", projectDescription: "Implementation of best practices and compliance models for health data privacy and cybersecurity." },
+  { projectImage: "img_pic3.png", projectTitle: "Digitization of Traditional Medicine Records", projectDescription: "Pioneering the integration of traditional medicine into digital health platforms to support inclusive healthcare." },
+  { projectImage: "img_proj_2.jpg", projectTitle: "Development of Integrated EMR/EHR Solutions", projectDescription: "Custom-built electronic medical record and electronic health record systems for hospitals, clinics, and pharmacies, focusing on usability and interoperability." },
 ];
 
-// Group projects into arrays of groupSize.
-// If the last group is missing items, fill it with items from the beginning.
 function groupProjects(projects: Project[], groupSize: number): Project[][] {
   const groups: Project[][] = [];
   for (let i = 0; i < projects.length; i += groupSize) {
@@ -52,96 +32,59 @@ function groupProjects(projects: Project[], groupSize: number): Project[][] {
 }
 
 export default function ProjectsAndSocialsSection() {
-  // Set up a state for groupSize that updates based on viewport width.
   const [groupSize, setGroupSize] = useState(3);
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Adjust groupSize based on window width:
-  // - width < 768px: 1 tile
-  // - width between 768px and 1023px: 2 tiles
-  // - width >= 1024px: 3 tiles
   useEffect(() => {
-    function handleResize() {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setGroupSize(1);
-      } else if (width < 1024) {
-        setGroupSize(2);
-      } else {
-        setGroupSize(3);
-      }
-    }
-    handleResize(); // Set on mount.
+    const handleResize = () => {
+      const w = window.innerWidth;
+      setGroupSize(w < 768 ? 1 : w < 1024 ? 2 : 3);
+    };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Reset currentSlide when groupSize changes.
-  useEffect(() => {
-    setCurrentSlide(1);
-  }, [groupSize]);
-
-  // Group projects based on the current groupSize.
   const groups = groupProjects(emrSystemGrid, groupSize);
-  // For infinite looping, clone the last and first group.
-  const extendedSlides = [groups[groups.length - 1], ...groups, groups[0]];
-  const totalSlides = extendedSlides.length;
+  const maxIdx = groups.length - 1;
+  const [currentIdx, setCurrentIdx] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => prev + 1);
+  // Update current index on scroll
+  const onScroll = () => {
+    if (!containerRef.current) return;
+    const idx = Math.round(
+      containerRef.current.scrollLeft / containerRef.current.clientWidth
+    );
+    setCurrentIdx(idx);
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => prev - 1);
+  // Scroll by group
+  const scrollToGroup = (idx: number) => {
+    if (!containerRef.current) return;
+    const width = containerRef.current.clientWidth;
+    containerRef.current.scrollTo({ left: width * idx, behavior: "smooth" });
+    setCurrentIdx(idx);
   };
 
-  // Enable touch/swipe interactions.
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: nextSlide,
-    onSwipedRight: prevSlide,
-    preventScrollOnSwipe: true,
-    trackMouse: true,
-  });
-
-  // When transition ends, jump if at a cloned slide.
-  const handleTransitionEnd = () => {
-    if (currentSlide === totalSlides - 1) {
-      // Jump from cloned first slide back to the first real slide.
-      setTransitionEnabled(false);
-      setCurrentSlide(1);
-    }
-    if (currentSlide === 0) {
-      // Jump from cloned last slide to the last real slide.
-      setTransitionEnabled(false);
-      setCurrentSlide(totalSlides - 2);
-    }
+  // Handle wheel for smooth horizontal
+  const onWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    if (!containerRef.current) return;
+    containerRef.current.scrollBy({ left: e.deltaY, behavior: "smooth" });
   };
-
-  // Re-enable transition after a jump.
-  useEffect(() => {
-    if (!transitionEnabled) {
-      const timer = setTimeout(() => {
-        setTransitionEnabled(true);
-      }, 50);
-      return () => clearTimeout(timer);
-    }
-  }, [transitionEnabled]);
 
   return (
     <div className="mt-[88px] flex flex-col items-center">
       <div className="container-xs flex flex-col gap-5 md:px-5">
+        {/* Header */}
         <div className="mx-auto flex flex-col items-center gap-6 md:mx-0">
-          <div className="flex">
-            <Button
-              color="black_900_01"
-              size="xs"
-              className="min-w-[108px] rounded-[10px] px-1.5 font-merriweather tracking-[1.09px]"
-            >
-              Our Projects
-            </Button>
-          </div>
+          <Button
+            color="black_900_01"
+            size="xs"
+            className="min-w-[108px] rounded-[10px] px-1.5 font-merriweather tracking-[1.09px]"
+          >
+            Our Projects
+          </Button>
           <Text
             size="text13xl"
             className="!font-merriweather text-[56.47px] font-normal !text-black-900_01 md:text-[48px] sm:text-[42px]"
@@ -150,118 +93,88 @@ export default function ProjectsAndSocialsSection() {
           </Text>
         </div>
 
-        {/* Carousel Section */}
-        <div className="flex flex-col items-center">
-          <div className="relative w-full overflow-hidden" {...swipeHandlers}>
-            <div
-              ref={sliderRef}
-              className={`flex ${
-                transitionEnabled
-                  ? "transition-transform duration-700 ease-in-out"
-                  : "transition-none"
-              }`}
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              onTransitionEnd={handleTransitionEnd}
-            >
-              {extendedSlides.map((group, slideIdx) => (
-                <div
-                  key={slideIdx}
-                  className="flex-shrink-0 w-full flex justify-around"
-                >
-                  {group.map((project, idx) => (
-                    <div key={idx} className="mx-2 flex-1">
-                      <ProjectTile
-                        {...project}
-                        className="aspect-square object-cover"
+        {/* Carousel */}
+        <div className="relative mt-8">
+          <div
+            ref={containerRef}
+            onScroll={onScroll}
+            onWheel={onWheel}
+            className="flex overflow-x-auto scroll-hidden"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
+            {groups.map((group, gi) => (
+              <div key={gi} className="flex-shrink-0 w-full flex justify-around">
+                {group.map((p, i) => (
+                  <div key={i} className="mx-2 flex-1">
+                    {/* Explicit image rendering */}
+                    <div className="w-full aspect-square overflow-hidden rounded-lg">
+                      <Img
+                        src={p.projectImage}
+                        width={1000}
+                        height={1000}
+                        alt={p.projectTitle}
+                        className="!w-full !h-full object-cover"
                       />
                     </div>
-                  ))}
-                </div>
-              ))}
-            </div>
+                    <Text className="mt-3 text-lg !font-merriweather !text-blue-700">{p.projectTitle}</Text>
+                    <Text className="mt-1 text-xs !font-normal !text-gray-900">{p.projectDescription}</Text>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
-          <div className="flex gap-4 mt-4">
-            <button onClick={prevSlide} className="p-2 bg-gray-300 rounded-2xl">
-              &lt;&lt;
-            </button>
-            <button onClick={nextSlide} className="p-2 bg-gray-300 rounded-2xl">
-              &gt;&gt;
-            </button>
-          </div>
-        </div>
 
-        {/* Socials Section */}
-        <div className="hidden my-[26px] flex w-[36%] flex-col gap-[58px] self-center rounded-[10px] bg-green-a700_3f px-2.5 py-[46px] md:w-full md:py-5 sm:gap-[29px]">
-          <div className="flex flex-col items-center justify-center gap-4 px-4 py-6 sm:py-5">
-            <Text
-              size="text8xl"
-              className="text-[30.49px] font-normal !text-black-900_01 md:text-[28px] sm:text-[26px]"
+          {/* Prev / Next Buttons */}
+          <button
+            onClick={() => currentIdx > 0 && scrollToGroup(currentIdx - 1)}
+            disabled={currentIdx === 0}
+            className={`absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg transition-opacity ${
+              currentIdx === 0 ? "opacity-50" : "hover:opacity-100"
+            }`}
+            aria-label="Previous projects"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              Join our millions of followers
-            </Text>
-            <div className="mx-4 flex justify-between gap-5 self-stretch md:mx-0">
-              <Img
-                src="img_facebook_app_symbol.png"
-                width={36}
-                height={36}
-                alt="Facebookapp"
-                className="h-[36px] object-cover"
-              />
-              <Img
-                src="img_instagram_logo.png"
-                width={36}
-                height={36}
-                alt="Instagramlogo"
-                className="h-[36px] object-cover"
-              />
-              <Img
-                src="img_linkedin_big_logo.png"
-                width={36}
-                height={36}
-                alt="LinkedInbig"
-                className="h-[36px] object-cover"
-              />
-              <Img
-                src="img_youtube.png"
-                width={36}
-                height={36}
-                alt="YouTubeLogo"
-                className="h-[36px] object-cover"
-              />
-            </div>
-          </div>
-          <Img
-            src="img_side_video.png"
-            width={440}
-            height={582}
-            alt="SideVideo"
-            className="h-[582px] object-cover"
-          />
-          <div className="flex flex-col gap-[30px] py-2.5">
-            <Text
-              size="text8xl"
-              className="text-center text-[30.49px] font-normal leading-9 !text-black-900_01 md:text-[28px] sm:text-[26px]"
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => currentIdx < maxIdx && scrollToGroup(currentIdx + 1)}
+            disabled={currentIdx === maxIdx}
+            className={`absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg transition-opacity ${
+              currentIdx === maxIdx ? "opacity-50" : "hover:opacity-100"
+            }`}
+            aria-label="Next projects"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              Follow us for more daily health and wellness tips
-            </Text>
-            <Button
-              shape="round"
-              rightIcon={
-                <Img
-                  src="img_link_icon.png"
-                  width={28}
-                  height={28}
-                  alt="Link Icon"
-                  className="h-[28px] w-[28px] object-contain"
-                />
-              }
-              className="mx-[98px] gap-2.5 self-stretch rounded-[10px] px-[34px] font-merriweathersans md:mx-0 sm:px-5"
-            >
-              Follow Us
-            </Button>
-          </div>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
+
+      <style jsx>{`
+        .scroll-hidden {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;     /* Firefox */
+        }
+        .scroll-hidden::-webkit-scrollbar {
+          display: none;             /* Chrome, Safari, Opera */
+        }
+      `}</style>
     </div>
   );
 }
