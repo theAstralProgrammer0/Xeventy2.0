@@ -7,11 +7,8 @@ import VideoGallery from '../VideoGallery';
 import { mockVideos, Video } from '../utils/mockVideos';
 import Header from '@/components/Header';
 
-interface TtrainingListingsClientPageProps {
-  initialVideos: Video[];
-}
 
-export default function TrainingListingsClientPage({ initialVideos }: TrainingListingsClientPageProps) {
+export default function TrainingListingsClientPage() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
