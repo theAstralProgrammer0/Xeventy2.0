@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import LandingPage from "./index";
 import { Metadata } from "next";
 import axios from "axios";
@@ -26,10 +26,12 @@ export default async function LandingPageWrapper() {
 
   {/* Render d landing page UI,passin initial data as props */}
   return (
-    <LandingPage
-      initialNewsArticles={initialNewsArticles}
-      initialVideoNews={initialVideoNews}
-    />
+    <Suspense fallback={<div className="py-10 text-center">Loading...</div>}>
+      <LandingPage
+        initialNewsArticles={initialNewsArticles}
+        initialVideoNews={initialVideoNews}
+      />
+    </Suspense>
   );
 }
 
