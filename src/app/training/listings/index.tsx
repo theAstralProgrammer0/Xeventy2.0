@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import SearchBar from '@/components/SearchBar';
 import VideoGallery from '../VideoGallery';
-import { mockVideos, Video } from '../utils/mockVideos';
+import { mockVideos } from '../utils/mockVideos';
 import Header from '@/components/Header';
 
 
