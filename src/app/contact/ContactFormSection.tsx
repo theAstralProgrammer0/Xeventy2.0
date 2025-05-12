@@ -10,10 +10,10 @@ export default function ContactFormSection() {
       <div className="container-xs mx-auto px-6">
         <div className="max-w-4xl border border-thin mx-auto bg-white p-8 rounded-2xl shadow-xl">
           <Heading className="text-3xl font-bold mb-4 text-center text-gray-900">
-            We'd love to help
+            We&apos;d love to help
           </Heading>
           <Text className="text-center text-lg !text-gray-700 mb-8">
-            Reach out and we'll get in touch within 24 hours.
+            Reach out and we&apos;ll get in touch within 24 hours.
           </Text>
           <form className="space-y-6">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-1">
