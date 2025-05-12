@@ -25,7 +25,7 @@ export default function ProjectTile({
       />
       <Text
         size="textxl"
-        className="mt-[18px] w-full !font-merriweather text-[14.68px] font-normal leading-6 !text-black-900_01"
+        className="mt-[18px] w-full !font-merriweather text-[14.68px] font-normal leading-6"
       >
         {projectTitle}
       </Text>
