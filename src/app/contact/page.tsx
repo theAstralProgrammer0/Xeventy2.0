@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <Suspense fallback={<div className="py-10 text-center">Loading...</div>}>
       <Page />
-    </Suspense
+    </Suspense>
   );
 }
 
