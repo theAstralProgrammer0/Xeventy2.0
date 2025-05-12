@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default async function TrainingListingsPage() {
-  const videos: Video[] = await fetchAllVideosFromServer();
-  // const videos: Video[] = mockVideos;
+  // const videos: Video[] = await fetchAllVideosFromServer();
+  const videos: Video[] = mockVideos;
 
   return (
     <TrainingListingsClientPage initialVideos={videos} />
