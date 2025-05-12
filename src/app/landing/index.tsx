@@ -11,6 +11,7 @@ import ServicesOverviewSection from "./ServicesOverviewSection";
 import VideoNewsSection from "./VideoNewsSection";
 import React from "react";
 import Image from "next/image";
+import FAQSection from "../contact/FAQSection";
 
 
 interface NewsArticleType {
@@ -58,6 +59,7 @@ export default function LandingPage({ initialNewsArticles, initialVideoNews }: V
       <ProjectsAndSocialsSection />
       <LogoRowSection />
       <CareersSection />
+      <FAQSection />
       <NewsletterSubscription />
       <Footer />
     </div>
