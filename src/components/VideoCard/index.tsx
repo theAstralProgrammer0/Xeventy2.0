@@ -74,7 +74,7 @@ export default function VideoCard({ video }: React.FC<VideoCardProps>) {
           <img
             src={actualThumbnailUrl}
             alt={`Thumbnail for ${video.title}`}
-            className="w-full h-48 object-cover cursor-pointer"
+            className="!w-full !h-48 object-cover cursor-pointer"
             onError={(e) => (e.currentTarget.src = `https://placehold.co/600x400/EEE/31343C?text=${encodeURIComponent(video.title)}&font=Inter`)}
           />
         </Link>
