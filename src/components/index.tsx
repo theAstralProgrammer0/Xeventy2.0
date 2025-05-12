@@ -6,7 +6,6 @@ import Header from "./Header";
 import { Heading } from "./Heading";
 import HealthExpertiseProfile from "./HealthExpertiseProfile";
 import HealthcareRecordComponent from "./HealthcareRecordComponent";
-import { HoverMenu } from "./HoverMenu";
 import { Img } from "./Img";
 import { Input } from "./Input";
 import NewsArticle from "./NewsArticle";
@@ -16,5 +15,5 @@ import { Text } from "./Text";
 import { TextArea } from "./TextArea";
 import VideoCard from "./VideoCard";
 
-export { AvatarStack, Button, CheckBox, Footer, Header, Heading, HealthExpertiseProfile, HealthcareRecordComponent, HoverMenu, Img, Input, NewsArticle, NewsletterSubscription, ProjectTile, Text, TextArea, VideoCard };
+export { AvatarStack, Button, CheckBox, Footer, Header, Heading, HealthExpertiseProfile, HealthcareRecordComponent, Img, Input, NewsArticle, NewsletterSubscription, ProjectTile, Text, TextArea, VideoCard };
 
