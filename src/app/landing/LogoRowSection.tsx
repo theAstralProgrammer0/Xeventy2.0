@@ -1,13 +1,12 @@
 "use client";
 
-import { Img } from "../../components";
+import { Button, Img, Text } from "../../components";
 import React, { useEffect, useRef, useState, useLayoutEffect, JSX } from "react";
 
 const logos = [
   "img_logo_1.png",
   "img_logo_2.png",
   "img_logo_3.png",
-  "img_logo_4.png",
 ];
 
 export default function LogoRowSection(): JSX.Element {
@@ -78,40 +77,54 @@ export default function LogoRowSection(): JSX.Element {
   const marqueeSequence = [...baseSequence, ...baseSequence];
 
   return (
-    <div
-      className="mt-[8em] relative overflow-hidden bg-black-900_07 py-6 shadow-md"
-      ref={containerRef}
-    >
-      <div
-        className="flex animate-marquee"
-        ref={marqueeRef}
-        style={{ "--base-width": `${baseWidth}px` } as React.CSSProperties}
+    <div className="flex flex-col mt-[8em]">
+      <Button
+        color="black_900_01"
+        size="xs"
+        className="flex flex-col items-center gap-5 px-12 md:px-5"
       >
-        {marqueeSequence.map((logo, index) => (
-          <div key={index} className="flex-shrink-0 mx-8">
-            <Img
-              src={logo}
-              width={136}
-              height={136}
-              alt={`Logo ${index + 1}`}
-              className="h-[136px] w-[136px] object-contain"
-            />
-          </div>
-        ))}
+        <Text 
+          size="xs"
+          className="!font-merriweather"
+        >
+          Our Partners
+        </Text>
+      </Button>
+      <div
+        className="relative overflow-hidden bg-black-900_07 py-6 shadow-md"
+        ref={containerRef}
+      >
+        <div
+          className="flex animate-marquee"
+          ref={marqueeRef}
+          style={{ "--base-width": `${baseWidth}px` } as React.CSSProperties}
+        >
+          {marqueeSequence.map((logo, index) => (
+            <div key={index} className="flex-shrink-0 mx-8">
+              <Img
+                src={logo}
+                width={136}
+                height={136}
+                alt={`Logo ${index + 1}`}
+                className="h-[136px] w-[136px] object-contain"
+              />
+            </div>
+          ))}
+        </div>
+        <style jsx>{`
+          @keyframes marquee {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-1 * var(--base-width)));
+            }
+          }
+          .animate-marquee {
+            animation: marquee 20s linear infinite;
+          }
+        `}</style>
       </div>
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-1 * var(--base-width)));
-          }
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-      `}</style>
     </div>
   );
 }
