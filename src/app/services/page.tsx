@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Metadata } from "next";
 import Page from ".";
 
@@ -8,6 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  return <Page />;
+  return (
+    <Suspense faillback={<div className="py-10 text-center">Loading...</div>}>
+      <Page />
+    </Suspense>
+  );
 }
 
