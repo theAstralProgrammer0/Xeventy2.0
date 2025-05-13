@@ -11,77 +11,7 @@ Xeventy2.0/
 ├── postcss.config.mjs
 ├── public/
 │   ├── fonts/
-│   │   ├── MERRIWEATHERBOLD.ttf
-│   │   ├── MERRIWEATHERBOLDIT.ttf
-│   │   ├── MERRIWEATHERITALIC.ttf*
-│   │   ├── MERRIWEATHERLIGHT.ttf
-│   │   ├── MERRIWEATHERLIGHTIT.ttf
-│   │   ├── MERRIWEATHERREGULAR.ttf*
-│   │   ├── MERRIWEATHERSANSBOLD.ttf
-│   │   ├── MERRIWEATHERSANSBOLDITALIC.ttf
-│   │   ├── MERRIWEATHERSANSEXBOLDIT.ttf
-│   │   ├── MERRIWEATHERSANSEXTRABOLD.ttf
-│   │   ├── MERRIWEATHERSANSITALIC.ttf
-│   │   ├── MERRIWEATHERSANSLIGHT.ttf
-│   │   ├── MERRIWEATHERSANSLIGHTITALIC.ttf
-│   │   ├── MERRIWEATHERSANSREGULAR.ttf
-│   │   ├── MERRIWEATHERULTRABDIT.ttf
-│   │   ├── MERRIWEATHERULTRABOLD.ttf
-│   │   ├── MONTSERRATBLACK.ttf*
-│   │   ├── MONTSERRATBOLD.ttf*
-│   │   ├── MONTSERRATMEDIUM.ttf*
-│   │   ├── MONTSERRATREGULAR.ttf*
-│   │   └── import_fonts.sh*
 │   └── images/
-│       ├── ai.jpg
-│       ├── amazon.svg.svg
-│       ├── anonym_pfp.png
-│       ├── article.png
-│       ├── dam_pfp.jpg
-│       ├── data.jpg
-│       ├── defaultNoData.png
-│       ├── dr_raphael_pfp.jpg
-│       ├── emr.jpg
-│       ├── hire_icon.png
-│       ├── hire_icon.svg
-│       ├── img_arrow_down.svg
-│       ├── img_arrow_right.svg
-│       ├── img_comp_1_image.png
-│       ├── img_comp_2_image.png
-│       ├── img_comp_3_image.png
-│       ├── img_comp_4_image.png
-│       ├── img_daniel.jpg
-│       ├── img_essien.jpg
-│       ├── img_facebook_app_symbol.png
-│       ├── img_favorite.svg
-│       ├── img_frame_21.png
-│       ├── img_header_hero.png
-│       ├── img_instagram_logo.png
-│       ├── img_link_icon.png
-│       ├── img_linkedin_big_logo.png
-│       ├── img_logo_1.png
-│       ├── img_logo_2.png
-│       ├── img_logo_3.png
-│       ├── img_logo_4.png
-│       ├── img_pic1.png
-│       ├── img_pic2.png
-│       ├── img_pic3.png
-│       ├── img_proj_1.jpg
-│       ├── img_proj_2.jpg
-│       ├── img_ribbon_icon.svg
-│       ├── img_sanwo_olu.jpeg
-│       ├── img_send_airplane_icon.svg
-│       ├── img_stethoscope_icon.svg
-│       ├── img_temitayo.jpg
-│       ├── img_x2h_logo_new_removebg_preview.png
-│       ├── img_youtube.png
-│       ├── person-office-work-day.jpg
-│       ├── telehealth.jpg
-│       ├── ty_pfp.jpg
-│       ├── vr.jpg
-│       ├── vr_dr.jpg
-│       └── web3.jpg
-│       └── x2h_about1.png  # Added based on path logic (was missing end slash in output)
 ├── results
 ├── src/
 │   ├── app/
